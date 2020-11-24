@@ -27,7 +27,13 @@ class Centro extends Model{}
     }, {db, 
         timestamps: false,
         tableName: 'centro', });
+<<<<<<< HEAD
  
           
         
         module.exports = Centro;
+=======
+
+    return Centro;
+};
+>>>>>>> parent of 6d0f470... Sequelize test 2
