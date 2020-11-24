@@ -1,39 +1,38 @@
-const { Model, DataTypes } = require('sequelize'); 
-const db = require('./index');
-class Centro extends Model{}
-     Centro.init({
+module.exports = (sequelize, Sequelize) => {
+    const Centro = sequelize.define("Centro", {
         idCentro: {
-            type: DataTypes.INTEGER,
+            type: Sequelize.INTEGER,
             primaryKey: true
         },
         nombre: {
-            type: DataTypes.STRING
+            type: Sequelize.STRING
         },
       
         codigo_Postal: {
-            type: DataTypes.INTEGER            
+            type: Sequelize.INTEGER            
         },
         lat: {
-            type: DataTypes.DOUBLE            
+            type: Sequelize.DOUBLE            
         },long: {
-            type: DataTypes.DOUBLE            
+            type: Sequelize.DOUBLE            
         },
         idMunicipio: {
-            type: DataTypes.INTEGER,
-          
+            type: Sequelize.INTEGER,
+            references: {
+                model: 'Municipio', // 'persons' refers to table name
+                key: 'Id_Municipio', // 'id' refers to column name in persons table
+             }
         }
 
       
-    }, {db, 
-        timestamps: false,
+    }, { timestamps: false,
         tableName: 'centro', });
-<<<<<<< HEAD
  
-          
+            Centro.hasMany(health, {
+              through: 'centro_Datos',
+              as: 'fk_Id_Centro',
+              foreignKey: 'idCentro',
+            })
         
-        module.exports = Centro;
-=======
-
     return Centro;
 };
->>>>>>> parent of 6d0f470... Sequelize test 2

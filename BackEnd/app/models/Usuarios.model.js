@@ -1,40 +1,34 @@
-<<<<<<< HEAD
-const { Model, DataTypes } = require('sequelize'); 
-const db = require('./index');
-class Usuario extends Model{}
-Usuario.init ({
-=======
+  
 module.exports = (sequelize, Sequelize) => {
-    const Usuario = sequelize.define("Usuarios", {
->>>>>>> parent of 6d0f470... Sequelize test 2
+    const Usuario = sequelize.define("usuarios", {
         idUsuarios: {
-            type: DataTypes.INTEGER,
+            type: Sequelize.INTEGER,
             primaryKey: true
         },
         username: {
-            type: DataTypes.STRING
+            type: Sequelize.STRING
         },
         password: {
-            type: DataTypes.STRING
+            type: Sequelize.STRING
         },
         nombre:{
-            type: DataTypes.STRING      
+            type: Sequelize.STRING      
         },
         apellidos:{
-            type: DataTypes.STRING      
+            type: Sequelize.STRING      
         },
         rol:{
-            type: DataTypes.ENUM('Admin','Profesor','Alumno')  
+            type: Sequelize.ENUM('Admin','Profesor','Alumno')  
         },
-      
+        idCentro: {
+            type: Sequelize.INTEGER,
+            references: {
+                model: 'Cetro', // 'persons' refers to table name
+                key: 'Id_Centro', // 'id' refers to column name in persons table
+             }
+        },
     
-<<<<<<< HEAD
-    }, {db, timestamps: false });
- 
-module.exports= Usuario;
-=======
     }, { timestamps: false });
-
+ 
     return Usuario;
 };
->>>>>>> parent of 6d0f470... Sequelize test 2
