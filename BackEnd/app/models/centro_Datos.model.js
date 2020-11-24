@@ -1,11 +1,11 @@
 module.exports = (sequelize, Sequelize) => {
-    const usuario_datos = sequelize.define("usuario_datos", {
-        idUsuario: {
+    const centro_Datos = sequelize.define("centro_Datos", {
+        idCentro: {
             type: Sequelize.INTEGER,
             primaryKey: true,
             references: {
-                model: 'Alumno', // 'persons' refers to table name
-                key: 'idUsuarios', // 'id' refers to column name in persons table
+                model: 'Centro', // 'persons' refers to table name
+                key: 'idCentro', // 'id' refers to column name in persons table
              }
         },
         idDatos: {
@@ -13,15 +13,15 @@ module.exports = (sequelize, Sequelize) => {
             primaryKey: true,
             references: {
                 model: 'health', // 'persons' refers to table name
-                key: 'idhealth', // 'id' refers to column name in persons table
+                key: 'idHealth', // 'id' refers to column name in persons table
              }
         },
-        Fecha: {
+        fecha: {
             type: Sequelize.DATE     
         }
 
       
     }, { timestamps: false });
 
-    return usuario_datos;
+    return centro_Datos;
 };

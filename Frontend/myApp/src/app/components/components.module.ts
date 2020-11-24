@@ -10,7 +10,7 @@ import { IonicModule } from '@ionic/angular';
   declarations: [
     FooterComponent,HeaderComponent
   ],
-  exports:[HeaderComponent],
+  exports:[HeaderComponent,FooterComponent],
   imports: [
     CommonModule,
     IonicModule

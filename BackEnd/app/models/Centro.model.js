@@ -4,15 +4,17 @@ module.exports = (sequelize, Sequelize) => {
             type: Sequelize.INTEGER,
             primaryKey: true
         },
-        Nombre: {
+        nombre: {
             type: Sequelize.STRING
         },
       
-        Codigo_Postal: {
+        codigo_Postal: {
             type: Sequelize.INTEGER            
         },
-        Coordenadas:{
-            type: Sequelize.STRING
+        lat: {
+            type: Sequelize.DOUBLE            
+        },long: {
+            type: Sequelize.DOUBLE            
         },
         idMunicipio: {
             type: Sequelize.INTEGER,

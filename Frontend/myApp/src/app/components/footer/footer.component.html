@@ -1,12 +1,13 @@
-<div class="ion-page" id="main-content">
-  <ion-header>
-    <ion-toolbar color="">
-      <ion-title>Home</ion-title>
-      
-      <ion-buttons  >
-        <ion-menu-button color="primary" menu="main-menu"></ion-menu-button>
-      </ion-buttons>
+<ion-tabs>
+  <ion-tab-bar color="primary" slot="bottom">
+    <ion-tab-button tab="map">
+      <ion-icon name="map"></ion-icon>
+      <ion-label>Map</ion-label>
+    </ion-tab-button>
+    <ion-tab-button  tab="municipios">
+      <ion-icon name="search"></ion-icon>
+      <ion-label>Municipios</ion-label>
      
-    </ion-toolbar>
-  </ion-header>
-</div>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>

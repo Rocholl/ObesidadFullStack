@@ -4,22 +4,22 @@ module.exports = (sequelize, Sequelize) => {
             type: Sequelize.INTEGER,
             primaryKey: true
         },
-        Username: {
+        username: {
             type: Sequelize.STRING
         },
-        Password: {
+        password: {
             type: Sequelize.STRING
         },
-        Nombre:{
+        nombre:{
             type: Sequelize.STRING      
         },
-        Apellidos:{
+        apellidos:{
             type: Sequelize.STRING      
         },
-        Rol:{
+        rol:{
             type: Sequelize.ENUM('Admin','Profesor','Alumno')  
         },
-        Id_Centro: {
+        idCentro: {
             type: Sequelize.INTEGER,
             references: {
                 model: 'Cetro', // 'persons' refers to table name
