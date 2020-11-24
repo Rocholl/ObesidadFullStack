@@ -23,10 +23,12 @@ module.exports = (sequelize, Sequelize) => {
     }, { timestamps: false });
     Health.associate = function(models) {
         // associations can be defined here
-        Health.hasOne(models.centro, {
-          through: 'Usuario_LenguajeP',
-          as: 'lenguajesProgramacion',
-          foreignKey: 'UsuarioId',
+        Health.belongsTo(models.Centro, {
+          through: 'centro_Datos',
+          as: 'fk_Id_Datos',
+          foreignKey: 'idDatos',
         })
+    };
+        //  
     return Health;
 };

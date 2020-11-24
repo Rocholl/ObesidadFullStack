@@ -27,6 +27,12 @@ module.exports = (sequelize, Sequelize) => {
       
     }, { timestamps: false,
         tableName: 'centro', });
-
+ 
+            Centro.hasMany(health, {
+              through: 'centro_Datos',
+              as: 'fk_Id_Centro',
+              foreignKey: 'idCentro',
+            })
+        
     return Centro;
 };
