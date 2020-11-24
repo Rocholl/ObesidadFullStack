@@ -1,33 +1,28 @@
-module.exports = (sequelize, Sequelize) => {
-    const Usuario = sequelize.define("usuarios", {
+const { Model, DataTypes } = require('sequelize'); 
+const db = require('./index');
+class Usuario extends Model{}
+Usuario.init ({
         idUsuarios: {
-            type: Sequelize.INTEGER,
+            type: DataTypes.INTEGER,
             primaryKey: true
         },
         username: {
-            type: Sequelize.STRING
+            type: DataTypes.STRING
         },
         password: {
-            type: Sequelize.STRING
+            type: DataTypes.STRING
         },
         nombre:{
-            type: Sequelize.STRING      
+            type: DataTypes.STRING      
         },
         apellidos:{
-            type: Sequelize.STRING      
+            type: DataTypes.STRING      
         },
         rol:{
-            type: Sequelize.ENUM('Admin','Profesor','Alumno')  
+            type: DataTypes.ENUM('Admin','Profesor','Alumno')  
         },
-        idCentro: {
-            type: Sequelize.INTEGER,
-            references: {
-                model: 'Cetro', // 'persons' refers to table name
-                key: 'Id_Centro', // 'id' refers to column name in persons table
-             }
-        },
+      
     
-    }, { timestamps: false });
+    }, {db, timestamps: false });
  
-    return Usuario;
-};
+module.exports= Usuario;

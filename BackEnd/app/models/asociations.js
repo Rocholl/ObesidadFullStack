@@ -1,7 +1,12 @@
-const usuarios = require("./usuarios.model.js")(sequelize, Sequelize);
-const curso = require("./curso.model.js")(sequelize, Sequelize);
-const health = require("./health.model.js")(sequelize, Sequelize);
-const usuario_Curso = require("./usuario_Curso.model.js")(sequelize, Sequelize);
-const centro_Datos = require("./centro_Datos.model.js")(sequelize, Sequelize);
-const centro = require("./Centro.model.js")(sequelize, Sequelize);
-const municipio = require("./municipio.model.js")(sequelize, Sequelize);
+const usuarios = require("./usuarios.model.js");
+const curso = require("./curso.model.js");
+const health = require("./health.model.js");
+const usuario_Curso = require("./usuario_Curso.model.js");
+const centro_Datos = require("./centro_Datos.model.js");
+const centro = require("./Centro.model.js");
+const municipio = require("./municipio.model.js");
+
+// One to many 
+centro.hasMany(usuarios,{as:"usuarios"});
+usuarios.belongsTo(centro);
+// N to M 

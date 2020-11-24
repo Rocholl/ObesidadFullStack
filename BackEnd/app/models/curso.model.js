@@ -1,32 +1,22 @@
-module.exports = (sequelize, Sequelize) => {
-    const Curso = sequelize.define("curso", {
+const { Model, DataTypes } = require('sequelize'); 
+const db = require('./index');
+class Curso extends Model{}
+Curso.init ({
         idCurso: {
-            type: Sequelize.INTEGER,
+            type: DataTypes.INTEGER,
             primaryKey: true
         },
         Curso: {
-            type: Sequelize.STRING
+            type: DataTypes.STRING
            
            
         },
         Letra: {
-            type: Sequelize.STRING     
+            type: DataTypes.STRING     
         }
 
       
-    }, { timestamps: false });
-    Curso.associate = function(models) {
-        // associations can be defined here
-        Curso.hasMany(models.centro, {
-          through: 'centro_Datos',
-          as: 'fk_Id_Datos',
-          foreignKey: 'idDatos',
-        }),
-        Curso.hasMany(models.usuarios, {
-            through: 'usuario_Curso',
-            as: 'fk_Id_Curso',
-            foreignKey: 'idCurso',
-          })
-    };
-    return Curso;
-};
+    }, {db, timestamps: false });
+   
+module.exports = Curso;
+    

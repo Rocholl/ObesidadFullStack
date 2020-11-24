@@ -1,21 +1,22 @@
-module.exports = (sequelize, Sequelize) => {
-    const municipio = sequelize.define("municipio", {
+const { Model, DataTypes } = require('sequelize'); 
+const db = require('./index');
+class Municipio extends Model{}
+Municipio.init ({
         idMunicipio: {
-            type: Sequelize.INTEGER,
+            type: DataTypes.INTEGER,
             primaryKey: true
         },
         nombre: {
-            type: Sequelize.STRING
+            type: DataTypes.STRING
         },
         isla: {
-            type: Sequelize.ENUM('Las palmas')            
+            type: DataTypes.ENUM('Las palmas')            
         }
 
       
-    },  {
+    },  {db,
         tableName: 'municipio',
         timestamps: false
     });
 
-    return municipio;
-};
+    module.exports = Municipio;

@@ -1,38 +1,33 @@
-module.exports = (sequelize, Sequelize) => {
-    const Centro = sequelize.define("Centro", {
+const { Model, DataTypes } = require('sequelize'); 
+const db = require('./index');
+class Centro extends Model{}
+     Centro.init({
         idCentro: {
-            type: Sequelize.INTEGER,
+            type: DataTypes.INTEGER,
             primaryKey: true
         },
         nombre: {
-            type: Sequelize.STRING
+            type: DataTypes.STRING
         },
       
         codigo_Postal: {
-            type: Sequelize.INTEGER            
+            type: DataTypes.INTEGER            
         },
         lat: {
-            type: Sequelize.DOUBLE            
+            type: DataTypes.DOUBLE            
         },long: {
-            type: Sequelize.DOUBLE            
+            type: DataTypes.DOUBLE            
         },
         idMunicipio: {
-            type: Sequelize.INTEGER,
-            references: {
-                model: 'Municipio', // 'persons' refers to table name
-                key: 'Id_Municipio', // 'id' refers to column name in persons table
-             }
+            type: DataTypes.INTEGER,
+          
         }
 
       
-    }, { timestamps: false,
+    }, {db, 
+        timestamps: false,
         tableName: 'centro', });
  
-            Centro.hasMany(health, {
-              through: 'centro_Datos',
-              as: 'fk_Id_Centro',
-              foreignKey: 'idCentro',
-            })
+          
         
-    return Centro;
-};
+        module.exports = Centro;

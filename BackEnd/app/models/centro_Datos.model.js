@@ -1,7 +1,10 @@
-module.exports = (sequelize, Sequelize) => {
-    const centro_Datos = sequelize.define("centro_Datos", {
+const { Model, DataTypes } = require('sequelize'); 
+const db = require('./index');
+class Centro_Datos extends Model{}
+Centro_Datos.init ({
+    
         idCentro: {
-            type: Sequelize.INTEGER,
+            type: DataTypes.INTEGER,
             primaryKey: true,
             references: {
                 model: 'Centro', // 'persons' refers to table name
@@ -9,7 +12,7 @@ module.exports = (sequelize, Sequelize) => {
              }
         },
         idDatos: {
-            type: Sequelize.INTEGER,
+            type: DataTypes.INTEGER,
             primaryKey: true,
             references: {
                 model: 'health', // 'persons' refers to table name
@@ -17,11 +20,10 @@ module.exports = (sequelize, Sequelize) => {
              }
         },
         fecha: {
-            type: Sequelize.DATE     
+            type: DataTypes.DATE     
         }
 
       
-    }, { timestamps: false });
+    }, {db, timestamps: false });
 
-    return centro_Datos;
-};
+    module.exports = Centro_Datos;
