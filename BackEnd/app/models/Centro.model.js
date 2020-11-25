@@ -1,5 +1,5 @@
 module.exports = (sequelize, Sequelize) => {
-    const Centro = sequelize.define("Centro", {
+    const Centro = sequelize.define("centros", {
         idCentro: {
             type: Sequelize.INTEGER,
             primaryKey: true
@@ -26,13 +26,23 @@ module.exports = (sequelize, Sequelize) => {
 
       
     }, { timestamps: false,
-        tableName: 'centro', });
- 
-            Centro.hasMany(health, {
-              through: 'centro_Datos',
-              as: 'fk_Id_Centro',
-              foreignKey: 'idCentro',
-            })
-        
+        });
+        Centro.associate = function(models) {
+            Centro.hasMany(models.usuarios, {
+           as:"fk_usu_Id_Centro",
+           foreignKey:{
+            name: "idCentros"
+          }
+          
+             
+            }),
+            Centro.belongsTo(models.municipios
+              ),
+              Centro.belongsToMany(models.healths, {
+                through: 'centro_Datos',
+                as: 'fkIdHeal',
+                foreignKey: "idCentros"
+              })
+        };
     return Centro;
 };

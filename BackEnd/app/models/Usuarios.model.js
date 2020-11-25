@@ -20,15 +20,18 @@ module.exports = (sequelize, Sequelize) => {
         rol:{
             type: Sequelize.ENUM('Admin','Profesor','Alumno')  
         },
-        idCentro: {
-            type: Sequelize.INTEGER,
-            references: {
-                model: 'Cetro', // 'persons' refers to table name
-                key: 'Id_Centro', // 'id' refers to column name in persons table
-             }
-        },
+     
     
     }, { timestamps: false });
+    Usuario.associate = function(models) {
+        // associations can be defined here
+      
+        Usuario.belongsToMany(models.cursos, {
+            through: 'usuario_Cursos',
+           
+            foreignKey: 'idUsuario',
+          })
+    };
  
     return Usuario;
 };

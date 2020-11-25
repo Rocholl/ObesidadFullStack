@@ -18,10 +18,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.static('public'));
 
-const db = require("./app/models");
+const { sequelize } = require('./app/models/index'); 
 
 // explotation time.
-db.sequelize.sync();
+sequelize.sync();
 
 // development time only. Drop and re-sync db.
 // db.sequelize.sync({ force: true }).then(() => {
@@ -34,6 +34,10 @@ require("./app/routes/Centro.routes")(app);
 
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}.`);
+app.listen(PORT, function () {
+    console.log(`La app ha arrancado en http://localhost:${PORT}`);
+
+    sequelize.sync({ force: false }).then(() => {
+        console.log("Se ha establecido la conexión");
+    })
 });

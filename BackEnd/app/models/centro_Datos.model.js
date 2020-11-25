@@ -15,13 +15,10 @@ module.exports = (sequelize, Sequelize) => {
                 model: 'health', // 'persons' refers to table name
                 key: 'idHealth', // 'id' refers to column name in persons table
              }
-        },
-        fecha: {
-            type: Sequelize.DATE     
         }
 
       
-    }, { timestamps: false });
+    }, { timestamps: true });
 
     return centro_Datos;
 };

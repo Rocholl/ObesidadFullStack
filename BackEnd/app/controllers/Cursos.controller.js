@@ -1,35 +1,30 @@
 const db = require("../models");
-const Usuario = db.usuarios;
+const Cursos = db.cursos;
 const Op = db.Sequelize.Op;
-const bcrypt = require('bcrypt');
-const jst = require('jsonwebtoken');
-const authConfig = require('../config/Auth.config.js');
+
 // Create and Save a new usuario
 // req --> request (contains the body)
 exports.create = (req, res) => {
-    console.log(req.body);
-    let password = bcrypt.hashSync(req.body.password,Number.parseInt(authConfig.rounds));
- 
+    // Validate request
+    /*if (!req.body.ID_whis || !req.body.Nombre) {
+        res.status(400).send({
+            message: "Content can not be empty!"
+        });
+        return;
+    }*/
+
+    // Create a usuario
+    const cursos = {
+        idcursos: req.body.idcursos,
+        nombre: req.body.nombre,
+        isla: req.body.isla
+        
+    };
 
     // Save usuario in the database
-    Usuario.create({
-        idUsuarios: req.body.idUsuarios,
-        username: req.body.username,
-        password	:password,
-        nombre: req.body.apellidos,
-        apellidos: req.body.apellidos,
-        rol:Number.parseInt(req.body.Rol),
-        idCentros: Number.parseInt(req.body.idCentros)
-    })
-        .then(usuario => {
-
-            let token = jst.sign({usuario: usuario},authConfig.secret, {
-                expiresIn: authConfig.expires
-            })
-            res.json({
-                usuario: usuario,
-                token: token
-            });
+    Cursos.create(cursos)
+        .then(data => {
+            res.send(data);
         })
         .catch(err => {
             res.status(500).send({
@@ -41,7 +36,7 @@ exports.create = (req, res) => {
 // Retrieve all usuarios from the database.
 exports.findAll = (req, res) => {
 
-    Usuario.findAll()
+    Cursos.findAll()
         .then(data => {
             res.send(data);
         })
@@ -55,7 +50,7 @@ exports.findAll = (req, res) => {
 // Find a single usuario with an id
 exports.findOne = (req, res) => {
     let id = req.params.id;
-    Usuario.findByPk(id)
+    Cursos.findByPk(id)
         .then(data => {
             console.log("estos son los datos")
             console.log(data);
@@ -82,16 +77,12 @@ exports.update = (req, res) => {
     let id = req.body.id;
 
 
-    const usuario = {
-        idUsuarios: req.body.Id_usuario,
-        Username: req.body.Username,
-        Password:req.body.Password,
-        Nombre: req.body.Nombre,
-        Apellidos: req.body.Apellido,
-        Rol: req.body.Rol,
-        Id_Centro: req.body.Id_Centro
+    const cursos = {
+        idCursos: req.body.idCursos,
+        nombre: req.body.nombre,
+        isla: req.body.isla
     };
-    Usuario.update(id)
+    Cursos.update(id)
         .then(data => {
             res.send(data);
         })
@@ -105,7 +96,7 @@ exports.update = (req, res) => {
 // Delete a Tutorial with the specified id in the request
 exports.delete = (req, res) => {
     let id = req.params.id;
-    Usuario.delete(id)
+    Cursos.delete(id)
         .then(data => {
             res.send(data);
         })

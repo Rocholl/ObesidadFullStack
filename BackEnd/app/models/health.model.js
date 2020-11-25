@@ -1,5 +1,5 @@
 module.exports = (sequelize, Sequelize) => {
-    const Health = sequelize.define("health", {
+    const Health = sequelize.define("healths", {
         idHealth: {
             type: Sequelize.INTEGER,
             primaryKey: true
@@ -23,7 +23,7 @@ module.exports = (sequelize, Sequelize) => {
     }, { timestamps: false });
     Health.associate = function(models) {
         // associations can be defined here
-        Health.belongsTo(models.Centro, {
+        Health.belongsToMany(models.centros, {
           through: 'centro_Datos',
           as: 'fk_Id_Datos',
           foreignKey: 'idDatos',
