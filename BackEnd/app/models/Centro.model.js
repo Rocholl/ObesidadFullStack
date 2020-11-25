@@ -16,13 +16,7 @@ module.exports = (sequelize, Sequelize) => {
         },long: {
             type: Sequelize.DOUBLE            
         },
-        idMunicipio: {
-            type: Sequelize.INTEGER,
-            references: {
-                model: 'Municipio', // 'persons' refers to table name
-                key: 'Id_Municipio', // 'id' refers to column name in persons table
-             }
-        }
+     
 
       
     }, { timestamps: false,
@@ -32,12 +26,9 @@ module.exports = (sequelize, Sequelize) => {
            as:"fk_usu_Id_Centro",
            foreignKey:{
             name: "idCentros"
-          }
-          
-             
-            }),
-            Centro.belongsTo(models.municipios
-              ),
+          }}) ,
+           
+            
               Centro.belongsToMany(models.healths, {
                 through: 'centro_Datos',
                 as: 'fkIdHeal',
