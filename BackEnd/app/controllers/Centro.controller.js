@@ -1,5 +1,5 @@
 const db = require("../models");
-const Centro = db.centro;
+const Centro = db.centros;
 const Op = db.Sequelize.Op;
 
 // Create and Save a new Centro
