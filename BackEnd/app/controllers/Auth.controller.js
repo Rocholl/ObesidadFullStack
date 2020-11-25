@@ -7,11 +7,11 @@ module.exports=
 {   
     signIn(req,res){
 
-        let{Username,Password}= req.body;
+        let{username,password}= req.body;
         console.log(req.body);
         Usuario.findOne({
             where:{
-                Username: Username
+                username: username
 
             }
         }).then( async usuario=>{

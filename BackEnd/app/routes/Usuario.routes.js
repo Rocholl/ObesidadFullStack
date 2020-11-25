@@ -18,7 +18,8 @@ module.exports = app => {
     // Delete a Usuario with id
     router.delete("/:id", Usuario.delete);
 
-
+    // Add a Centro to a user
+    // Add a Curso to a user
     router.post('/signin/',Auth.signIn);
 
     app.use('/api/usuario', router);

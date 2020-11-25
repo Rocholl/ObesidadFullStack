@@ -1,6 +1,6 @@
 module.exports = (sequelize, Sequelize) => {
     const Municipio = sequelize.define("municipios", {
-        idMunicipio: {
+        idMunicipios: {
             type: Sequelize.INTEGER,
             primaryKey: true
         },
@@ -19,7 +19,8 @@ module.exports = (sequelize, Sequelize) => {
     Municipio.associate = function(models) {
         Municipio.hasMany(models.centros, {
        
-          as: 'fk_Id_Centros'
+          as: 'fk_Id_Municipios',
+          foreignKey: 'idMunicipios'
          
         })
     };

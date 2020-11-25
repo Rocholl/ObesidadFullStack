@@ -115,3 +115,53 @@ exports.delete = (req, res) => {
             });
         });
 };
+exports.addCursos= (req,res)=>{
+    let idUsuarios = req.params.idUsuario;
+    let idCursos = req.params.idCursos ;
+    Usuario.findByPk(idUsuarios)
+.then(usuario => {
+
+    if (!data) {
+        res.status(400).send({
+            message: "No usuario found with that id"
+        })
+    }
+    usuario.setCursos(idCursos);
+  
+})
+.catch(err => {
+    console.log(err.message);
+ 
+    res.status(500).send({
+        message: err.message || "Some error occurred while retrieving usuario with id"
+    });
+    return;
+});
+
+
+}
+exports.addCentro= (req,res)=>{
+let idUsuarios = req.params.idUsuario;
+let idCentro = req.params.IdCentro;
+Usuario.findByPk(idUsuarios)
+.then(usuario => {
+
+    if (!data) {
+        res.status(400).send({
+            message: "No usuario found with that id"
+        })
+    }
+    usuario.setCentro(idCentro);
+  
+})
+.catch(err => {
+    console.log(err.message);
+ 
+    res.status(500).send({
+        message: err.message || "Some error occurred while retrieving usuario with id"
+    });
+    return;
+});
+
+
+}

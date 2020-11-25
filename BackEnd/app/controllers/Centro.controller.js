@@ -16,10 +16,11 @@ exports.create = (req, res) => {
     // Create a Centro
     const centro = {
         idCentro: req.body.Id_Centro,
-        Nombre: req.body.Nombre,
-        Coordenadas:req.body.Coordenadas,
-        idMunicipio: req.body.idMunicipio,
-        Codigo_Postal:  parseInt(req.body.Codigo_Postal) 
+        nombre: req.body.nombre,
+        codigo_Postal:req.body.codigo_Postal,
+        idMunicipios : req.body.idMunicipios ,
+        lat:  parseDouble(req.body.lat) ,
+        long:  parseDouble(req.body.long) 
       
     };
 
@@ -81,11 +82,11 @@ exports.update = (req, res) => {
 
     const centro = {
         idCentro: req.body.Id_Centro,
-        Nombre: req.body.Nombre,
-        Coordenadas:req.body.Coordenadas,
-        idMunicipio: req.body.idMunicipio,
-        Codigo_Postal:  parseInt(req.body.Codigo_Postal) 
-      
+        nombre: req.body.nombre,
+        codigo_Postal:req.body.codigo_Postal,
+        idMunicipios : req.body.idMunicipios ,
+        lat:  parseDouble(req.body.lat) ,
+        long:  parseDouble(req.body.long) 
     };
     Centro.update(id)
         .then(data => {
