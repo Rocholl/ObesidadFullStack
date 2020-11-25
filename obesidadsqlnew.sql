@@ -23,7 +23,8 @@ SET time_zone = "+00:00";
 --
 
 -- --------------------------------------------------------
-
+DROP DATABASE obesidadsql;
+CREATE DATABASE obesidadsql;
 --
 -- Estructura de tabla para la tabla `centros`
 --
