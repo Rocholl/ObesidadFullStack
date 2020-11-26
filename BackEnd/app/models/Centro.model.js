@@ -29,9 +29,9 @@ module.exports = (sequelize, Sequelize) => {
           }}) ,
            
             
-              Centro.belongsToMany(models.healths, {
-                through: 'centro_Datos',
-                as: 'fkIdHeal',
+              Centro.hasMany(models.healths, {
+                
+                as: 'Centro',
                 foreignKey: "idCentros"
               })
         };

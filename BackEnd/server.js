@@ -31,6 +31,7 @@ sequelize.sync();
 require("./app/routes/Usuario.routes")(app);
 require("./app/routes/Municipio.routes")(app);
 require("./app/routes/Centro.routes")(app);
+require("./app/routes/health.routes")(app);
 
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;

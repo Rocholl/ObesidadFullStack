@@ -1,5 +1,5 @@
 const db = require("../models");
-const Centro = db.centro;
+const Centro = db.centros;
 const Op = db.Sequelize.Op;
 
 // Create and Save a new Centro
@@ -14,20 +14,20 @@ exports.create = (req, res) => {
     }*/
 
     // Create a Centro
-    const centro = {
-        idCentro: req.body.Id_Centro,
+  
+
+    // Save Centro in the database
+    Centro.create({
+        idCentro: req.body.idCentro,
         nombre: req.body.nombre,
         codigo_Postal:req.body.codigo_Postal,
         idMunicipios : req.body.idMunicipios ,
-        lat:  parseDouble(req.body.lat) ,
-        long:  parseDouble(req.body.long) 
+        lat:  parseFloat(req.body.lat) ,
+        long: parseFloat(req.body.long) 
       
-    };
-
-    // Save Centro in the database
-    Centro.create(centro)
-        .then(data => {
-            res.send(data);
+    })
+        .then(centro => {
+            res.send(centro);
         })
         .catch(err => {
             res.status(500).send({
