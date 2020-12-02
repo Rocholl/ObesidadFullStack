@@ -12,20 +12,19 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class HealthsService {
- 
-  constructor(private http: HttpClient) { }
-  getCentros(id:number): Observable<any[]> {
- 
-    let bodyEncoded = new URLSearchParams();
-    bodyEncoded.append("idCentros", id);
-    let body = bodyEncoded.toString();
 
-    return this.http.post(apiUrl, body, httpOptions);
-    
-      // .pipe(
-      //   tap(bicycle => console.log('fetched bicycles'))
-      //   // ,
-      //   // catchError(this.handleError('getBicycles', []))
-      // );
+  constructor(private http: HttpClient) { }
+
+
+  getAll(): Observable<Healths[]> {
+
+    console.log(apiUrl, httpOptions);
+    return this.http.get<Healths[]>(apiUrl);
+
+    // .pipe(
+    //   tap(bicycle => console.log('fetched bicycles'))
+    //   // ,
+    //   // catchError(this.handleError('getBicycles', []))
+    // );
   };
 }

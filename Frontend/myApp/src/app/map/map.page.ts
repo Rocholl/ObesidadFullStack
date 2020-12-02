@@ -5,6 +5,7 @@ import { CentrosService } from '../services/centros.service';
 import { Centro } from '../Models/Centro';
 import { HealthsService } from '../services/healths.service';
 import { Healths } from '../Models/Healths';
+import { MapArray } from '../Models/mapArray';
 
 declare var google: any;
 
@@ -25,66 +26,136 @@ export class MapPage implements OnInit {
   @ViewChild('map', { read: ElementRef, static: false }) mapRef: ElementRef;
   infoWindows: any = [];
   focusmapLat = 28.1248;
-  focusmapLong= -15.43;
-  centro : Centro[];
-  health: Healths[];
+  focusmapLong = -15.43;
+  centros: Centro[];
+  mapMarkers: any[] = [];
+
   constructor(
     private menuCtrl: MenuController,
-    private centroService:CentrosService,
-    private healthService:HealthsService) {    this.getAllCentros();}
-    ionViewWillEnter(){
-   
-    }
+    private centroService: CentrosService,
+    private healthService: HealthsService) {
+
+
+    this.getAllCentros();
+
+  }
+  ionViewWillEnter() {
+
+  }
   ngOnInit() {
   }
-  getAllHealth(id){
-    this.healthService.getCentros(id).subscribe(health=>{
-      this.health= health;
+  getAllHealth() {
+    this.healthService.getAll().subscribe(healths => {
+
+      console.log(healths);
+
+      for (let centro of this.centros) {
+        let marker = new MapArray;
+
+
+        let mediaGrasa = 0;
+        let mediaViseral = 0;
+        let i = 0;
+        let media1: number[] = [0];
+        let media2: number[] = [0];
+        for (let health of healths) {
+
+          if (centro.idCentro == health.idCentros) {
+
+            media1.push(health.masa_Grasa);
+            media2.push(health.masa_Viseral);
+          }
+        }
+        let sum = media1.reduce((previous, current) => current += previous);
+        mediaGrasa = sum / media1.length;
+        sum = media2.reduce((previous, current) => current += previous);
+        mediaViseral = sum / media2.length;
+        marker.idCentro = centro.idCentro;
+        marker.nombre = centro.nombre;
+        marker.lat = centro.lat;
+        marker.long = centro.long;
+        marker.masa_Grasa = mediaGrasa;
+        marker.masa_Grasa = mediaViseral;
+
+        if (mediaGrasa < 7) {
+          marker.type = "alto";
+        } else if (mediaGrasa > 7 && mediaGrasa < 5) {
+          marker.type = "medio";
+        } if (mediaGrasa < 5) {
+          marker.type = "bajo";
+        } else {
+          marker.type = "default";
+        }
+
+
+
+
+        this.mapMarkers.push(marker);
+
+
+
+      }
     })
 
 
 
   }
-  getAllCentros(){
-    this.centroService.getCentros().subscribe( centros => {
-      this.centro = centros;
-      
+
+  getAllCentros() {
+    this.centroService.getCentros().subscribe(centros => {
+      this.centros = centros;
+      this.getAllHealth();
     });
-}
+  }
   ionViewDidEnter() {
     this.showMap();
   }
   addMarkersToMap() {
-    console.log(this.centro);
-    for (let centro of this.centro) {
-      let sumMasa_Grasa:number;
-      let sumMasa_Viseral:number;
-      this.getAllHealth(centro.idCentro);
-      console.log(this.health);
-      for(let health of this.health){
-        sumMasa_Grasa += health.masa_Grasa;
-        sumMasa_Viseral+=health.masa_Viseral;
-
+    const iconBase = "https://maps.google.com/mapfiles/kml/paddle/";
+    const icons: Record<string, any> = {
+      alto: {
+        name: "Alto",
+        icon: iconBase + "parking_lot_maps.png",
+      },
+      medio: {
+        name: "Medio",
+        icon: iconBase + "ylw-blank.png",
+      },
+      bajo: {
+        name: "Bajo",
+        icon: iconBase + "grn-blank.png",
+      },
+      default: {
+        name: "Default",
+        icon: iconBase + "wht-blank.png",
       }
-      let position = new google.maps.LatLng(centro.lat, centro.long);
-      let mapMarker = new google.maps.Marker({
+    };
+    console.log(this.mapMarkers);
+    for (let marker of this.mapMarkers) {
+      let mapMarker = null;
+      let position = new google.maps.LatLng(marker.lat, marker.long);
+      mapMarker = new google.maps.Marker({
         position: position,
-        title: centro.nombre,
-        masa_grasa: sumMasa_Grasa,
-        latitude: centro.lat,
-        longitude: centro.long
+        title: marker.nombre,
+        masa_grasa: marker.masa_Grasa,
+        masa_viseral: marker.masa_Viseral,
+        latitude: marker.lat,
+        longitude: marker.long,
+        icon: icons[marker.type].icon
       });
-
       mapMarker.setMap(this.map);
       this.addInfoWindowToMarker(mapMarker);
+
     }
+
   }
   addInfoWindowToMarker(marker) {
     let infoWindowContent = '<div id="content">' +
-                              '<h2 id="firstHeading" class"firstHeading">' + marker.title + '</h2>' +
-                              '<p>Latitude: ' + marker.latitude + '</p>' +
-                              '<p>Longitude: ' + marker.longitude + '</p>' +
-                            '</div>';
+      '<h2 id="firstHeading" class"firstHeading">' + marker.title + '</h2>' +
+      '<p>Latitude: ' + marker.latitude + '</p>' +
+      '<p>Longitude: ' + marker.longitude + '</p>' +
+      '<p>Masa Grasa: ' + marker.masa_grasa + '</p>' +
+      '</div>';
 
     let infoWindow = new google.maps.InfoWindow({
       content: infoWindowContent
@@ -97,12 +168,12 @@ export class MapPage implements OnInit {
     this.infoWindows.push(infoWindow);
   }
   closeAllInfoWindows() {
-    for(let window of this.infoWindows) {
+    for (let window of this.infoWindows) {
       window.close();
     }
   }
   showMap() {
-    const location = new google.maps.LatLng(this.focusmapLat,this.focusmapLong);
+    const location = new google.maps.LatLng(this.focusmapLat, this.focusmapLong);
     const options = {
       center: location,
       zoom: 15,

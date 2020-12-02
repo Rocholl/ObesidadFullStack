@@ -10,7 +10,7 @@ module.exports = app => {
     router.get("/", Health.findAll);
 
   // Delete a health with id
-  router.get("/centro/", Health.findHealthbyCentro);
+  router.get("/centro/:id", Health.findHealthbyCentro);
 
     app.use('/api/health', router);
 };

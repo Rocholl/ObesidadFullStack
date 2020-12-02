@@ -64,9 +64,10 @@ exports.findAll = (req, res) => {
 };
 
 exports.findHealthbyCentro= (req,res)=>{
+    console.log(req.params.id);
     Healths.findAll({
        
-      where: { idCentros: req.body.idCentros }
+      where: { idCentros: req.params.id }
     }).then(data =>{
         res.send(data);
     }) .catch(err => {

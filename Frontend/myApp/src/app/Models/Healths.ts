@@ -6,4 +6,5 @@ export class Healths{
 
     masa_Viseral: number;
     idCursos: number;
+    idCentros:number;
 }
