@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AlertController } from '@ionic/angular';
+import { Usuario } from '../Models/Usuario';
+import { ObjectSenderService } from '../service/object-sender.service';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -6,10 +11,48 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
-
-  constructor() { }
+  constructor(
+    private router: Router, 
+    private authService: AuthService, 
+    private alertController: AlertController,
+    private obj:ObjectSenderService
+    ) { }
 
   ngOnInit() {
   }
 
+  login(form){
+    let user: Usuario = {
+      id: null,
+      username: form.value.email,
+      password: form.value.password,
+      nombre: null,
+      apellidos: null,
+      rol: null,
+      idCentros: null
+    };
+    this.authService.login(user).subscribe((res)=>{
+      if(!res.token) {
+        this.presentAlert("invalid credentials");
+        return;
+      }
+      this.obj.sendObjectSource(res.usuario);
+      this.router.navigateByUrl('/user-page');
+      form.reset();
+    }, err => {
+      this.presentAlert("Error");
+    });
+  }
+
+  async presentAlert(message: string) {
+    const alert = await this.alertController.create({
+      cssClass: 'my-custom-class',
+      header: 'Error',
+      subHeader: message,
+      message: 'Could not login. Try again.',
+      buttons: ['OK']
+    });
+
+    await alert.present();
+  }
 }

@@ -1,36 +1,41 @@
+<ion-menu side="start" menuId="main-menu" contentId="main">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>Start Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
 
-    <ion-menu side="start" menuId="main-menu" contentId="main">
-      <ion-header>
-        <ion-toolbar color="primary">
-          <ion-title>Start Menu</ion-title>
-        </ion-toolbar>
-      </ion-header>
-      <ion-content>
-        <ion-list>
-          <ion-item>Login</ion-item>
-          <ion-item>Sobre nosotros</ion-item>
-          <ion-item>Terminos de uso</ion-item>
-          <ion-item>Cerrar sesion</ion-item>
-        </ion-list>
-      </ion-content>
-    </ion-menu>
-    
-    
-    
-    <ion-menu side="end" type="push" contentId="main">
-      <ion-header>
-        <ion-toolbar color="danger">
-          <ion-title>End Menu</ion-title>
-        </ion-toolbar>
-      </ion-header>
-      <ion-content>
-        <ion-list>
-          <ion-item>Login</ion-item>
-          <ion-item>Sobre nosotros</ion-item>
-          <ion-item>Terminos de uso</ion-item>
-          <ion-item>Cerrar sesion</ion-item>
-    
-        </ion-list>
-      </ion-content>
-    </ion-menu>
-    
+      <ion-button expand="full" href="/login">
+        Login
+      </ion-button>
+      <ion-button expand="full" (click)="onClick()">
+        Sobre nosotros
+      </ion-button>
+      <ion-button expand="full" (click)="onClick()">
+        Terminos de uso
+      </ion-button>
+
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+
+
+<ion-menu side="end" type="push" contentId="main">
+  <ion-header>
+    <ion-toolbar color="danger">
+      <ion-title>End Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item>Login</ion-item>
+      <ion-item>Sobre nosotros</ion-item>
+      <ion-item>Terminos de uso</ion-item>
+      <ion-item>Cerrar sesion</ion-item>
+
+    </ion-list>
+  </ion-content>
+</ion-menu>
