@@ -3,7 +3,7 @@ module.exports = (sequelize, Sequelize) => {
        
 
       
-    }, { timestamps: true });
+    }, { timestamps: false });
    
     return usuario_Curso;
 };

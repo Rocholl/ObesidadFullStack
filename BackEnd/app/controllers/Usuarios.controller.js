@@ -4,6 +4,8 @@ const Op = db.Sequelize.Op;
 const bcrypt = require('bcrypt');
 const jst = require('jsonwebtoken');
 const authConfig = require('../config/Auth.config.js');
+
+
 // Create and Save a new usuario
 // req --> request (contains the body)
 exports.create = (req, res) => {
@@ -140,18 +142,46 @@ exports.addCursos= (req,res)=>{
 
 
 }
+exports.Class=(req,res)=>{
+    Usuario.findByPk(req.params.id)
+    .then(usuario => {
+    
+        if (!usuario) {
+            res.status(400).send({
+                message: "No usuario found with that id"
+            })
+        }
+       
+        usuario.getCursos().then(data=>{
+            console.log(data)
+            res.send(data)
+        })
+        return;
+    })
+    .catch(err => {
+        console.log(err.message);
+     
+        res.status(500).send({
+            message: err.message || "Some error occurred while retrieving usuario with id"
+        });
+        return;
+    });
+    
+
+}
+
 exports.addCentro= (req,res)=>{
 let idUsuarios = req.params.idUsuario;
 let idCentro = req.params.IdCentro;
 Usuario.findByPk(idUsuarios)
-.then(usuario => {
+.then(data => {
 
     if (!data) {
         res.status(400).send({
             message: "No usuario found with that id"
         })
     }
-    usuario.setCentro(idCentro);
+    data.setCentro(idCentro);
   
 })
 .catch(err => {

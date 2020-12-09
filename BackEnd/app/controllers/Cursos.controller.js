@@ -1,7 +1,8 @@
 const db = require("../models");
 const Cursos = db.cursos;
 const Op = db.Sequelize.Op;
-
+const usuario_Curso= db.usuario_Cursos;
+const Usuario = db.usuarios;
 // Create and Save a new usuario
 // req --> request (contains the body)
 exports.create = (req, res) => {
@@ -36,7 +37,10 @@ exports.create = (req, res) => {
 // Retrieve all usuarios from the database.
 exports.findAll = (req, res) => {
 
-    Cursos.findAll()
+    Cursos.findAll({
+        where:{}
+
+    })
         .then(data => {
             res.send(data);
         })
@@ -46,6 +50,10 @@ exports.findAll = (req, res) => {
             });
         });
 };
+
+
+
+
 
 // Find a single usuario with an id
 exports.findOne = (req, res) => {

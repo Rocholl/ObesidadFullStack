@@ -15,7 +15,7 @@ export class LoginPage implements OnInit {
     private router: Router, 
     private authService: AuthService, 
     private alertController: AlertController,
-    private obj:ObjectSenderService
+    private objSender:ObjectSenderService
     ) { }
 
   ngOnInit() {
@@ -36,7 +36,8 @@ export class LoginPage implements OnInit {
         this.presentAlert("invalid credentials");
         return;
       }
-      this.obj.sendObjectSource(res.usuario);
+      console.log(res.usuario)
+      this.objSender.sendObjectSource(res.usuario);
       this.router.navigateByUrl('/user-page');
       form.reset();
     }, err => {

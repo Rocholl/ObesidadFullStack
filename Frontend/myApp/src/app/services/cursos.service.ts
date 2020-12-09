@@ -1,8 +1,8 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Centro } from '../Models/Centro';
-const apiUrl = 'http://localhost:8080/api/centro/';
+import { Cursos } from '../Models/Cursos';
+const apiUrl = 'http://localhost:8080/api/';
 const httpOptions = {
   headers: new HttpHeaders({
     'Content-Type': 'application/x-www-form-urlencoded',
@@ -11,14 +11,13 @@ const httpOptions = {
 @Injectable({
   providedIn: 'root'
 })
-
-export class CentrosService {
+export class CursosService {
 
   constructor(private http: HttpClient) { }
 
-  getCentros(): Observable<Centro[]> {
+  getCursos(): Observable<Cursos[]> {
  
-    return this.http.get<Centro[]>(apiUrl);
+    return this.http.get<Cursos[]>(apiUrl+"class/");
     
       // .pipe(
       //   tap(bicycle => console.log('fetched bicycles'))
@@ -26,14 +25,15 @@ export class CentrosService {
       //   // catchError(this.handleError('getBicycles', []))
       // );
   };
-  getCentroId(id): Observable<Centro> {
+  getCursosByUserId(id): Observable<Cursos[]> {
+ 
+    return this.http.get<Cursos[]>(apiUrl+"usuariofindByUser/"+id);
+    
+      // .pipe(
+      //   tap(bicycle => console.log('fetched bicycles'))
+      //   // ,
+      //   // catchError(this.handleError('getBicycles', []))
+      // );
+  };
   
-    return this.http.get<Centro>(apiUrl+id);
-    
-      // .pipe(
-      //   tap(bicycle => console.log('fetched bicycles'))
-      //   // ,
-      //   // catchError(this.handleError('getBicycles', []))
-      // );
-  };
 }

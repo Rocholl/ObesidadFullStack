@@ -21,7 +21,7 @@ module.exports = (sequelize, Sequelize) => {
         Curso.belongsToMany(models.usuarios, {
             through: 'usuario_Cursos',
             as: 'fk_Id_Curso',
-            foreignKey: 'idCurso',
+            foreignKey: 'idCursos',
           })
         Curso.hasMany(models.healths,{
 

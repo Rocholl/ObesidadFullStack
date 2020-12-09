@@ -1,9 +1,30 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>UserPage</ion-title>
+  <ion-toolbar color="primary">
+      <ion-title>Profesor: {{user.nombre}}</ion-title>
+
+      <ion-buttons slot="start">
+          <ion-button (click)="toggleMenu()" color="secondary" expand="block" fill="clear" shape="round">
+              <ion-icon slot="start" name="menu"></ion-icon>
+          </ion-button>
+      </ion-buttons>
+
   </ion-toolbar>
 </ion-header>
-
 <ion-content>
-
+  <ion-item>
+    <ion-label>Nombre:{{user.nombre+user.apellidos}}</ion-label>
+    
+  </ion-item>
+  <ion-item>
+    <ion-label>Centro:{{centro.nombre}}</ion-label>
+    
+  </ion-item>
+  <ion-list *ngFor='let curso of cursos'>
+    <ion-item>
+      <ion-label>Curso:{{curso.Curso}}</ion-label>
+      <ion-label>Letra:{{curso.Letra}}</ion-label>
+    </ion-item>
+  </ion-list>
+ 
+ 
 </ion-content>

@@ -59,11 +59,11 @@ app.use(function (req, res, next) {
       }
     });
   });
-require("./app/routes/Usuario.routes")(app);
-require("./app/routes/Municipio.routes")(app);
-require("./app/routes/Centro.routes")(app);
+require("./app/routes/user.routes")(app);
+require("./app/routes/municipality.routes")(app);
+require("./app/routes/center.routes")(app);
 require("./app/routes/health.routes")(app);
-
+require("./app/routes/class.routes")(app);
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, function () {

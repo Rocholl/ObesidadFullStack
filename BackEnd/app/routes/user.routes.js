@@ -16,7 +16,7 @@ module.exports = app => {
     router.put("/:id", Usuario.update);
 
     // Delete a Usuario with id
-    router.delete("/:id", Usuario.delete);
+    router.get("/getUserAndClass/:id", Usuario.getClass);
 
     // Add a Centro to a user
     // Add a Curso to a user

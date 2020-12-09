@@ -16,7 +16,7 @@ export class HealthsService {
   constructor(private http: HttpClient) { }
 
 
-  getAll(): Observable<Healths[]> {
+  getAllbyCentro(): Observable<Healths[]> {
 
     console.log(apiUrl, httpOptions);
     return this.http.get<Healths[]>(apiUrl);

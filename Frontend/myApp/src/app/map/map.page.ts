@@ -44,7 +44,7 @@ export class MapPage implements OnInit {
   ngOnInit() {
   }
   getAllHealth() {
-    this.healthService.getAll().subscribe(healths => {
+    this.healthService.getAllbyCentro().subscribe(healths => {
 
       console.log(healths);
 
