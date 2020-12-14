@@ -39,10 +39,20 @@ export class HealthsService {
     return this.http.post(apiUrl, body, httpOptions);
 
   }
-
-  getAllbyCentro(): Observable<Healths[]> {
-
+  getByMunicipio(id): Observable<Healths[]> {
     console.log(apiUrl, httpOptions);
+    return this.http.get<Healths[]>(apiUrl+"municipio/"+id);
+
+    // .pipe(
+    //   tap(bicycle => console.log('fetched bicycles'))
+    //   // ,
+    //   // catchError(this.handleError('getBicycles', []))
+    // );
+  };
+
+  getAll(): Observable<Healths[]> {
+
+   
     return this.http.get<Healths[]>(apiUrl);
 
     // .pipe(

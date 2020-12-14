@@ -11,6 +11,6 @@ module.exports = app => {
 
   // Delete a health with id
   router.get("/centro/:id", Health.findHealthbyCentro);
-
+  router.get("/municipio/:id", Health.findHealthbyMunicipio);
     app.use('/api/health', router);
 };

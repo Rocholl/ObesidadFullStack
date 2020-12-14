@@ -46,7 +46,12 @@ exports.findAll = (req, res) => {
             });
         });
 };
+exports.findHealths =(req, res) => {
 
+
+
+
+}
 // Find a single usuario with an id
 exports.findOne = (req, res) => {
     let id = req.params.id;

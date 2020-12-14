@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuController } from '@ionic/angular';
 import { Storage } from '@ionic/storage';
 import { Centro } from '../Models/Centro';
 import { Usuario } from '../Models/Usuario';
@@ -18,8 +19,10 @@ export class UserPagePage implements OnInit {
   centro:Centro;
   
   constructor(private obj:ObjectSenderService,private centroService: CentrosService,
-    private healthService: HealthsService,private cursoService:CursosService,private storage:Storage) { }
-
+    private healthService: HealthsService,private cursoService:CursosService,private storage:Storage,private menuCtrl: MenuController) { }
+    toggleMenu() {
+      this.menuCtrl.toggle();
+    }
   ngOnInit() {
     this.storage.get("user").then(data=>{
       this.user= data;

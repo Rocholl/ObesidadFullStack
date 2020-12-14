@@ -16,18 +16,18 @@
 <ion-content>
   <form  #form="ngForm" (ngSubmit)="login(form)">
     <ion-item lines="full">
-      <ion-label position="floating">Email</ion-label>
-      <ion-input  name="email" type="email" placeholder="your@email.com" ngModel ></ion-input>
+      <ion-label position="floating">User</ion-label>
+      <ion-input  name="email" type="email" placeholder="Usuario" ngModel ></ion-input>
     </ion-item>
 
     <ion-item lines="full">
       <ion-label position="floating">Password</ion-label>
-      <ion-input name="password" type="password" placeholder="Password" ngModel required></ion-input>
+      <ion-input name="password" type="password" placeholder="Contraseña" ngModel required></ion-input>
     </ion-item>
 
     <ion-row>
       <ion-col>
-        <ion-button type="submit"  expand="block">Sign In</ion-button>
+        <ion-button type="submit" [disabled]="!form.valid" expand="block">Sign In</ion-button>
   
       </ion-col>
     </ion-row>

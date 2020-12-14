@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AlertController } from '@ionic/angular';
+import { AlertController, MenuController } from '@ionic/angular';
 import { Storage } from '@ionic/storage';
 import { Usuario } from '../Models/Usuario';
 import { ObjectSenderService } from '../service/object-sender.service';
@@ -17,12 +17,15 @@ export class LoginPage implements OnInit {
     private authService: AuthService, 
     private alertController: AlertController,
     private objSender:ObjectSenderService,
-    private storage:Storage
+    private storage:Storage,
+    private menuCtrl: MenuController
     ) { }
 
   ngOnInit() {
   }
-
+  toggleMenu() {
+    this.menuCtrl.toggle();
+  }
   login(form){
     let user: Usuario = {
       id: null,

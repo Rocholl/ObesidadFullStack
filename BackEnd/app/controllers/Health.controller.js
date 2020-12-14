@@ -1,8 +1,10 @@
 const db = require("../models");
-
+const sequelize = require("../models/index");
 const Healths = db.healths;
 const Op = db.Sequelize.Op;
 const Centro = db.centros;
+const { QueryTypes } = require('sequelize');
+const { Sequelize } = require("../models");
 // Create and Save a new usuario
 // req --> request (contains the body)
 exports.create = (req, res) => {
@@ -65,6 +67,18 @@ exports.findAll = (req, res) => {
             });
         });
 };
+exports.findHealthbyMunicipio= (req,res)=>{
+ db.sequelize.query(`SELECT * from healths INNER JOIN centros   
+    ON healths.idCentros = centros.idCentro 
+ HAVING centros.idMunicipios =` +req.params.id).then((result) => {
+    res.json(result);
+ }).catch((err) => {
+    res.status(500).send({
+        message: err.message || "Some error occurred while retrieving Healths."
+    });
+ });
+
+}
 
 exports.findHealthbyCentro= (req,res)=>{
     console.log(req.params.id);

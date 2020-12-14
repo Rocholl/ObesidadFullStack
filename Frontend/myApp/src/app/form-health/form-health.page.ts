@@ -12,6 +12,7 @@ import { ObjectSenderService } from '../service/object-sender.service';
 import { Storage } from '@ionic/storage';
 import { Centro } from '../Models/Centro';
 import { Healths } from '../Models/Healths';
+import { AlertController, MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-form-health',
@@ -25,8 +26,11 @@ export class FormHealthPage implements OnInit {
   centro: Centro;
   curso: Cursos;
   isSubmitted = false;
-  constructor(private router: Router, private auth: AuthService, private healthService: HealthsService, private centroService: CentrosService, private storage: Storage, public formBuilder: FormBuilder) { }
-
+  health:Healths;
+  constructor(private router: Router,private menuCtrl: MenuController,private alertController:AlertController, private auth: AuthService, private healthService: HealthsService, private centroService: CentrosService, private storage: Storage, public formBuilder: FormBuilder) { }
+  toggleMenu() {
+    this.menuCtrl.toggle();
+  }
   ngOnInit() {
     if (!this.auth.isLoggedIn()) {
       this.router.navigateByUrl("/login");
@@ -73,12 +77,22 @@ export class FormHealthPage implements OnInit {
       peso: this.ionicForm.controls["peso"].value,
       edad: this.ionicForm.controls["edad"].value,
     }
+   
     this.healthService.postHealth(health).subscribe((res) => {
 
-
+      this.handleButtonClick(health);
       this.ionicForm.reset();
     });
 
+  }
+  async handleButtonClick(health) {
+    const alert = await this.alertController.create({
+      header: 'Usuario creado',
+      message: "Id: "+health.idHealths,
+      buttons: ['Agree']
+    });
+
+    await alert.present();
   }
   compareWith(o1: Cursos, o2: Cursos) {
     return o1 && o2 ? o1.idCursos === o2.idCursos : o1 === o2;

@@ -8,8 +8,10 @@ import { MenuController } from '@ionic/angular';
 })
 export class HomePage {
 
-  constructor() {}
-
+  constructor(private menuCtrl: MenuController) {}
+  toggleMenu() {
+    this.menuCtrl.toggle();
+  }
 
   }
 
