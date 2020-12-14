@@ -44,7 +44,7 @@ Here we will see about the data model
  - a usuario has many cursos and a curso has many usuario
 
 ### E/R Diagram
-![Image text]
+ <p align="center"> <img src="https://github.com/Rocholl/ObesidadFullStack/blob/Tests/Documentacion/entidad-relacion.png?raw=true" width="350"/> <img  width="350"/> </p> 
 
 ### Relational Model
 Usuario(**IdUsuario**,Username,Password,Email,Nombre,Apellidos,Rol,IdCentro*)
@@ -69,10 +69,11 @@ Centro(**Id_Centro**,nombre,lat,long,codigo_Postal,IdMunicipio*)
 
 Municipio(**Id_Municipio**,Nombre,Isla)
 ### Class diagram
-![Image text]
+ <p align="center"> <img src="https://github.com/Rocholl/ObesidadFullStack/blob/Tests/Documentacion/class-diagram.png?raw=true" width="350"/> <img  width="350"/> </p> 
+
 ### Sql Code
 
-[Sql link](https://github.com/Rocholl/ObesidadFullStack/blob/Develop/obesidadsql.sql)
+[Sql link](https://github.com/Rocholl/ObesidadFullStack/blob/Tests/obesidadsql.sql)
 ## User requirements
 
  - Platform:
@@ -83,7 +84,8 @@ Municipio(**Id_Municipio**,Nombre,Isla)
  - Only teachers can access the menu to add a record.
 
 ## Use case
-![Image text]
+ <p align="center"> <img src="https://github.com/Rocholl/ObesidadFullStack/blob/Tests/Documentacion/use_case.png?raw=true" width="350"/> <img  width="350"/> </p> 
+
 
 ## Technical specifications
 
@@ -92,7 +94,9 @@ Municipio(**Id_Municipio**,Nombre,Isla)
 
 ## Interfaces
 ### Color palette.
-![Image text]
+ <p align="center"> <img src="https://github.com/Rocholl/ObesidadFullStack/blob/Tests/Documentacion/paleta_colores.png?raw=true" width="350"/> <img  width="350"/> </p> 
+
+
 ### Usability
 
 
