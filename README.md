@@ -6,9 +6,15 @@ A project to control childhood obesity in schools.
 1. [General Info](#general-info)
 2. [Technologies](#technologies)
 3. [Data Model](#datamodel)
-3. [Installation](#installation)
-4. [Collaboration](#collaboration)
-5. [FAQs](#faqs)
+4. [Use case](#user-case)
+5. [User requirements](#user-requeriments)
+6. [Intefaces](#interfaces)
+7. [Installation instructions](#installation-instructions)
+8. [Tech Stack](#tech-stack)
+9. [Technology comparison](#technologycomparison)
+10. [Planning](#planning)
+11. [Repositories](#repositories)
+12.  [Conclusion](#conclusion)
 ### General Info
 ***
 
