@@ -1,7 +1,7 @@
 # Proyecto Obesidad
 
- <p align="center"> <img src="https://i2.wp.com/www3.gobiernodecanarias.org/medusa/edublog/ieselrincon/wp-content/uploads/sites/137/2019/10/cropped-sin-titulo-4.png?fit=512%2C512" width="350"/>  </p> 
-A project to control childhood obesity in schools.
+ <p align="center"> <img src="https://i2.wp.com/www3.gobiernodecanarias.org/medusa/edublog/ieselrincon/wp-content/uploads/sites/137/2019/10/cropped-sin-titulo-4.png?fit=512%2C512" width="350"/></p> 
+
 ## Table of Contents
 1. [General Info](#general-info)
 2. [Technologies](#technologies)
