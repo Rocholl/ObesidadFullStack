@@ -1,6 +1,6 @@
 # Proyecto Obesidad
-![Image text]("https://i2.wp.com/www3.gobiernodecanarias.org/medusa/edublog/ieselrincon/wp-content/uploads/sites/137/2019/10/cropped-sin-titulo-4.png?fit=512%2C512)
-
+![Image text]("https://i2.wp.com/www3.gobiernodecanarias.org/medusa/edublog/ieselrincon/wp-content/uploads/sites/137/2019/10/cropped-sin-titulo-4.png?fit=512%2C512")
+ <p align="center"> <img src="your_relative_path_here" width="350"/> <img src="your_relative_path_here_number_2_large_name" width="350"/> </p> 
 A project to control childhood obesity in schools.
 ## Table of Contents
 1. [General Info](#general-info)
