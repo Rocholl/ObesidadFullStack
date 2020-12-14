@@ -235,3 +235,22 @@ Enjoy!!!
  - [Ionic Team Docs](https://github.com/ionic-team/ionic-framework)
  - [Obesidad FullStack by Carlos Rocholl](https://github.com/Rocholl/ObesidadFullStack)
 ## Conclusion
+El desarrollo basado en frameworks en de javascript me parecio increible tanto node como ionic tienen mucho apoyo de la comunidad y su documentacion es muy facil de entender.
+En cuanto al desarrollo de ionic:
+- Hay que tener en cuenta las promesas y los observables ya que tuve algunos problemas a la hora de mostrar datos por pantalla.
+- Ionic Storage es una buena herramienta para guarda datos(objetos en mi caso) el cual me facilito mucho a la hora de no invadir al servidor con demasiadas peticiones. Por ejemplo cuando te logueas vas a una pagina de presentacion del usuario, al entrar a esa pagina retiro los datos del storage y llamo a los servicios de centro y curso para luego guardarlos de nuevo y no tener que volver a llamarlos a la hora de crear un registro.
+- Al poder importar cualquier libreria de javascript y angular facilita el tema de validar formularios. Por ejemplo la api de google maps para js.
+En cuanto al desarrollo con nodeJS:
+- Aprendi un monton de las llamadas asincronas.
+- El ORM sequelize te permite hacer un monton de cosas y casi no utilice ninguna Raw Query(por tema de tiempo), te permite crear validaciones en el propio servidor y crear relaciones complejas(Ej: relacion many to many de usuario y cursos que con un simple metodo usuario.getCursos me devuelve un array con los cursos del usuario)
+- Poder ver en tiempo real las peticiones al servidor me ayudo bastante a la hora de encontrar fallos.
+En cuanto a la base de datos:
+- Mysql es problamente el sistema gestor de bases de datos mas utilizado en el mundo.
+- Tiene un monton de herramientas para crear las bases de datos asi como su relaciones.
+- Tiene compatibilidad con todo.
+Cosas que cambiaria o que me haya faltado tiempo para implementarlas.
+- Añadir filtros al mapa.
+- Controlar que todo este cargado antes de iniciar una pagina a travez de un loading.
+- Implementar ion-picker en vez de ion-select ya que seria mas comodo para dispositivos moviles.
+- Controlar con ionic guards las sesiones.(De esto me entero ya avanzado en el desarrollo).
+- Mejorar la pagina Home.
