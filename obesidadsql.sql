@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 23-11-2020 a las 18:16:23
+-- Tiempo de generación: 14-12-2020 a las 21:14:02
 -- Versión del servidor: 10.1.40-MariaDB
 -- Versión de PHP: 7.1.29
 
@@ -21,60 +21,125 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `obesidadsql`
 --
-create database obesidadsql;
-use obesidadsql;
+
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `centro`
+-- Estructura de tabla para la tabla `centros`
 --
 
-CREATE TABLE `centro` (
+CREATE TABLE `centros` (
   `idCentro` int(11) NOT NULL,
-  `Nombre` varchar(45) DEFAULT NULL,
-  `Coordenadas` varchar(100) DEFAULT NULL,
-  `Codigo_Postal` varchar(7) DEFAULT NULL,
-  `idMunicipio` int(11) NOT NULL
+  `nombre` varchar(45) DEFAULT NULL,
+  `codigo_Postal` varchar(7) DEFAULT NULL,
+  `idMunicipios` int(11) NOT NULL,
+  `lat` double DEFAULT NULL,
+  `long` double DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `centro`
+-- Volcado de datos para la tabla `centros`
 --
 
-INSERT INTO `centro` (`idCentro`, `Nombre`, `Coordenadas`, `Codigo_Postal`, `idMunicipio`) VALUES
-(0, 'IES Poeta Tomás Morales Castellano', '28°06\'36.9\"N 15°25\'20.6\"W\r\n', '35003', 1),
-(1, 'IES Poeta Tomás Morales Castellano', '28.110250, -15.422386\r\n', '35003', 1);
+INSERT INTO `centros` (`idCentro`, `nombre`, `codigo_Postal`, `idMunicipios`, `lat`, `long`) VALUES
+(1, 'Ies El Rincon', '3555', 1, 28.12785883771104, -15.44697574937665),
+(2, 'IES Poeta Tomás Morales Castellano, Paseo de ', '35001', 1, 28.110397221755242, -15.422337757860756),
+(3, 'IES Alonso Quesada', '35014', 1, 28.10311834987386, -15.442121488920527);
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `health`
+-- Estructura de tabla para la tabla `cursos`
 --
 
-CREATE TABLE `health` (
-  `idHealth` int(11) NOT NULL,
-  `Masa_Grasa` double DEFAULT NULL,
-  `Masa_Viseral` double DEFAULT NULL
+CREATE TABLE `cursos` (
+  `idCursos` int(11) NOT NULL,
+  `Curso` varchar(45) NOT NULL,
+  `Letra` varchar(45) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `cursos`
+--
+
+INSERT INTO `cursos` (`idCursos`, `Curso`, `Letra`) VALUES
+(1, '1º Bachillerato', 'A'),
+(2, '2º Bachillerato', 'A');
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `municipio`
+-- Estructura de tabla para la tabla `healths`
 --
 
-CREATE TABLE `municipio` (
-  `idMunicipio` int(11) NOT NULL,
-  `Nombre` varchar(45) DEFAULT NULL,
-  `Isla` set('Las palmas') DEFAULT 'Las palmas'
+CREATE TABLE `healths` (
+  `idHealths` int(11) NOT NULL,
+  `masa_Grasa` double NOT NULL,
+  `masa_Viseral` double NOT NULL,
+  `idCursos` int(11) NOT NULL,
+  `idCentros` int(11) NOT NULL,
+  `masa_Muscular` double DEFAULT NULL,
+  `altura` int(11) DEFAULT NULL,
+  `peso` int(11) DEFAULT NULL,
+  `edad` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `municipio`
+-- Volcado de datos para la tabla `healths`
 --
 
-INSERT INTO `municipio` (`idMunicipio`, `Nombre`, `Isla`) VALUES
-(1, 'Las Palmas de Gran Canaria', 'Las palmas');
+INSERT INTO `healths` (`idHealths`, `masa_Grasa`, `masa_Viseral`, `idCursos`, `idCentros`, `masa_Muscular`, `altura`, `peso`, `edad`) VALUES
+(1, 0, 15, 1, 1, NULL, NULL, NULL, NULL),
+(2, 15, 12, 1, 1, 0, 0, 0, 0),
+(3, 35, 20, 1, 3, NULL, NULL, NULL, NULL),
+(4, 35, 20, 1, 3, NULL, NULL, NULL, NULL),
+(5, 35, 20, 1, 3, NULL, NULL, NULL, NULL),
+(6, 35, 20, 1, 3, NULL, NULL, NULL, NULL),
+(7, 35, 20, 1, 3, NULL, NULL, NULL, NULL),
+(8, 35, 20, 1, 3, NULL, NULL, NULL, NULL),
+(9, 35, 20, 1, 3, NULL, NULL, NULL, NULL),
+(10, 25, 20, 2, 3, NULL, NULL, NULL, NULL),
+(11, 25, 20, 2, 3, NULL, NULL, NULL, NULL),
+(12, 25, 20, 2, 3, NULL, NULL, NULL, NULL),
+(13, 25, 20, 2, 3, NULL, NULL, NULL, NULL),
+(14, 25, 20, 2, 3, NULL, NULL, NULL, NULL),
+(15, 25, 20, 2, 3, NULL, NULL, NULL, NULL),
+(16, 25, 20, 2, 3, NULL, NULL, NULL, NULL),
+(17, 25, 20, 2, 3, NULL, NULL, NULL, NULL),
+(18, 8, 20, 2, 2, NULL, NULL, NULL, NULL),
+(19, 8, 20, 2, 2, NULL, NULL, NULL, NULL),
+(20, 8, 20, 2, 2, NULL, NULL, NULL, NULL),
+(21, 8, 20, 2, 2, NULL, NULL, NULL, NULL),
+(22, 8, 20, 2, 2, NULL, NULL, NULL, NULL),
+(23, 8, 20, 2, 2, NULL, NULL, NULL, NULL),
+(24, 8, 20, 2, 2, NULL, NULL, NULL, NULL),
+(25, 8, 20, 2, 2, NULL, NULL, NULL, NULL),
+(26, 8, 20, 2, 2, NULL, NULL, NULL, NULL),
+(27, 8, 20, 2, 2, NULL, NULL, NULL, NULL),
+(28, 15, 25, 1, 1, 0, 0, 0, 0),
+(29, 15, 15, 1, 1, 0, 0, 0, 0),
+(30, 15, 15, 1, 1, 0, 0, 0, 0),
+(31, 15, 15, 1, 1, 0, 0, 0, 0),
+(32, 15, 15, 1, 1, 15, 0, 0, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `municipios`
+--
+
+CREATE TABLE `municipios` (
+  `idMunicipios` int(11) NOT NULL,
+  `nombre` varchar(45) NOT NULL,
+  `isla` set('Las palmas') NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `municipios`
+--
+
+INSERT INTO `municipios` (`idMunicipios`, `nombre`, `isla`) VALUES
+(1, 'Las palmas Gc', 'Las palmas');
 
 -- --------------------------------------------------------
 
@@ -84,117 +149,152 @@ INSERT INTO `municipio` (`idMunicipio`, `Nombre`, `Isla`) VALUES
 
 CREATE TABLE `usuarios` (
   `idUsuarios` int(11) NOT NULL,
-  `Username` varchar(45) DEFAULT NULL,
-  `Password` varchar(45) DEFAULT NULL,
-  `Nombre` varchar(45) DEFAULT NULL,
-  `Apellidos` varchar(60) DEFAULT NULL,
-  `Rol` set('Admin','Profesor','Alumno') DEFAULT NULL,
-  `Id_Centro` int(11) NOT NULL
+  `username` varchar(45) NOT NULL,
+  `password` varchar(100) NOT NULL,
+  `nombre` varchar(45) DEFAULT NULL,
+  `apellidos` varchar(60) DEFAULT NULL,
+  `rol` set('Admin','Profesor','Alumno') DEFAULT NULL,
+  `idCentros` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `usuarios`
 --
 
-INSERT INTO `usuarios` (`idUsuarios`, `Username`, `Password`, `Nombre`, `Apellidos`, `Rol`, `Id_Centro`) VALUES
-(7, 'jesus', '$2b$10$cPqBDw9PlVxLpi.p6Ej5pO5p7QV6o0UM7Pnkt3', 'carlos', 'rocholl', 'Admin', 1),
-(8, 'raul', '$2b$10$HsjPuWxPoj7BTwOfH5zNnu1zjLkVsKUuDxE6If', 'carlos', 'rocholl', 'Admin', 1),
-(9, 'raul', '$2b$10$/WeXMU4/5yb19p30SbchluAfwuf3sL.yhXkDHR', 'carlos', 'rocholl', 'Admin', 1),
-(10, 'raul2', '$2b$10$ncXyf19xaDPKmjb45WzFre4q.Adrl9PwqPf8z9', 'carlos', 'rocholl', 'Admin', 1);
+INSERT INTO `usuarios` (`idUsuarios`, `username`, `password`, `nombre`, `apellidos`, `rol`, `idCentros`) VALUES
+(1, 'prueba', '$2b$10$q1NlHDwoPhy.zDaQY4M7hehnrTmrTzVW1mgQ8S52nmeIgMTBRbxh6', 'Rocholl', 'Rocholl', '', 1),
+(2, 'prueba1', '$2b$10$aYxpG33f2wjUJ52I0TGMTOVTjeI5bO/wTT8ku/UudpY05GTRM3kA2', 'Rocholl', 'Rocholl', '', 2),
+(3, 'prueba2', '$2b$10$SNTb7t9yRSNKTygjj7WYbuB1Oejzt68xpZBxZf5N12Bq7JPxG3tm.', 'Rocholl', 'Rocholl', '', 3);
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `usuario_datos`
+-- Estructura de tabla para la tabla `usuario_cursos`
 --
 
-CREATE TABLE `usuario_datos` (
-  `idUsuario` int(11) NOT NULL,
-  `idDatos` int(11) NOT NULL,
-  `Fecha` date NOT NULL
+CREATE TABLE `usuario_cursos` (
+  `idUsuarios` int(11) NOT NULL,
+  `idCursos` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `usuario_cursos`
+--
+
+INSERT INTO `usuario_cursos` (`idUsuarios`, `idCursos`) VALUES
+(1, 1),
+(1, 2),
+(2, 1),
+(3, 2);
 
 --
 -- Índices para tablas volcadas
 --
 
 --
--- Indices de la tabla `centro`
+-- Indices de la tabla `centros`
 --
-ALTER TABLE `centro`
+ALTER TABLE `centros`
   ADD PRIMARY KEY (`idCentro`),
-  ADD KEY `pkId_Municipio_idx` (`idMunicipio`);
+  ADD KEY `Id_Municipio_idx` (`idMunicipios`);
 
 --
--- Indices de la tabla `health`
+-- Indices de la tabla `cursos`
 --
-ALTER TABLE `health`
-  ADD PRIMARY KEY (`idHealth`);
+ALTER TABLE `cursos`
+  ADD PRIMARY KEY (`idCursos`);
 
 --
--- Indices de la tabla `municipio`
+-- Indices de la tabla `healths`
 --
-ALTER TABLE `municipio`
-  ADD PRIMARY KEY (`idMunicipio`);
+ALTER TABLE `healths`
+  ADD PRIMARY KEY (`idHealths`),
+  ADD KEY `idCurso_idx` (`idCursos`),
+  ADD KEY `fk_health_Centro_idx` (`idCentros`);
+
+--
+-- Indices de la tabla `municipios`
+--
+ALTER TABLE `municipios`
+  ADD PRIMARY KEY (`idMunicipios`);
 
 --
 -- Indices de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`idUsuarios`),
-  ADD KEY `Id_Centro_idx` (`Id_Centro`);
+  ADD KEY `Id_Centro_idx` (`idCentros`);
 
 --
--- Indices de la tabla `usuario_datos`
+-- Indices de la tabla `usuario_cursos`
 --
-ALTER TABLE `usuario_datos`
-  ADD PRIMARY KEY (`idUsuario`,`idDatos`),
-  ADD KEY `idDatos_idx` (`idDatos`);
+ALTER TABLE `usuario_cursos`
+  ADD PRIMARY KEY (`idUsuarios`,`idCursos`),
+  ADD KEY `idCurso_idx` (`idCursos`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
 --
--- AUTO_INCREMENT de la tabla `health`
+-- AUTO_INCREMENT de la tabla `centros`
 --
-ALTER TABLE `health`
-  MODIFY `idHealth` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `centros`
+  MODIFY `idCentro` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT de la tabla `municipio`
+-- AUTO_INCREMENT de la tabla `cursos`
 --
-ALTER TABLE `municipio`
-  MODIFY `idMunicipio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+ALTER TABLE `cursos`
+  MODIFY `idCursos` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT de la tabla `healths`
+--
+ALTER TABLE `healths`
+  MODIFY `idHealths` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+
+--
+-- AUTO_INCREMENT de la tabla `municipios`
+--
+ALTER TABLE `municipios`
+  MODIFY `idMunicipios` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `idUsuarios` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `idUsuarios` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Restricciones para tablas volcadas
 --
 
 --
--- Filtros para la tabla `centro`
+-- Filtros para la tabla `centros`
 --
-ALTER TABLE `centro`
-  ADD CONSTRAINT `fkId_Municipio` FOREIGN KEY (`idMunicipio`) REFERENCES `municipio` (`idMunicipio`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `centros`
+  ADD CONSTRAINT `Id_Municipio` FOREIGN KEY (`idMunicipios`) REFERENCES `municipios` (`idMunicipios`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `healths`
+--
+ALTER TABLE `healths`
+  ADD CONSTRAINT `fk_health_Centro` FOREIGN KEY (`idCentros`) REFERENCES `centros` (`idCentro`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `fk_health_Curso` FOREIGN KEY (`idCursos`) REFERENCES `cursos` (`idCursos`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Filtros para la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  ADD CONSTRAINT `Id_Centro` FOREIGN KEY (`Id_Centro`) REFERENCES `centro` (`idCentro`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `Id_Centro` FOREIGN KEY (`idCentros`) REFERENCES `centros` (`idCentro`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Filtros para la tabla `usuario_datos`
+-- Filtros para la tabla `usuario_cursos`
 --
-ALTER TABLE `usuario_datos`
-  ADD CONSTRAINT `idDatos` FOREIGN KEY (`idDatos`) REFERENCES `health` (`idHealth`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `idUsuario` FOREIGN KEY (`idUsuario`) REFERENCES `usuarios` (`idUsuarios`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+ALTER TABLE `usuario_cursos`
+  ADD CONSTRAINT `fk_usucur_idCurso` FOREIGN KEY (`idCursos`) REFERENCES `cursos` (`idCursos`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_usucur_idUsu` FOREIGN KEY (`idUsuarios`) REFERENCES `usuarios` (`idUsuarios`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
