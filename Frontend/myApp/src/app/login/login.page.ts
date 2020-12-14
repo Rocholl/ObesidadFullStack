@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
+import { Storage } from '@ionic/storage';
 import { Usuario } from '../Models/Usuario';
 import { ObjectSenderService } from '../service/object-sender.service';
 import { AuthService } from '../services/auth.service';
@@ -15,7 +16,8 @@ export class LoginPage implements OnInit {
     private router: Router, 
     private authService: AuthService, 
     private alertController: AlertController,
-    private objSender:ObjectSenderService
+    private objSender:ObjectSenderService,
+    private storage:Storage
     ) { }
 
   ngOnInit() {
@@ -36,8 +38,7 @@ export class LoginPage implements OnInit {
         this.presentAlert("invalid credentials");
         return;
       }
-      console.log(res.usuario)
-      this.objSender.sendObjectSource(res.usuario);
+      this.storage.set("user",res.usuario);
       this.router.navigateByUrl('/user-page');
       form.reset();
     }, err => {

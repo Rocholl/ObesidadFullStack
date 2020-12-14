@@ -27,7 +27,7 @@ export class CentrosService {
       // );
   };
   getCentroId(id): Observable<Centro> {
-  
+  console.log(id)
     return this.http.get<Centro>(apiUrl+id);
     
       // .pipe(

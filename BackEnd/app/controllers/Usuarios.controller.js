@@ -142,7 +142,7 @@ exports.addCursos= (req,res)=>{
 
 
 }
-exports.Class=(req,res)=>{
+exports.getClass=(req,res)=>{
     Usuario.findByPk(req.params.id)
     .then(usuario => {
     

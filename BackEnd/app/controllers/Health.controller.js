@@ -20,8 +20,11 @@ exports.create = (req, res) => {
         masa_Grasa: req.body.masa_Grasa,
         masa_Viseral: req.body.masa_Viseral,
         idCursos: req.body.idCursos,
-        idCentros: req.body.idCentros
-        
+        idCentros: req.body.idCentros,
+        masa_Muscular: req.body.masa_Muscular,
+        altura: req.body.altura,
+        peso: req.body.peso,
+        edad: req.body.edad
     };
 
     // Save usuario in the database

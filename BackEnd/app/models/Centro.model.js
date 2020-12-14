@@ -2,7 +2,9 @@ module.exports = (sequelize, Sequelize) => {
     const Centro = sequelize.define("centros", {
         idCentro: {
             type: Sequelize.INTEGER,
-            primaryKey: true
+            primaryKey: true,
+            
+        autoIncrement: true
         },
         nombre: {
             type: Sequelize.STRING

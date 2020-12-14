@@ -16,7 +16,7 @@ export class CursosService {
   constructor(private http: HttpClient) { }
 
   getCursos(): Observable<Cursos[]> {
- 
+   
     return this.http.get<Cursos[]>(apiUrl+"class/");
     
       // .pipe(
@@ -27,7 +27,7 @@ export class CursosService {
   };
   getCursosByUserId(id): Observable<Cursos[]> {
  
-    return this.http.get<Cursos[]>(apiUrl+"usuariofindByUser/"+id);
+    return this.http.get<Cursos[]>(apiUrl+"usuario/getUserAndClass/"+id);
     
       // .pipe(
       //   tap(bicycle => console.log('fetched bicycles'))

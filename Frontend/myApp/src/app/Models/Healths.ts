@@ -7,4 +7,8 @@ export class Healths{
     masa_Viseral: number;
     idCursos: number;
     idCentros:number;
+    masa_Muscular:number;
+    altura:number;
+    peso:number;
+    edad:number;
 }

@@ -26,6 +26,10 @@ const routes: Routes = [
     path: 'user-page',
     loadChildren: () => import('./user-page/user-page.module').then( m => m.UserPagePageModule)
   },
+  {
+    path: 'form-health',
+    loadChildren: () => import('./form-health/form-health.module').then( m => m.FormHealthPageModule)
+  },
 
 ];
 

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Storage } from '@ionic/storage';
+import { Centro } from '../Models/Centro';
+import { Usuario } from '../Models/Usuario';
 import { ObjectSenderService } from '../service/object-sender.service';
 import { AuthResponse } from '../services/auth.response';
 import { CentrosService } from '../services/centros.service';
@@ -12,23 +15,38 @@ import { HealthsService } from '../services/healths.service';
 })
 export class UserPagePage implements OnInit {
   user:any;
-  centro:any;
-  cursos:any[];
+  centro:Centro;
+  
   constructor(private obj:ObjectSenderService,private centroService: CentrosService,
-    private healthService: HealthsService,private cursoService:CursosService) { }
+    private healthService: HealthsService,private cursoService:CursosService,private storage:Storage) { }
 
   ngOnInit() {
-    this.obj.$getObjectSource.subscribe(data => {
+    this.storage.get("user").then(data=>{
+      this.user= data;
+      console.log(data);
+      this.cursoService.getCursosByUserId(this.user.idUsuarios).subscribe(curso=>{
+        this.storage.set("class",curso);
+        });
+    }).catch().finally(()=>{
+      this.saveParams();
+    }) 
+
     
-      this.user = data;
-    }).unsubscribe();
-  this.centroService.getCentroId(this.user.idCentro).subscribe(centro=>{
-    console.log(centro)
-    this.centro= centro;
-  }).unsubscribe();;
-  this.cursoService.getCursosByUserId(this.user.id).subscribe(curso=>{
-    this.cursos= curso;
-  }).unsubscribe();;
+
+    
+   
+    }
+    saveParams(){
+      this.centroService.getCentroId(this.user.idCentros).subscribe(centro=>{
+        console.log(this.user)
+  
+        this.centro= centro;
+        this.storage.set("centro",centro);
+        
+      });
+    
+    }
   }
   
-}
+  
+

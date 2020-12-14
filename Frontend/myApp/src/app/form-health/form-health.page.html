@@ -1,0 +1,98 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Agregar registro de Salud</ion-title>
+ 
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+      <ion-button (click)="toggleMenu()" color="secondary" expand="block" fill="clear" shape="round">
+        <ion-icon slot="start" name="menu"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-item *ngIf="cursos" >
+   
+  <ion-select color="primary" placeholder="Clase: " [(ngModel)]="curso">
+    <ion-select-option *ngFor="let curso1 of cursos" [value]="curso1">{{curso1.Curso + ' ' + curso1.Letra}}
+    </ion-select-option>
+  </ion-select>
+</ion-item>
+<ion-content>
+  <ion-item>
+    <ion-select class="customInterface" color="primary" placeholder="Sexo: " [(ngModel)]="sex">
+      <ion-select-option value="m">
+        <ion-text color="primary" style="background-color:#FCA311">Masculino</ion-text>
+      </ion-select-option>
+      <ion-select-option value="f">
+        <ion-text color="primary">Femenino</ion-text>
+      </ion-select-option>
+
+    </ion-select>
+  </ion-item>
+  <form [formGroup]="ionicForm" #form="ngForm" (ngSubmit)="submitForm(form)">
+    <ion-item lines="full">
+      <ion-label position="floating">Masa Grasa</ion-label>
+      <ion-input type="number" name="mGrasa" required formControlName="mGrasa"></ion-input>
+      <div *ngFor="let error of errorMessages.name">
+        <ng-container *ngIf="name.hasError(error.type) && (name.dirty || name.touched)">
+          <small class="error-message">{{error.message}}</small>
+        </ng-container>
+      </div>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating" >Masa Visceral</ion-label>
+      <ion-input type="number" name="mVisceral" formControlName="mVisceral" required></ion-input>
+      <div *ngFor="let error of errorMessages.name">
+        <ng-container *ngIf="name.hasError(error.type) && (name.dirty || name.touched)">
+          <small class="error-message">{{error.message}}</small>
+        </ng-container>
+      </div>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating" >Masa muscular</ion-label>
+      <ion-input type="number" name="mMuscular" formControlName="mMuscular"></ion-input>
+      <div *ngFor="let error of errorMessages.name">
+        <ng-container *ngIf="name.hasError(error.type) && (name.dirty || name.touched)">
+          <small class="error-message">{{error.message}}</small>
+        </ng-container>
+      </div>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating" >Altura</ion-label>
+      <ion-input type="number" name="altura" formControlName="altura"></ion-input>
+      <div *ngFor="let error of errorMessages.name">
+        <ng-container *ngIf="name.hasError(error.type) && (name.dirty || name.touched)">
+          <small class="error-message">{{error.message}}</small>
+        </ng-container>
+      </div>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating" >Peso</ion-label>
+      <ion-input type="number" name="peso" formControlName="peso"></ion-input>
+      <div *ngFor="let error of errorMessages.name">
+        <ng-container *ngIf="name.hasError(error.type) && (name.dirty || name.touched)">
+          <small class="error-message">{{error.message}}</small>
+        </ng-container>
+      </div>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating" >Edad</ion-label>
+      <ion-input type="number" name="edad" formControlName="edad"></ion-input>
+      <div *ngFor="let error of errorMessages.name">
+        <ng-container *ngIf="name.hasError(error.type) && (name.dirty || name.touched)">
+          <small class="error-message">{{error.message}}</small>
+        </ng-container>
+      </div>
+    </ion-item>
+    
+    <ion-row>
+      <ion-col>
+        <ion-button  [disabled]="!ionicForm.valid" type="submit" color="primary" expand="block">Añadir alumno</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>
