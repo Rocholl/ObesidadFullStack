@@ -1,6 +1,6 @@
 # Proyecto Obesidad
 
- <p align="center"> <img src="https://i2.wp.com/www3.gobiernodecanarias.org/medusa/edublog/ieselrincon/wp-content/uploads/sites/137/2019/10/cropped-sin-titulo-4.png?fit=512%2C512" width="350"/> <img src="your_relative_path_here_number_2_large_name" width="350"/> </p> 
+ <p align="center"> <img src="https://i2.wp.com/www3.gobiernodecanarias.org/medusa/edublog/ieselrincon/wp-content/uploads/sites/137/2019/10/cropped-sin-titulo-4.png?fit=512%2C512" width="350"/>  </p> 
 A project to control childhood obesity in schools.
 ## Table of Contents
 1. [General Info](#general-info)
@@ -44,7 +44,7 @@ Here we will see about the data model
  - a usuario has many cursos and a curso has many usuario
 
 ### E/R Diagram
- <p align="center"> <img src="https://github.com/Rocholl/ObesidadFullStack/blob/Tests/Documentacion/entidad-relacion.png?raw=true" width="350"/> <img  width="350"/> </p> 
+ <p align="center"> <img src="https://github.com/Rocholl/ObesidadFullStack/blob/Tests/Documentacion/entidad-relacion.png?raw=true" width="500"/>  </p> 
 
 ### Relational Model
 Usuario(**IdUsuario**,Username,Password,Email,Nombre,Apellidos,Rol,IdCentro*)
@@ -69,7 +69,7 @@ Centro(**Id_Centro**,nombre,lat,long,codigo_Postal,IdMunicipio*)
 
 Municipio(**Id_Municipio**,Nombre,Isla)
 ### Class diagram
- <p align="center"> <img src="https://github.com/Rocholl/ObesidadFullStack/blob/Tests/Documentacion/class-diagram.png?raw=true" width="350"/> <img  width="350"/> </p> 
+ <p align="center"> <img src="https://github.com/Rocholl/ObesidadFullStack/blob/Tests/Documentacion/class-diagram.png?raw=true" width="500"/>  </p> 
 
 ### Sql Code
 
@@ -84,7 +84,7 @@ Municipio(**Id_Municipio**,Nombre,Isla)
  - Only teachers can access the menu to add a record.
 
 ## Use case
- <p align="center"> <img src="https://github.com/Rocholl/ObesidadFullStack/blob/Tests/Documentacion/use_case.png?raw=true" width="350"/> <img  width="350"/> </p> 
+ <p align="center"> <img src="https://github.com/Rocholl/ObesidadFullStack/blob/Tests/Documentacion/use_case.png?raw=true" width="500"/> </p> 
 
 
 ## Technical specifications
@@ -94,7 +94,7 @@ Municipio(**Id_Municipio**,Nombre,Isla)
 
 ## Interfaces
 ### Color palette.
- <p align="center"> <img src="https://github.com/Rocholl/ObesidadFullStack/blob/Tests/Documentacion/paleta_colores.png?raw=true" width="350"/> <img  width="350"/> </p> 
+ <p align="center"> <img src="https://github.com/Rocholl/ObesidadFullStack/blob/Tests/Documentacion/paleta_colores.png?raw=true" width="500"/>  </p> 
 
 
 ### Usability
