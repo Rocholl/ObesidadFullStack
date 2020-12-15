@@ -233,7 +233,6 @@ Enjoy!!!
  - [Trello](https://trello.com/b/DHpZELkW/app-obesidad)
  
 ## Repositories
- - [Ionic Team Docs](https://github.com/ionic-team/ionic-framework)
  - [Obesidad FullStack by Carlos Rocholl](https://github.com/Rocholl/ObesidadFullStack)
 ## Conclusion
 El desarrollo basado en frameworks en de javascript me parecio increible tanto node como ionic tienen mucho apoyo de la comunidad y su documentacion es muy facil de entender.
