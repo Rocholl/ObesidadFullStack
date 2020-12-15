@@ -15,6 +15,7 @@
 10. [Planning](#planning)
 11. [Repositories](#repositories)
 12.  [Conclusion](#conclusion)
+13.  [Links and references](#linksandreferences)
 
 ### General Info
 ***
@@ -255,3 +256,8 @@ El desarrollo basado en frameworks en de javascript me parecio increible tanto n
 - Implementar ion-picker en vez de ion-select ya que seria mas comodo para dispositivos moviles.
 - Controlar con ionic guards las sesiones.(De esto me entero ya avanzado en el desarrollo).
 - Mejorar la pagina Home.
+## Links and references
+ - [Ionic Team Github](https://github.com/ionic-team/ionic-framework)
+ - [Code Swag Channel](https://www.youtube.com/channel/UCNqICCv46r3o4sRlmzStfVQ)
+ - [StackOverFlow](https://stackoverflow.com/)
+ - [Simon Grimm Channel](https://www.youtube.com/user/saimon1924)
