@@ -7,7 +7,7 @@
 2. [Technologies](#technologies)
 3. [Data Model](#datamodel)
 4. [Use case](#user-case)
-5. [User requirements](#user-requeriments)
+5. [User requirements](#user-requirements)
 6. [Intefaces](#interfaces)
 7. [Installation instructions](#installation-instructions)
 8. [Tech Stack](#tech-stack)
@@ -88,8 +88,9 @@ Municipio(**Id_Municipio**,Nombre,Isla)
  - - The application will be hybrid, that is, it will work for web and mobile environments.
 - The main function of the application will be to be able to visualize a map where you can see the educational centers and relative information about obesity.
  - There is also a function where teachers can login and add data.
+  - Only teachers can access the menu to add a record.
  - All those who access the application will be able to view the map.
- - Only teachers can access the menu to add a record.
+
 
 ## Use case
  <p align="center"> <img src="https://github.com/Rocholl/ObesidadFullStack/blob/Tests/Documentacion/use_case.png?raw=true" width="500"/> </p> 
