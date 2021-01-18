@@ -30,6 +30,10 @@ const routes: Routes = [
     path: 'form-health',
     loadChildren: () => import('./form-health/form-health.module').then( m => m.FormHealthPageModule)
   },
+  {
+    path: 'help-page',
+    loadChildren: () => import('./help-page/help-page.module').then( m => m.HelpPagePageModule)
+  },
 
 ];
 
