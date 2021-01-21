@@ -1,0 +1,57 @@
+2021-01-21T14:12:57.960Z - error: Rendering request 13 finished with error in 5539 ms
+2021-01-21T14:12:57.978Z - error: Error when processing render request 13 Failed to launch chrome!
+[0121/151257.671:FATAL:feature_list.cc(282)] Check failed: !g_initialized_from_accessor. 
+Backtrace:
+	ovly_debug_event [0x00007FFB5DF21252+16183762]
+	ovly_debug_event [0x00007FFB5DF20832+16181170]
+	ovly_debug_event [0x00007FFB5DF33383+16257795]
+	ovly_debug_event [0x00007FFB5DF23386+16192262]
+	ovly_debug_event [0x00007FFB5DA74B2E+11283118]
+	ovly_debug_event [0x00007FFB5DE9DB58+15645400]
+	ovly_debug_event [0x00007FFB5DE9DACD+15645261]
+	ovly_debug_event [0x00007FFB5DEC8F28+15822504]
+	ovly_debug_event [0x00007FFB5DE9D35E+15643358]
+	ovly_debug_event [0x00007FFB5DEC83E3+15819619]
+	ovly_debug_event [0x00007FFB5DEC82BB+15819323]
+	ovly_debug_event [0x00007FFB5DEC80F2+15818866]
+	ChromeMain [0x00007FFB5CFB11B6+286]
+	Ordinal0 [0x00007FF67C3A275F+10079]
+	Ordinal0 [0x00007FF67C3A182D+6189]
+	GetHandleVerifier [0x00007FF67C4AB7C2+697538]
+	BaseThreadInitThunk [0x00007FFBDC6E7C24+20]
+	RtlUserThreadStart [0x00007FFBDE68D4D1+33]
+
+
+
+TROUBLESHOOTING: https://github.com/GoogleChrome/puppeteer/blob/master/docs/troubleshooting.md
+ Error: Failed to launch chrome!
+[0121/151257.671:FATAL:feature_list.cc(282)] Check failed: !g_initialized_from_accessor. 
+Backtrace:
+	ovly_debug_event [0x00007FFB5DF21252+16183762]
+	ovly_debug_event [0x00007FFB5DF20832+16181170]
+	ovly_debug_event [0x00007FFB5DF33383+16257795]
+	ovly_debug_event [0x00007FFB5DF23386+16192262]
+	ovly_debug_event [0x00007FFB5DA74B2E+11283118]
+	ovly_debug_event [0x00007FFB5DE9DB58+15645400]
+	ovly_debug_event [0x00007FFB5DE9DACD+15645261]
+	ovly_debug_event [0x00007FFB5DEC8F28+15822504]
+	ovly_debug_event [0x00007FFB5DE9D35E+15643358]
+	ovly_debug_event [0x00007FFB5DEC83E3+15819619]
+	ovly_debug_event [0x00007FFB5DEC82BB+15819323]
+	ovly_debug_event [0x00007FFB5DEC80F2+15818866]
+	ChromeMain [0x00007FFB5CFB11B6+286]
+	Ordinal0 [0x00007FF67C3A275F+10079]
+	Ordinal0 [0x00007FF67C3A182D+6189]
+	GetHandleVerifier [0x00007FF67C4AB7C2+697538]
+	BaseThreadInitThunk [0x00007FFBDC6E7C24+20]
+	RtlUserThreadStart [0x00007FFBDE68D4D1+33]
+
+
+
+TROUBLESHOOTING: https://github.com/GoogleChrome/puppeteer/blob/master/docs/troubleshooting.md
+
+    at onClose (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\puppeteer\lib\Launcher.js:348:14)
+    at ChildProcess.<anonymous> (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\puppeteer\lib\Launcher.js:338:60)
+    at ChildProcess.emit (events.js:327:22)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:277:12)
+2021-01-21T14:12:57.982Z - error: Error during processing request at https://localhost:5489/api/report

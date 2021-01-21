@@ -5,6 +5,7 @@ const Op = db.Sequelize.Op;
 const Centro = db.centros;
 const { QueryTypes } = require('sequelize');
 const { Sequelize } = require("../models");
+
 // Create and Save a new usuario
 // req --> request (contains the body)
 exports.create = (req, res) => {
@@ -80,18 +81,57 @@ exports.findHealthbyMunicipio= (req,res)=>{
 
 }
 
-exports.findHealthbyCentro= (req,res)=>{
-    console.log(req.params.id);
-    Healths.findAll({
+exports.findHealthbyCentro= async (id)=>{
+  
+  console.log(1);
+    let count= await  Healths.count({
        
-      where: { idCentros: req.params.id }
-    }).then(data =>{
-        res.send(data);
-    }) .catch(err => {
-        res.status(500).send({
-            message: err.message || "Some error occurred while retrieving usuarios."
-        });
+      where: { idCentros: id }
     });
+    let sum= await Healths.sum(('masa_Grasa'),{
+       
+        where: { idCentros:id }
+      });let sum2= await Healths.sum(('masa_Viseral'),{
+       
+        where: { idCentros:id }
+      });
+    let centro =   await   Centro.findByPk(id);
+    let total= sum/count;
+    let total2= sum2/count;
+    let data= {centro,total,total2}
+    
+   return data;
+      
+}
 
+exports.findHealthbyCentr2o= async (req,res)=>{
+  
+  
+    let count= await  Healths.count({
+       
+      where: { idCentros: req.body.id }
+    });
+    let sum= await Healths.sum(('masa_Grasa'),{
+       
+        where: { idCentros:req.body.id }
+      });
+      let sum2= await Healths.sum(('masa_Viseral'),{
+       
+        where: { idCentros:req.body.id  }
+      });
+      let total= sum/count;
+      let total2= sum2/count;
+       Centro.findByPk(req.body.id).then(async data =>{
+        let centro= {data,total,total2};
+    await    res.json(centro);
+       }).catch((err) => {
+        res.status(500).send({
+            message: err.message || "Some error occurred while retrieving Healths."
+        });
+     });
+   
+    
+ 
+      
 }
 

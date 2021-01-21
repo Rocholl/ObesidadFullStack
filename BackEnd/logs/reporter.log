@@ -1,0 +1,957 @@
+2021-01-18T18:31:56.074Z - info: Initializing jsreport@2.11.0 in development mode using configuration file: jsreport.config.json
+2021-01-18T18:31:56.077Z - info: Searching for available extensions in C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\
+2021-01-18T18:31:56.089Z - info: Extensions location cache doesn't contain entry yet, crawling
+2021-01-18T18:32:06.653Z - info: Found 35 extensions
+2021-01-18T18:32:06.983Z - info: Setting http-server strategy for rendering
+2021-01-18T18:32:07.209Z - info: Using extension cli@2.2.5
+2021-01-18T18:32:07.220Z - info: Using extension debug@2.1.3
+2021-01-18T18:32:07.226Z - info: Using extension express@2.8.1
+2021-01-18T18:32:07.394Z - info: Using extension freeze@2.0.0
+2021-01-18T18:32:07.406Z - info: Using extension handlebars@2.1.0
+2021-01-18T18:32:07.411Z - info: Using extension import-export@2.1.1
+2021-01-18T18:32:07.496Z - info: Using extension jsrender@2.1.1
+2021-01-18T18:32:07.508Z - info: Using extension tags@2.5.0
+2021-01-18T18:32:07.512Z - info: Using extension templates@2.4.0
+2021-01-18T18:32:07.515Z - info: Using extension authorization@2.4.0
+2021-01-18T18:32:07.528Z - info: Using extension base@2.0.2
+2021-01-18T18:32:07.530Z - info: Using extension browser-client@2.2.2
+2021-01-18T18:32:07.544Z - info: Using extension child-templates@1.4.0
+2021-01-18T18:32:07.561Z - info: Using extension chrome-pdf@1.10.0
+2021-01-18T18:32:07.664Z - info: Using extension data@2.4.0
+2021-01-18T18:32:07.674Z - info: Using extension docx@2.9.0
+2021-01-18T18:32:07.680Z - info: Using extension fs-store@2.9.1
+2021-01-18T18:32:07.868Z - info: Using extension licensing@2.2.3
+2021-01-18T18:32:07.880Z - info: Using extension pdf-utils@1.10.1
+2021-01-18T18:32:08.001Z - info: Using extension pptx@0.7.0
+2021-01-18T18:32:08.012Z - info: Using extension reports@2.5.1
+2021-01-18T18:32:08.025Z - info: Using extension static-pdf@0.4.0
+2021-01-18T18:32:08.032Z - info: Using extension studio@2.10.1
+2021-01-18T18:32:08.103Z - info: Using extension text@2.0.0
+2021-01-18T18:32:08.112Z - info: Using extension version-control@1.6.0
+2021-01-18T18:32:08.226Z - info: Using extension assets@1.7.0
+2021-01-18T18:32:08.263Z - info: Using extension html-to-xlsx@2.8.3
+2021-01-18T18:32:08.737Z - info: html-to-xlsx detected chrome as available html engine
+2021-01-18T18:32:08.738Z - info: Using extension scheduling@2.5.0
+2021-01-18T18:32:08.801Z - info: Using extension scripts@2.6.0
+2021-01-18T18:32:08.805Z - info: Using extension studio-theme-dark@0.3.0
+2021-01-18T18:32:08.807Z - info: Using extension xlsx@2.5.0
+2021-01-18T18:32:09.024Z - info: Using extension public-templates@2.2.0
+2021-01-18T18:32:09.031Z - info: Using extension resources@2.1.0
+2021-01-18T18:32:09.043Z - info: Using extension sample-template@2.6.1
+2021-01-18T18:32:09.047Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2021-01-18T18:32:09.048Z - info: Using fs provider for template store.
+2021-01-18T18:32:09.061Z - info: fs store is persisting using fs
+2021-01-18T18:32:09.063Z - info: fs store is synchronizing using fs
+2021-01-18T18:32:09.077Z - info: fs store is loading data
+2021-01-18T18:32:09.118Z - info: fs store is initialized successfully
+2021-01-18T18:32:09.145Z - info: Creating default express app.
+2021-01-18T18:32:09.198Z - info: jsreport server successfully started on https port: 5489
+2021-01-18T18:32:09.198Z - info: jsreport server successfully started on http port: 5488
+2021-01-18T18:32:09.199Z - info: fs store emits sockets to synchronize underlying changes with studio
+2021-01-18T18:32:09.229Z - info: Verifying license key free
+2021-01-18T18:32:09.230Z - info: Using free license
+2021-01-18T18:32:09.695Z - info: reporter initialized
+2021-01-18T18:37:42.529Z - info: Initializing jsreport@2.11.0 in development mode using configuration file: jsreport.config.json
+2021-01-18T18:37:42.532Z - info: Searching for available extensions in C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\
+2021-01-18T18:37:42.550Z - info: Extensions location cache contains up to date information, skipping crawling in C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\
+2021-01-18T18:37:44.403Z - info: Found 70 extensions
+2021-01-18T18:37:44.905Z - warn: Filtering out duplicated extension "authentication" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-authentication, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-authentication
+2021-01-18T18:37:44.916Z - warn: Filtering out duplicated extension "cli" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-cli, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-cli
+2021-01-18T18:37:44.920Z - warn: Filtering out duplicated extension "debug" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-debug, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-debug
+2021-01-18T18:37:44.921Z - warn: Filtering out duplicated extension "express" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-express, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-express
+2021-01-18T18:37:44.940Z - warn: Filtering out duplicated extension "freeze" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-freeze, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-freeze
+2021-01-18T18:37:44.941Z - warn: Filtering out duplicated extension "handlebars" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-handlebars, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-handlebars
+2021-01-18T18:37:44.944Z - warn: Filtering out duplicated extension "import-export" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-import-export, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-import-export
+2021-01-18T18:37:44.945Z - warn: Filtering out duplicated extension "jsrender" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-jsrender, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-jsrender
+2021-01-18T18:37:44.951Z - warn: Filtering out duplicated extension "tags" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-tags, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-tags
+2021-01-18T18:37:44.951Z - warn: Filtering out duplicated extension "templates" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-templates, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-templates
+2021-01-18T18:37:44.974Z - warn: Filtering out duplicated extension "authorization" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-authorization, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-authorization
+2021-01-18T18:37:44.978Z - warn: Filtering out duplicated extension "base" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-base, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-base
+2021-01-18T18:37:44.978Z - warn: Filtering out duplicated extension "browser-client" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-browser-client, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-browser-client
+2021-01-18T18:37:44.982Z - warn: Filtering out duplicated extension "child-templates" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-child-templates, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-child-templates
+2021-01-18T18:37:44.986Z - warn: Filtering out duplicated extension "chrome-pdf" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-chrome-pdf, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-chrome-pdf
+2021-01-18T18:37:45.005Z - warn: Filtering out duplicated extension "data" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-data, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-data
+2021-01-18T18:37:45.006Z - warn: Filtering out duplicated extension "docx" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-docx, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-docx
+2021-01-18T18:37:45.009Z - warn: Filtering out duplicated extension "fs-store" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-fs-store, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-fs-store
+2021-01-18T18:37:45.010Z - warn: Filtering out duplicated extension "licensing" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-licensing, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-licensing
+2021-01-18T18:37:45.016Z - warn: Filtering out duplicated extension "pdf-utils" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-pdf-utils, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-pdf-utils
+2021-01-18T18:37:45.020Z - warn: Filtering out duplicated extension "pptx" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-pptx, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-pptx
+2021-01-18T18:37:45.021Z - warn: Filtering out duplicated extension "reports" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-reports, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-reports
+2021-01-18T18:37:45.055Z - warn: Filtering out duplicated extension "static-pdf" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-static-pdf, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-static-pdf
+2021-01-18T18:37:45.068Z - warn: Filtering out duplicated extension "studio" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-studio, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-studio
+2021-01-18T18:37:45.071Z - warn: Filtering out duplicated extension "text" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-text, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-text
+2021-01-18T18:37:45.085Z - warn: Filtering out duplicated extension "version-control" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-version-control, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-version-control
+2021-01-18T18:37:45.088Z - warn: Filtering out duplicated extension "assets" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-assets, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-assets
+2021-01-18T18:37:45.136Z - warn: Filtering out duplicated extension "html-to-xlsx" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-html-to-xlsx, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-html-to-xlsx
+2021-01-18T18:37:45.180Z - warn: Filtering out duplicated extension "scheduling" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-scheduling, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-scheduling
+2021-01-18T18:37:45.204Z - warn: Filtering out duplicated extension "scripts" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-scripts, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-scripts
+2021-01-18T18:37:45.248Z - warn: Filtering out duplicated extension "studio-theme-dark" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-studio-theme-dark, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-studio-theme-dark
+2021-01-18T18:37:45.287Z - warn: Filtering out duplicated extension "xlsx" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-xlsx, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-xlsx
+2021-01-18T18:37:45.317Z - warn: Filtering out duplicated extension "public-templates" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-public-templates, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-public-templates
+2021-01-18T18:37:45.337Z - warn: Filtering out duplicated extension "resources" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-resources, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-resources
+2021-01-18T18:37:45.337Z - warn: Filtering out duplicated extension "sample-template" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-sample-template, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-sample-template
+2021-01-18T18:37:45.419Z - info: Setting http-server strategy for rendering
+2021-01-18T18:37:45.702Z - info: Using extension cli@2.2.5
+2021-01-18T18:37:45.719Z - info: Using extension debug@2.1.3
+2021-01-18T18:37:45.734Z - info: Using extension express@2.8.1
+2021-01-18T18:37:46.021Z - info: Using extension freeze@2.0.0
+2021-01-18T18:37:46.030Z - info: Using extension handlebars@2.1.0
+2021-01-18T18:37:46.035Z - info: Using extension import-export@2.1.1
+2021-01-18T18:37:46.109Z - info: Using extension jsrender@2.1.1
+2021-01-18T18:37:46.117Z - info: Using extension tags@2.5.0
+2021-01-18T18:37:46.121Z - info: Using extension templates@2.4.0
+2021-01-18T18:37:46.128Z - info: Using extension authorization@2.4.0
+2021-01-18T18:37:46.136Z - info: Using extension base@2.0.2
+2021-01-18T18:37:46.138Z - info: Using extension browser-client@2.2.2
+2021-01-18T18:37:46.145Z - info: Using extension child-templates@1.4.0
+2021-01-18T18:37:46.160Z - info: Using extension chrome-pdf@1.10.0
+2021-01-18T18:37:46.266Z - info: Using extension data@2.4.0
+2021-01-18T18:37:46.274Z - info: Using extension docx@2.9.0
+2021-01-18T18:37:46.312Z - info: Using extension fs-store@2.9.1
+2021-01-18T18:37:46.512Z - info: Using extension licensing@2.2.3
+2021-01-18T18:37:46.534Z - info: Using extension pdf-utils@1.10.1
+2021-01-18T18:37:46.662Z - info: Using extension pptx@0.7.0
+2021-01-18T18:37:46.668Z - info: Using extension reports@2.5.1
+2021-01-18T18:37:46.674Z - info: Using extension static-pdf@0.4.0
+2021-01-18T18:37:46.679Z - info: Using extension studio@2.10.1
+2021-01-18T18:37:46.751Z - info: Using extension text@2.0.0
+2021-01-18T18:37:46.753Z - info: Using extension version-control@1.6.0
+2021-01-18T18:37:46.870Z - info: Using extension assets@1.7.0
+2021-01-18T18:37:46.882Z - info: Using extension html-to-xlsx@2.8.3
+2021-01-18T18:37:47.286Z - info: html-to-xlsx detected chrome as available html engine
+2021-01-18T18:37:47.286Z - info: Using extension scheduling@2.5.0
+2021-01-18T18:37:47.342Z - info: Using extension scripts@2.6.0
+2021-01-18T18:37:47.346Z - info: Using extension studio-theme-dark@0.3.0
+2021-01-18T18:37:47.348Z - info: Using extension xlsx@2.5.0
+2021-01-18T18:37:47.567Z - info: Using extension public-templates@2.2.0
+2021-01-18T18:37:47.574Z - info: Using extension resources@2.1.0
+2021-01-18T18:37:47.577Z - info: Using extension sample-template@2.6.1
+2021-01-18T18:37:47.580Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2021-01-18T18:37:47.580Z - info: Using fs provider for template store.
+2021-01-18T18:37:47.585Z - info: fs store is persisting using fs
+2021-01-18T18:37:47.587Z - info: fs store is synchronizing using fs
+2021-01-18T18:37:47.615Z - info: fs store is loading data
+2021-01-18T18:37:47.683Z - info: fs store is initialized successfully
+2021-01-18T18:37:47.698Z - info: Creating default express app.
+2021-01-18T18:37:47.745Z - info: jsreport server successfully started on https port: 5489
+2021-01-18T18:37:47.745Z - info: jsreport server successfully started on http port: 5488
+2021-01-18T18:37:47.749Z - info: fs store emits sockets to synchronize underlying changes with studio
+2021-01-18T18:37:47.776Z - info: Verifying license key free
+2021-01-18T18:37:47.780Z - info: Using free license
+2021-01-18T18:37:47.798Z - info: reporter initialized
+2021-01-19T15:37:25.401Z - info: Initializing jsreport@2.11.0 in development mode using configuration file: jsreport.config.json
+2021-01-19T15:37:25.407Z - info: Searching for available extensions in C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\
+2021-01-19T15:37:25.457Z - info: Extensions location cache contains up to date information, skipping crawling in C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\
+2021-01-19T15:37:28.475Z - info: Found 70 extensions
+2021-01-19T15:37:29.651Z - warn: Filtering out duplicated extension "authentication" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-authentication, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-authentication
+2021-01-19T15:37:29.682Z - warn: Filtering out duplicated extension "cli" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-cli, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-cli
+2021-01-19T15:37:29.699Z - warn: Filtering out duplicated extension "debug" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-debug, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-debug
+2021-01-19T15:37:29.723Z - warn: Filtering out duplicated extension "express" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-express, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-express
+2021-01-19T15:37:29.724Z - warn: Filtering out duplicated extension "freeze" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-freeze, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-freeze
+2021-01-19T15:37:29.725Z - warn: Filtering out duplicated extension "handlebars" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-handlebars, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-handlebars
+2021-01-19T15:37:29.726Z - warn: Filtering out duplicated extension "import-export" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-import-export, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-import-export
+2021-01-19T15:37:29.727Z - warn: Filtering out duplicated extension "jsrender" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-jsrender, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-jsrender
+2021-01-19T15:37:29.728Z - warn: Filtering out duplicated extension "tags" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-tags, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-tags
+2021-01-19T15:37:29.729Z - warn: Filtering out duplicated extension "templates" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-templates, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-templates
+2021-01-19T15:37:29.731Z - warn: Filtering out duplicated extension "authorization" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-authorization, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-authorization
+2021-01-19T15:37:29.732Z - warn: Filtering out duplicated extension "base" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-base, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-base
+2021-01-19T15:37:29.734Z - warn: Filtering out duplicated extension "browser-client" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-browser-client, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-browser-client
+2021-01-19T15:37:29.768Z - warn: Filtering out duplicated extension "child-templates" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-child-templates, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-child-templates
+2021-01-19T15:37:29.769Z - warn: Filtering out duplicated extension "chrome-pdf" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-chrome-pdf, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-chrome-pdf
+2021-01-19T15:37:29.771Z - warn: Filtering out duplicated extension "data" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-data, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-data
+2021-01-19T15:37:29.772Z - warn: Filtering out duplicated extension "docx" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-docx, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-docx
+2021-01-19T15:37:29.773Z - warn: Filtering out duplicated extension "fs-store" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-fs-store, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-fs-store
+2021-01-19T15:37:29.773Z - warn: Filtering out duplicated extension "licensing" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-licensing, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-licensing
+2021-01-19T15:37:29.828Z - warn: Filtering out duplicated extension "pdf-utils" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-pdf-utils, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-pdf-utils
+2021-01-19T15:37:29.829Z - warn: Filtering out duplicated extension "pptx" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-pptx, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-pptx
+2021-01-19T15:37:29.829Z - warn: Filtering out duplicated extension "reports" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-reports, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-reports
+2021-01-19T15:37:29.830Z - warn: Filtering out duplicated extension "static-pdf" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-static-pdf, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-static-pdf
+2021-01-19T15:37:29.831Z - warn: Filtering out duplicated extension "studio" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-studio, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-studio
+2021-01-19T15:37:29.833Z - warn: Filtering out duplicated extension "text" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-text, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-text
+2021-01-19T15:37:29.848Z - warn: Filtering out duplicated extension "version-control" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-version-control, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-version-control
+2021-01-19T15:37:29.849Z - warn: Filtering out duplicated extension "assets" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-assets, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-assets
+2021-01-19T15:37:29.872Z - warn: Filtering out duplicated extension "html-to-xlsx" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-html-to-xlsx, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-html-to-xlsx
+2021-01-19T15:37:29.905Z - warn: Filtering out duplicated extension "scheduling" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-scheduling, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-scheduling
+2021-01-19T15:37:29.906Z - warn: Filtering out duplicated extension "scripts" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-scripts, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-scripts
+2021-01-19T15:37:29.906Z - warn: Filtering out duplicated extension "studio-theme-dark" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-studio-theme-dark, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-studio-theme-dark
+2021-01-19T15:37:29.909Z - warn: Filtering out duplicated extension "xlsx" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-xlsx, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-xlsx
+2021-01-19T15:37:29.911Z - warn: Filtering out duplicated extension "public-templates" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-public-templates, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-public-templates
+2021-01-19T15:37:29.911Z - warn: Filtering out duplicated extension "resources" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-resources, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-resources
+2021-01-19T15:37:29.913Z - warn: Filtering out duplicated extension "sample-template" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-sample-template, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-sample-template
+2021-01-19T15:37:29.996Z - info: Setting http-server strategy for rendering
+2021-01-19T15:37:30.329Z - info: Using extension cli@2.2.5
+2021-01-19T15:37:30.353Z - info: Using extension debug@2.1.3
+2021-01-19T15:37:30.360Z - info: Using extension express@2.8.1
+2021-01-19T15:37:30.819Z - info: Using extension freeze@2.0.0
+2021-01-19T15:37:30.835Z - info: Using extension handlebars@2.1.0
+2021-01-19T15:37:30.839Z - info: Using extension import-export@2.1.1
+2021-01-19T15:37:31.030Z - info: Using extension jsrender@2.1.1
+2021-01-19T15:37:31.045Z - info: Using extension tags@2.5.0
+2021-01-19T15:37:31.109Z - info: Using extension templates@2.4.0
+2021-01-19T15:37:31.147Z - info: Using extension authorization@2.4.0
+2021-01-19T15:37:31.162Z - info: Using extension base@2.0.2
+2021-01-19T15:37:31.165Z - info: Using extension browser-client@2.2.2
+2021-01-19T15:37:31.179Z - info: Using extension child-templates@1.4.0
+2021-01-19T15:37:31.196Z - info: Using extension chrome-pdf@1.10.0
+2021-01-19T15:37:31.390Z - info: Using extension data@2.4.0
+2021-01-19T15:37:31.405Z - info: Using extension docx@2.9.0
+2021-01-19T15:37:31.410Z - info: Using extension fs-store@2.9.1
+2021-01-19T15:37:31.640Z - info: Using extension licensing@2.2.3
+2021-01-19T15:37:31.679Z - info: Using extension pdf-utils@1.10.1
+2021-01-19T15:37:31.863Z - info: Using extension pptx@0.7.0
+2021-01-19T15:37:31.878Z - info: Using extension reports@2.5.1
+2021-01-19T15:37:31.893Z - info: Using extension static-pdf@0.4.0
+2021-01-19T15:37:31.898Z - info: Using extension studio@2.10.1
+2021-01-19T15:37:31.992Z - info: Using extension text@2.0.0
+2021-01-19T15:37:31.994Z - info: Using extension version-control@1.6.0
+2021-01-19T15:37:32.173Z - info: Using extension assets@1.7.0
+2021-01-19T15:37:32.192Z - info: Using extension html-to-xlsx@2.8.3
+2021-01-19T15:37:32.964Z - info: html-to-xlsx detected chrome as available html engine
+2021-01-19T15:37:32.964Z - info: Using extension scheduling@2.5.0
+2021-01-19T15:37:33.048Z - info: Using extension scripts@2.6.0
+2021-01-19T15:37:33.054Z - info: Using extension studio-theme-dark@0.3.0
+2021-01-19T15:37:33.056Z - info: Using extension xlsx@2.5.0
+2021-01-19T15:37:33.343Z - info: Using extension public-templates@2.2.0
+2021-01-19T15:37:33.359Z - info: Using extension resources@2.1.0
+2021-01-19T15:37:33.361Z - info: Using extension sample-template@2.6.1
+2021-01-19T15:37:33.364Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2021-01-19T15:37:33.365Z - info: Using fs provider for template store.
+2021-01-19T15:37:33.377Z - info: fs store is persisting using fs
+2021-01-19T15:37:33.379Z - info: fs store is synchronizing using fs
+2021-01-19T15:37:33.398Z - info: fs store is loading data
+2021-01-19T15:37:33.581Z - info: fs store is initialized successfully
+2021-01-19T15:37:33.610Z - info: Creating default express app.
+2021-01-19T15:37:34.441Z - info: jsreport server successfully started on https port: 5489
+2021-01-19T15:37:34.442Z - info: jsreport server successfully started on http port: 5488
+2021-01-19T15:37:34.456Z - info: fs store emits sockets to synchronize underlying changes with studio
+2021-01-19T15:37:34.514Z - info: Verifying license key free
+2021-01-19T15:37:34.528Z - info: Using free license
+2021-01-19T15:37:34.544Z - info: reporter initialized
+2021-01-19T15:50:45.079Z - info: Starting rendering request 1 (user: null)
+2021-01-19T15:50:45.082Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2021-01-19T15:50:47.699Z - info: Rendering request 1 finished in 2621 ms
+2021-01-19T15:51:52.403Z - info: Starting rendering request 2 (user: null)
+2021-01-19T15:51:52.407Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2021-01-19T15:51:57.186Z - info: Starting rendering request 3 (user: null)
+2021-01-19T15:51:57.190Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2021-01-19T15:51:58.107Z - info: pdf-utils is starting pdf processing
+2021-01-19T15:51:58.324Z - info: Starting rendering request 4 (user: null)
+2021-01-19T15:51:58.328Z - info: Rendering template { name: orders-header, recipe: chrome-pdf, engine: handlebars, preview: true }
+2021-01-19T15:52:00.202Z - info: pdf-utils is starting pdf processing
+2021-01-19T15:52:00.214Z - info: Rendering request 4 finished in 1890 ms
+2021-01-19T15:52:00.261Z - info: Starting rendering request 5 (user: null)
+2021-01-19T15:52:00.262Z - info: Rendering template { name: orders-header, recipe: chrome-pdf, engine: handlebars, preview: true }
+2021-01-19T15:52:00.374Z - info: pdf-utils pdf processing was finished
+2021-01-19T15:52:00.376Z - info: Rendering request 2 finished in 7973 ms
+2021-01-19T15:52:01.534Z - info: Rendering request 5 finished in 1275 ms
+2021-01-19T15:52:01.601Z - info: pdf-utils pdf processing was finished
+2021-01-19T15:52:01.606Z - info: Rendering request 3 finished in 4417 ms
+2021-01-19T15:52:08.873Z - info: Starting rendering request 6 (user: null)
+2021-01-19T15:52:08.874Z - info: Rendering template { name: sales-main, recipe: html-to-xlsx, engine: handlebars, preview: true }
+2021-01-19T15:52:08.962Z - info: html-to-xlsx generation is starting
+2021-01-19T15:52:10.848Z - info: html-to-xlsx generation was finished
+2021-01-19T15:52:11.000Z - info: Rendering request 6 finished in 2127 ms
+2021-01-19T15:52:18.542Z - info: Starting rendering request 7 (user: null)
+2021-01-19T15:52:18.544Z - info: Rendering template { name: sales-main, recipe: html-to-xlsx, engine: handlebars, preview: true }
+2021-01-19T15:52:18.569Z - info: html-to-xlsx generation is starting
+2021-01-19T15:52:19.327Z - info: html-to-xlsx generation was finished
+2021-01-19T15:52:19.464Z - info: Rendering request 7 finished in 923 ms
+2021-01-19T16:01:32.092Z - info: Starting rendering request 8 (user: null)
+2021-01-19T16:01:32.093Z - info: Rendering template { name: centroReport, recipe: chrome-pdf, engine: handlebars, preview: true }
+2021-01-19T16:01:32.902Z - info: Rendering request 8 finished in 810 ms
+2021-01-19T16:01:46.579Z - info: Starting rendering request 9 (user: null)
+2021-01-19T16:01:46.581Z - info: Rendering template { name: centroReport, recipe: chrome-pdf, engine: handlebars, preview: true }
+2021-01-19T16:01:47.163Z - info: Rendering request 9 finished in 583 ms
+2021-01-19T16:01:52.445Z - info: Starting rendering request 10 (user: null)
+2021-01-19T16:01:52.446Z - info: Rendering template { name: centroReport, recipe: chrome-pdf, engine: handlebars, preview: true }
+2021-01-19T16:01:53.215Z - info: Rendering request 10 finished in 770 ms
+2021-01-19T16:02:00.811Z - info: Starting rendering request 11 (user: null)
+2021-01-19T16:02:00.812Z - info: Rendering template { name: centroReport, recipe: chrome-pdf, engine: handlebars, preview: true }
+2021-01-19T16:02:01.506Z - info: Rendering request 11 finished in 696 ms
+2021-01-19T16:04:24.623Z - info: Starting rendering request 12 (user: null)
+2021-01-19T16:04:24.625Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2021-01-19T16:04:27.873Z - info: Starting rendering request 13 (user: null)
+2021-01-19T16:04:27.875Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2021-01-19T16:04:29.896Z - info: pdf-utils is starting pdf processing
+2021-01-19T16:04:30.009Z - info: Starting rendering request 14 (user: null)
+2021-01-19T16:04:30.010Z - info: Rendering template { name: orders-header, recipe: chrome-pdf, engine: handlebars, preview: true }
+2021-01-19T16:04:30.604Z - info: pdf-utils is starting pdf processing
+2021-01-19T16:04:30.653Z - info: Starting rendering request 15 (user: null)
+2021-01-19T16:04:30.655Z - info: Rendering template { name: orders-header, recipe: chrome-pdf, engine: handlebars, preview: true }
+2021-01-19T16:04:31.387Z - info: Rendering request 14 finished in 1377 ms
+2021-01-19T16:04:31.483Z - info: pdf-utils pdf processing was finished
+2021-01-19T16:04:31.487Z - info: Rendering request 12 finished in 6861 ms
+2021-01-19T16:04:31.742Z - info: Rendering request 15 finished in 1090 ms
+2021-01-19T16:04:31.803Z - info: pdf-utils pdf processing was finished
+2021-01-19T16:04:31.805Z - info: Rendering request 13 finished in 3931 ms
+2021-01-19T16:05:03.125Z - info: Starting rendering request 16 (user: null)
+2021-01-19T16:05:03.126Z - info: Rendering template { name: sales-main, recipe: html-to-xlsx, engine: handlebars, preview: true }
+2021-01-19T16:05:03.146Z - info: html-to-xlsx generation is starting
+2021-01-19T16:05:03.787Z - info: html-to-xlsx generation was finished
+2021-01-19T16:05:04.068Z - info: Rendering request 16 finished in 943 ms
+2021-01-19T16:26:57.910Z - info: Starting rendering request 17 (user: null)
+2021-01-19T16:26:57.911Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2021-01-19T16:27:07.238Z - info: pdf-utils is starting pdf processing
+2021-01-19T16:27:07.305Z - info: Starting rendering request 18 (user: null)
+2021-01-19T16:27:07.307Z - info: Rendering template { name: orders-header, recipe: chrome-pdf, engine: handlebars, preview: true }
+2021-01-19T16:27:12.161Z - info: Rendering request 18 finished in 4857 ms
+2021-01-19T16:27:12.230Z - info: pdf-utils pdf processing was finished
+2021-01-19T16:27:12.231Z - info: Rendering request 17 finished in 14321 ms
+2021-01-19T16:43:27.951Z - info: Starting rendering request 19 (user: null)
+2021-01-19T16:43:27.954Z - info: Rendering template { name: centroReport, recipe: chrome-pdf, engine: handlebars, preview: true }
+2021-01-19T16:43:28.050Z - warn: Rendering request 19 finished with error in 99 ms
+2021-01-19T16:43:28.057Z - warn: Error when processing render request 19 Error while executing user script. document is not defined. Error on line 1:21.
+
+> 1 | var densityCanvas = document.getElementById("densityChart");
+    |                     ^
+  2 | var mg= document.getElementById("mGrasa");
+  3 | var mv= document.getElementById("mVis");
+  4 | parseFloat(mv);
+
+ ReferenceError: document is not defined
+    at evaluate-user-script.js:1:21
+    at Script.runInContext (vm.js:143:18)
+    at VM.run (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\vm2\lib\main.js:219:62)
+    at run (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-core\lib\render\safeSandbox.js:171:19)
+    at scriptEvalChild (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-scripts\lib\scriptEvalChild.js:210:5)
+    at scriptExecModuleWrapper (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-core\lib\scriptExecModuleWrapper.js:34:26)
+    at IncomingMessage.<anonymous> (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\script-manager\lib\worker-servers.js:279:47)
+    at IncomingMessage.emit (events.js:327:22)
+    at IncomingMessage.EventEmitter.emit (domain.js:529:15)
+    at endReadableNT (internal/streams/readable.js:1327:12)
+2021-01-19T16:43:28.059Z - warn: Error during processing request at https://localhost:5489/api/report/centroReport
+2021-01-19T16:46:08.772Z - info: Starting rendering request 20 (user: null)
+2021-01-19T16:46:08.775Z - info: Rendering template { name: centroReport, recipe: chrome-pdf, engine: handlebars, preview: true }
+2021-01-19T16:46:10.790Z - info: Starting rendering request 21 (user: null)
+2021-01-19T16:46:10.792Z - info: Rendering template { name: centroReport, recipe: chrome-pdf, engine: handlebars, preview: true }
+2021-01-19T16:46:12.984Z - info: Rendering request 20 finished in 4218 ms
+2021-01-19T16:46:13.154Z - info: Rendering request 21 finished in 2364 ms
+2021-01-19T16:46:46.944Z - info: Starting rendering request 22 (user: null)
+2021-01-19T16:46:46.946Z - info: Rendering template { name: centroReport, recipe: chrome-pdf, engine: handlebars, preview: true }
+2021-01-19T16:46:47.939Z - info: Rendering request 22 finished in 995 ms
+2021-01-19T16:48:36.710Z - info: Starting rendering request 23 (user: null)
+2021-01-19T16:48:36.711Z - info: Rendering template { name: centroReport, recipe: chrome-pdf, engine: handlebars, preview: true }
+2021-01-19T16:48:37.703Z - info: Rendering request 23 finished in 994 ms
+2021-01-19T16:49:00.044Z - info: Starting rendering request 24 (user: null)
+2021-01-19T16:49:00.045Z - info: Rendering template { name: centroReport, recipe: chrome-pdf, engine: handlebars, preview: true }
+2021-01-19T16:49:01.013Z - info: Rendering request 24 finished in 970 ms
+2021-01-19T17:39:45.154Z - info: Starting rendering request 25 (user: null)
+2021-01-19T17:39:45.155Z - info: Rendering template { name: centroReport, recipe: chrome-pdf, engine: handlebars, preview: true }
+2021-01-19T17:39:49.272Z - info: Rendering request 25 finished in 4117 ms
+2021-01-19T17:40:06.497Z - info: Starting rendering request 26 (user: null)
+2021-01-19T17:40:06.499Z - info: Rendering template { name: centroReport, recipe: chrome-pdf, engine: handlebars, preview: true }
+2021-01-19T17:40:07.597Z - info: Rendering request 26 finished in 1101 ms
+2021-01-19T18:22:25.977Z - info: Starting rendering request 27 (user: null)
+2021-01-19T18:22:25.981Z - info: Rendering template { name: centroReport, recipe: chrome-pdf, engine: handlebars, preview: true }
+2021-01-19T18:22:30.184Z - info: Rendering request 27 finished in 4209 ms
+2021-01-19T18:55:00.703Z - info: Starting rendering request 28 (user: null)
+2021-01-19T18:55:00.710Z - info: Rendering template { name: centroReport, recipe: chrome-pdf, engine: handlebars, preview: true }
+2021-01-19T18:55:04.853Z - info: Rendering request 28 finished in 4155 ms
+2021-01-19T18:55:24.531Z - info: Starting rendering request 29 (user: null)
+2021-01-19T18:55:24.532Z - info: Rendering template { name: centroReport, recipe: chrome-pdf, engine: handlebars, preview: true }
+2021-01-19T18:55:25.562Z - info: Rendering request 29 finished in 1031 ms
+2021-01-19T19:51:10.694Z - info: Starting rendering request 30 (user: null)
+2021-01-19T19:51:10.704Z - info: Rendering template { name: centroReport, recipe: chrome-pdf, engine: handlebars, preview: true }
+2021-01-19T19:51:20.816Z - info: Rendering request 30 finished in 10141 ms
+2021-01-19T19:54:40.593Z - info: Starting rendering request 31 (user: null)
+2021-01-19T19:54:40.595Z - info: Rendering template { name: centroReport, recipe: chrome-pdf, engine: handlebars, preview: true }
+2021-01-19T19:54:45.587Z - info: Rendering request 31 finished in 4995 ms
+2021-01-19T19:58:19.387Z - info: Starting rendering request 32 (user: null)
+2021-01-19T19:58:19.389Z - info: Rendering template { name: centroReport, recipe: chrome-pdf, engine: handlebars, preview: false }
+2021-01-19T19:58:19.404Z - warn: Rendering request 32 finished with error in 18 ms
+2021-01-19T19:58:19.408Z - warn: Error when processing render request 32 Failed to parse data json. Unexpected token o in JSON at position 1 Error: Failed to parse data json. Unexpected token o in JSON at position 1
+    at module.exports (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-core\lib\util\createError.js:11:13)
+    at Reporter.createError (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-core\lib\reporter.js:332:12)
+    at Data.handleBeforeRender (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-data\lib\data.js:87:27)
+caused by: SyntaxError: Unexpected token o in JSON at position 1
+    at JSON.parse (<anonymous>)
+    at Data.handleBeforeRender (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-data\lib\data.js:85:27)
+2021-01-19T19:58:19.409Z - warn: Error during processing request at https://localhost:5489/templates/Qewrgm9Wza
+2021-01-20T15:06:42.782Z - info: Starting rendering request 33 (user: null)
+2021-01-20T15:06:42.810Z - info: Rendering template { name: centroReport, recipe: chrome-pdf, engine: handlebars, preview: false }
+2021-01-20T15:06:42.843Z - warn: Rendering request 33 finished with error in 76 ms
+2021-01-20T15:06:42.847Z - warn: Error when processing render request 33 Failed to parse data json. Unexpected token o in JSON at position 1 Error: Failed to parse data json. Unexpected token o in JSON at position 1
+    at module.exports (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-core\lib\util\createError.js:11:13)
+    at Reporter.createError (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-core\lib\reporter.js:332:12)
+    at Data.handleBeforeRender (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-data\lib\data.js:87:27)
+caused by: SyntaxError: Unexpected token o in JSON at position 1
+    at JSON.parse (<anonymous>)
+    at Data.handleBeforeRender (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-data\lib\data.js:85:27)
+2021-01-20T15:06:42.849Z - warn: Error during processing request at https://localhost:5489/templates/Qewrgm9Wza
+2021-01-20T15:09:21.770Z - info: Starting rendering request 34 (user: null)
+2021-01-20T15:09:21.770Z - info: Rendering template { name: centroReport, recipe: chrome-pdf, engine: handlebars, preview: false }
+2021-01-20T15:09:21.773Z - warn: Rendering request 34 finished with error in 3 ms
+2021-01-20T15:09:21.774Z - warn: Error when processing render request 34 Failed to parse data json. Unexpected token o in JSON at position 1 Error: Failed to parse data json. Unexpected token o in JSON at position 1
+    at module.exports (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-core\lib\util\createError.js:11:13)
+    at Reporter.createError (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-core\lib\reporter.js:332:12)
+    at Data.handleBeforeRender (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-data\lib\data.js:87:27)
+caused by: SyntaxError: Unexpected token o in JSON at position 1
+    at JSON.parse (<anonymous>)
+    at Data.handleBeforeRender (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-data\lib\data.js:85:27)
+2021-01-20T15:09:21.775Z - warn: Error during processing request at https://localhost:5489/templates/Qewrgm9Wza
+2021-01-20T15:10:34.254Z - info: Starting rendering request 35 (user: null)
+2021-01-20T15:10:34.256Z - info: Rendering template { name: centroReport, recipe: chrome-pdf, engine: handlebars, preview: false }
+2021-01-20T15:10:34.258Z - warn: Rendering request 35 finished with error in 3 ms
+2021-01-20T15:10:34.261Z - warn: Error when processing render request 35 Failed to parse data json. Unexpected token o in JSON at position 1 Error: Failed to parse data json. Unexpected token o in JSON at position 1
+    at module.exports (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-core\lib\util\createError.js:11:13)
+    at Reporter.createError (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-core\lib\reporter.js:332:12)
+    at Data.handleBeforeRender (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-data\lib\data.js:87:27)
+caused by: SyntaxError: Unexpected token o in JSON at position 1
+    at JSON.parse (<anonymous>)
+    at Data.handleBeforeRender (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-data\lib\data.js:85:27)
+2021-01-20T15:10:34.262Z - warn: Error during processing request at https://localhost:5489/templates/Qewrgm9Wza
+2021-01-20T15:20:29.748Z - info: Starting rendering request 36 (user: null)
+2021-01-20T15:20:29.753Z - info: Rendering template { name: centroReport, recipe: chrome-pdf, engine: handlebars, preview: false }
+2021-01-20T15:20:29.757Z - warn: Rendering request 36 finished with error in 11 ms
+2021-01-20T15:20:29.760Z - warn: Error when processing render request 36 Failed to parse data json. Unexpected token o in JSON at position 1 Error: Failed to parse data json. Unexpected token o in JSON at position 1
+    at module.exports (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-core\lib\util\createError.js:11:13)
+    at Reporter.createError (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-core\lib\reporter.js:332:12)
+    at Data.handleBeforeRender (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-data\lib\data.js:87:27)
+caused by: SyntaxError: Unexpected token o in JSON at position 1
+    at JSON.parse (<anonymous>)
+    at Data.handleBeforeRender (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-data\lib\data.js:85:27)
+2021-01-20T15:20:29.761Z - warn: Error during processing request at https://localhost:5489/templates/Qewrgm9Wza
+2021-01-20T15:20:31.440Z - info: Starting rendering request 37 (user: null)
+2021-01-20T15:20:31.442Z - info: Rendering template { name: centroReport, recipe: chrome-pdf, engine: handlebars, preview: false }
+2021-01-20T15:20:31.448Z - warn: Rendering request 37 finished with error in 6 ms
+2021-01-20T15:20:31.456Z - warn: Error when processing render request 37 Failed to parse data json. Unexpected token o in JSON at position 1 Error: Failed to parse data json. Unexpected token o in JSON at position 1
+    at module.exports (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-core\lib\util\createError.js:11:13)
+    at Reporter.createError (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-core\lib\reporter.js:332:12)
+    at Data.handleBeforeRender (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-data\lib\data.js:87:27)
+caused by: SyntaxError: Unexpected token o in JSON at position 1
+    at JSON.parse (<anonymous>)
+    at Data.handleBeforeRender (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-data\lib\data.js:85:27)
+2021-01-20T15:20:31.457Z - warn: Error during processing request at https://localhost:5489/templates/Qewrgm9Wza
+2021-01-20T15:28:25.382Z - info: Starting rendering request 38 (user: null)
+2021-01-20T15:28:25.385Z - info: Rendering template { name: centroReport, recipe: chrome-pdf, engine: handlebars, preview: false }
+2021-01-20T15:28:25.388Z - warn: Rendering request 38 finished with error in 8 ms
+2021-01-20T15:28:25.391Z - warn: Error when processing render request 38 Failed to parse data json. Unexpected token o in JSON at position 1 Error: Failed to parse data json. Unexpected token o in JSON at position 1
+    at module.exports (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-core\lib\util\createError.js:11:13)
+    at Reporter.createError (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-core\lib\reporter.js:332:12)
+    at Data.handleBeforeRender (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-data\lib\data.js:87:27)
+caused by: SyntaxError: Unexpected token o in JSON at position 1
+    at JSON.parse (<anonymous>)
+    at Data.handleBeforeRender (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-data\lib\data.js:85:27)
+2021-01-20T15:28:25.392Z - warn: Error during processing request at https://localhost:5489/templates/Qewrgm9Wza
+2021-01-20T16:02:32.016Z - info: Starting rendering request 39 (user: null)
+2021-01-20T16:02:32.019Z - info: Rendering template { name: centroReport, recipe: chrome-pdf, engine: handlebars, preview: true }
+2021-01-20T16:02:37.519Z - info: Rendering request 39 finished in 5506 ms
+2021-01-20T16:02:44.602Z - info: Starting rendering request 40 (user: null)
+2021-01-20T16:02:44.603Z - info: Rendering template { name: centroReport, recipe: chrome-pdf, engine: handlebars, preview: false }
+2021-01-20T16:02:44.608Z - warn: Rendering request 40 finished with error in 6 ms
+2021-01-20T16:02:44.613Z - warn: Error when processing render request 40 Failed to parse data json. Unexpected token o in JSON at position 1 Error: Failed to parse data json. Unexpected token o in JSON at position 1
+    at module.exports (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-core\lib\util\createError.js:11:13)
+    at Reporter.createError (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-core\lib\reporter.js:332:12)
+    at Data.handleBeforeRender (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-data\lib\data.js:87:27)
+caused by: SyntaxError: Unexpected token o in JSON at position 1
+    at JSON.parse (<anonymous>)
+    at Data.handleBeforeRender (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-data\lib\data.js:85:27)
+2021-01-20T16:02:44.615Z - warn: Error during processing request at https://localhost:5489/templates/Qewrgm9Wza
+2021-01-20T16:05:12.827Z - info: Starting rendering request 41 (user: null)
+2021-01-20T16:05:12.829Z - info: Rendering template { name: centroReport, recipe: chrome-pdf, engine: handlebars, preview: true }
+2021-01-20T16:05:14.120Z - info: Rendering request 41 finished in 1295 ms
+2021-01-20T16:05:27.503Z - info: Starting rendering request 42 (user: null)
+2021-01-20T16:05:27.508Z - info: Rendering template { name: centroReport, recipe: chrome-pdf, engine: handlebars, preview: false }
+2021-01-20T16:05:27.511Z - warn: Rendering request 42 finished with error in 8 ms
+2021-01-20T16:05:27.515Z - warn: Error when processing render request 42 Failed to parse data json. Unexpected token o in JSON at position 1 Error: Failed to parse data json. Unexpected token o in JSON at position 1
+    at module.exports (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-core\lib\util\createError.js:11:13)
+    at Reporter.createError (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-core\lib\reporter.js:332:12)
+    at Data.handleBeforeRender (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-data\lib\data.js:87:27)
+caused by: SyntaxError: Unexpected token o in JSON at position 1
+    at JSON.parse (<anonymous>)
+    at Data.handleBeforeRender (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-data\lib\data.js:85:27)
+2021-01-20T16:05:27.516Z - warn: Error during processing request at https://localhost:5489/templates/Qewrgm9Wza
+2021-01-20T16:05:30.519Z - info: Starting rendering request 43 (user: null)
+2021-01-20T16:05:30.520Z - info: Rendering template { name: centroReport, recipe: chrome-pdf, engine: handlebars, preview: false }
+2021-01-20T16:05:30.525Z - warn: Rendering request 43 finished with error in 13 ms
+2021-01-20T16:05:30.528Z - warn: Error when processing render request 43 Failed to parse data json. Unexpected token o in JSON at position 1 Error: Failed to parse data json. Unexpected token o in JSON at position 1
+    at module.exports (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-core\lib\util\createError.js:11:13)
+    at Reporter.createError (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-core\lib\reporter.js:332:12)
+    at Data.handleBeforeRender (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-data\lib\data.js:87:27)
+caused by: SyntaxError: Unexpected token o in JSON at position 1
+    at JSON.parse (<anonymous>)
+    at Data.handleBeforeRender (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-data\lib\data.js:85:27)
+2021-01-20T16:05:30.528Z - warn: Error during processing request at https://localhost:5489/templates/Qewrgm9Wza
+2021-01-20T16:07:20.539Z - info: Initializing jsreport@2.11.0 in development mode using configuration file: jsreport.config.json
+2021-01-20T16:07:20.541Z - info: Searching for available extensions in C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\
+2021-01-20T16:07:20.565Z - info: Extensions location cache contains up to date information, skipping crawling in C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\
+2021-01-20T16:07:28.702Z - info: Found 70 extensions
+2021-01-20T16:07:29.240Z - warn: Filtering out duplicated extension "authentication" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-authentication, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-authentication
+2021-01-20T16:07:29.241Z - warn: Filtering out duplicated extension "cli" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-cli, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-cli
+2021-01-20T16:07:29.242Z - warn: Filtering out duplicated extension "debug" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-debug, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-debug
+2021-01-20T16:07:29.243Z - warn: Filtering out duplicated extension "express" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-express, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-express
+2021-01-20T16:07:29.244Z - warn: Filtering out duplicated extension "freeze" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-freeze, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-freeze
+2021-01-20T16:07:29.245Z - warn: Filtering out duplicated extension "handlebars" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-handlebars, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-handlebars
+2021-01-20T16:07:29.245Z - warn: Filtering out duplicated extension "import-export" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-import-export, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-import-export
+2021-01-20T16:07:29.247Z - warn: Filtering out duplicated extension "jsrender" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-jsrender, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-jsrender
+2021-01-20T16:07:29.248Z - warn: Filtering out duplicated extension "tags" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-tags, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-tags
+2021-01-20T16:07:29.249Z - warn: Filtering out duplicated extension "templates" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-templates, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-templates
+2021-01-20T16:07:29.249Z - warn: Filtering out duplicated extension "authorization" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-authorization, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-authorization
+2021-01-20T16:07:29.250Z - warn: Filtering out duplicated extension "base" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-base, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-base
+2021-01-20T16:07:29.252Z - warn: Filtering out duplicated extension "browser-client" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-browser-client, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-browser-client
+2021-01-20T16:07:29.252Z - warn: Filtering out duplicated extension "child-templates" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-child-templates, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-child-templates
+2021-01-20T16:07:29.253Z - warn: Filtering out duplicated extension "chrome-pdf" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-chrome-pdf, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-chrome-pdf
+2021-01-20T16:07:29.254Z - warn: Filtering out duplicated extension "data" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-data, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-data
+2021-01-20T16:07:29.255Z - warn: Filtering out duplicated extension "docx" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-docx, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-docx
+2021-01-20T16:07:29.255Z - warn: Filtering out duplicated extension "fs-store" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-fs-store, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-fs-store
+2021-01-20T16:07:29.257Z - warn: Filtering out duplicated extension "licensing" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-licensing, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-licensing
+2021-01-20T16:07:29.257Z - warn: Filtering out duplicated extension "pdf-utils" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-pdf-utils, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-pdf-utils
+2021-01-20T16:07:29.258Z - warn: Filtering out duplicated extension "pptx" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-pptx, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-pptx
+2021-01-20T16:07:29.259Z - warn: Filtering out duplicated extension "reports" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-reports, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-reports
+2021-01-20T16:07:29.260Z - warn: Filtering out duplicated extension "static-pdf" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-static-pdf, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-static-pdf
+2021-01-20T16:07:29.260Z - warn: Filtering out duplicated extension "studio" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-studio, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-studio
+2021-01-20T16:07:29.261Z - warn: Filtering out duplicated extension "text" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-text, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-text
+2021-01-20T16:07:29.262Z - warn: Filtering out duplicated extension "version-control" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-version-control, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-version-control
+2021-01-20T16:07:29.263Z - warn: Filtering out duplicated extension "assets" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-assets, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-assets
+2021-01-20T16:07:29.264Z - warn: Filtering out duplicated extension "html-to-xlsx" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-html-to-xlsx, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-html-to-xlsx
+2021-01-20T16:07:29.264Z - warn: Filtering out duplicated extension "scheduling" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-scheduling, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-scheduling
+2021-01-20T16:07:29.265Z - warn: Filtering out duplicated extension "scripts" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-scripts, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-scripts
+2021-01-20T16:07:29.266Z - warn: Filtering out duplicated extension "studio-theme-dark" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-studio-theme-dark, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-studio-theme-dark
+2021-01-20T16:07:29.266Z - warn: Filtering out duplicated extension "xlsx" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-xlsx, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-xlsx
+2021-01-20T16:07:29.268Z - warn: Filtering out duplicated extension "public-templates" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-public-templates, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-public-templates
+2021-01-20T16:07:29.269Z - warn: Filtering out duplicated extension "resources" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-resources, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-resources
+2021-01-20T16:07:29.270Z - warn: Filtering out duplicated extension "sample-template" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-sample-template, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-sample-template
+2021-01-20T16:07:29.329Z - info: Setting http-server strategy for rendering
+2021-01-20T16:07:29.565Z - info: Using extension cli@2.2.5
+2021-01-20T16:07:29.574Z - info: Using extension debug@2.1.3
+2021-01-20T16:07:29.579Z - info: Using extension express@2.8.1
+2021-01-20T16:07:29.852Z - info: Using extension freeze@2.0.0
+2021-01-20T16:07:29.855Z - info: Using extension handlebars@2.1.0
+2021-01-20T16:07:29.860Z - info: Using extension import-export@2.1.1
+2021-01-20T16:07:29.937Z - info: Using extension jsrender@2.1.1
+2021-01-20T16:07:29.939Z - info: Using extension tags@2.5.0
+2021-01-20T16:07:29.944Z - info: Using extension templates@2.4.0
+2021-01-20T16:07:29.947Z - info: Using extension authorization@2.4.0
+2021-01-20T16:07:29.955Z - info: Using extension base@2.0.2
+2021-01-20T16:07:29.958Z - info: Using extension browser-client@2.2.2
+2021-01-20T16:07:29.962Z - info: Using extension child-templates@1.4.0
+2021-01-20T16:07:29.972Z - info: Using extension chrome-pdf@1.10.0
+2021-01-20T16:07:30.071Z - info: Using extension data@2.4.0
+2021-01-20T16:07:30.073Z - info: Using extension docx@2.9.0
+2021-01-20T16:07:30.079Z - info: Using extension fs-store@2.9.1
+2021-01-20T16:07:30.254Z - info: Using extension licensing@2.2.3
+2021-01-20T16:07:30.266Z - info: Using extension pdf-utils@1.10.1
+2021-01-20T16:07:30.375Z - info: Using extension pptx@0.7.0
+2021-01-20T16:07:30.382Z - info: Using extension reports@2.5.1
+2021-01-20T16:07:30.388Z - info: Using extension static-pdf@0.4.0
+2021-01-20T16:07:30.393Z - info: Using extension studio@2.10.1
+2021-01-20T16:07:30.464Z - info: Using extension text@2.0.0
+2021-01-20T16:07:30.466Z - info: Using extension version-control@1.6.0
+2021-01-20T16:07:30.584Z - info: Using extension assets@1.7.0
+2021-01-20T16:07:30.598Z - info: Using extension html-to-xlsx@2.8.3
+2021-01-20T16:07:31.005Z - info: html-to-xlsx detected chrome as available html engine
+2021-01-20T16:07:31.005Z - info: Using extension scheduling@2.5.0
+2021-01-20T16:07:31.061Z - info: Using extension scripts@2.6.0
+2021-01-20T16:07:31.065Z - info: Using extension studio-theme-dark@0.3.0
+2021-01-20T16:07:31.068Z - info: Using extension xlsx@2.5.0
+2021-01-20T16:07:31.305Z - info: Using extension public-templates@2.2.0
+2021-01-20T16:07:31.312Z - info: Using extension resources@2.1.0
+2021-01-20T16:07:31.314Z - info: Using extension sample-template@2.6.1
+2021-01-20T16:07:31.317Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2021-01-20T16:07:31.318Z - info: Using fs provider for template store.
+2021-01-20T16:07:31.323Z - info: fs store is persisting using fs
+2021-01-20T16:07:31.325Z - info: fs store is synchronizing using fs
+2021-01-20T16:07:31.331Z - info: fs store is loading data
+2021-01-20T16:07:31.411Z - info: fs store is initialized successfully
+2021-01-20T16:07:31.428Z - info: Creating default express app.
+2021-01-20T16:07:31.478Z - info: jsreport server successfully started on https port: 5489
+2021-01-20T16:07:31.478Z - info: jsreport server successfully started on http port: 5488
+2021-01-20T16:07:31.480Z - info: fs store emits sockets to synchronize underlying changes with studio
+2021-01-20T16:07:31.505Z - info: Verifying license key free
+2021-01-20T16:07:31.507Z - info: Using free license
+2021-01-20T16:07:31.513Z - info: reporter initialized
+2021-01-20T16:08:36.001Z - info: Starting rendering request 1 (user: null)
+2021-01-20T16:08:36.005Z - info: Rendering template { name: centroReport, recipe: chrome-pdf, engine: handlebars, preview: false }
+2021-01-20T16:08:36.009Z - warn: Rendering request 1 finished with error in 9 ms
+2021-01-20T16:08:36.013Z - warn: Error when processing render request 1 Failed to parse data json. Unexpected token o in JSON at position 1 Error: Failed to parse data json. Unexpected token o in JSON at position 1
+    at module.exports (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-core\lib\util\createError.js:11:13)
+    at Reporter.createError (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-core\lib\reporter.js:332:12)
+    at Data.handleBeforeRender (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-data\lib\data.js:87:27)
+caused by: SyntaxError: Unexpected token o in JSON at position 1
+    at JSON.parse (<anonymous>)
+    at Data.handleBeforeRender (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-data\lib\data.js:85:27)
+2021-01-20T16:08:36.015Z - warn: Error during processing request at https://localhost:5489/templates/Qewrgm9Wza
+2021-01-20T16:09:18.640Z - info: Starting rendering request 2 (user: null)
+2021-01-20T16:09:18.641Z - info: Rendering template { name: centroReport, recipe: chrome-pdf, engine: handlebars, preview: false }
+2021-01-20T16:09:18.646Z - warn: Rendering request 2 finished with error in 6 ms
+2021-01-20T16:09:18.652Z - warn: Error when processing render request 2 Failed to parse data json. Unexpected token o in JSON at position 1 Error: Failed to parse data json. Unexpected token o in JSON at position 1
+    at module.exports (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-core\lib\util\createError.js:11:13)
+    at Reporter.createError (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-core\lib\reporter.js:332:12)
+    at Data.handleBeforeRender (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-data\lib\data.js:87:27)
+caused by: SyntaxError: Unexpected token o in JSON at position 1
+    at JSON.parse (<anonymous>)
+    at Data.handleBeforeRender (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-data\lib\data.js:85:27)
+2021-01-20T16:09:18.654Z - warn: Error during processing request at https://localhost:5489/templates/Qewrgm9Wza
+2021-01-20T16:11:00.308Z - info: Starting rendering request 3 (user: null)
+2021-01-20T16:11:00.309Z - info: Rendering template { name: centroReport, recipe: chrome-pdf, engine: handlebars, preview: false }
+2021-01-20T16:11:00.315Z - warn: Rendering request 3 finished with error in 7 ms
+2021-01-20T16:11:00.318Z - warn: Error when processing render request 3 Failed to parse data json. Unexpected token o in JSON at position 1 Error: Failed to parse data json. Unexpected token o in JSON at position 1
+    at module.exports (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-core\lib\util\createError.js:11:13)
+    at Reporter.createError (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-core\lib\reporter.js:332:12)
+    at Data.handleBeforeRender (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-data\lib\data.js:87:27)
+caused by: SyntaxError: Unexpected token o in JSON at position 1
+    at JSON.parse (<anonymous>)
+    at Data.handleBeforeRender (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-data\lib\data.js:85:27)
+2021-01-20T16:11:00.319Z - warn: Error during processing request at https://localhost:5489/templates/Qewrgm9Wza
+2021-01-20T16:12:53.631Z - info: Starting rendering request 4 (user: null)
+2021-01-20T16:12:53.632Z - info: Rendering template { name: centroReport, recipe: chrome-pdf, engine: handlebars, preview: false }
+2021-01-20T16:12:53.635Z - warn: Rendering request 4 finished with error in 4 ms
+2021-01-20T16:12:53.638Z - warn: Error when processing render request 4 Failed to parse data json. Unexpected token o in JSON at position 1 Error: Failed to parse data json. Unexpected token o in JSON at position 1
+    at module.exports (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-core\lib\util\createError.js:11:13)
+    at Reporter.createError (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-core\lib\reporter.js:332:12)
+    at Data.handleBeforeRender (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-data\lib\data.js:87:27)
+caused by: SyntaxError: Unexpected token o in JSON at position 1
+    at JSON.parse (<anonymous>)
+    at Data.handleBeforeRender (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-data\lib\data.js:85:27)
+2021-01-20T16:12:53.640Z - warn: Error during processing request at https://localhost:5489/templates/Qewrgm9Wza
+2021-01-20T16:28:47.188Z - info: Starting rendering request 5 (user: null)
+2021-01-20T16:28:47.190Z - info: Rendering template { name: centroReport, recipe: chrome-pdf, engine: handlebars, preview: true }
+2021-01-20T16:28:52.433Z - info: Rendering request 5 finished in 5251 ms
+2021-01-20T16:29:05.105Z - info: Starting rendering request 6 (user: null)
+2021-01-20T16:29:05.106Z - info: Rendering template { name: centroReport, recipe: chrome-pdf, engine: handlebars, preview: true }
+2021-01-20T16:29:06.304Z - info: Rendering request 6 finished in 1199 ms
+2021-01-20T16:29:30.012Z - info: Starting rendering request 7 (user: null)
+2021-01-20T16:29:30.013Z - info: Rendering template { name: centroReport, recipe: chrome-pdf, engine: handlebars, preview: false }
+2021-01-20T16:29:30.032Z - warn: Rendering request 7 finished with error in 12 ms
+2021-01-20T16:29:30.035Z - warn: Error when processing render request 7 Failed to parse data json. Unexpected token o in JSON at position 1 Error: Failed to parse data json. Unexpected token o in JSON at position 1
+    at module.exports (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-core\lib\util\createError.js:11:13)
+    at Reporter.createError (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-core\lib\reporter.js:332:12)
+    at Data.handleBeforeRender (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-data\lib\data.js:87:27)
+caused by: SyntaxError: Unexpected token o in JSON at position 1
+    at JSON.parse (<anonymous>)
+    at Data.handleBeforeRender (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-data\lib\data.js:85:27)
+2021-01-20T16:29:30.036Z - warn: Error during processing request at https://localhost:5489/templates/Qewrgm9Wza
+2021-01-20T16:32:26.516Z - info: Starting rendering request 8 (user: null)
+2021-01-20T16:32:26.517Z - info: Rendering template { name: centroReport, recipe: chrome-pdf, engine: handlebars, preview: true }
+2021-01-20T16:32:27.608Z - info: Rendering request 8 finished in 1092 ms
+2021-01-20T16:32:40.492Z - info: Starting rendering request 9 (user: null)
+2021-01-20T16:32:40.493Z - info: Rendering template { name: centroReport, recipe: chrome-pdf, engine: handlebars, preview: false }
+2021-01-20T16:32:40.496Z - warn: Rendering request 9 finished with error in 4 ms
+2021-01-20T16:32:40.499Z - warn: Error when processing render request 9 Failed to parse data json. Unexpected token o in JSON at position 1 Error: Failed to parse data json. Unexpected token o in JSON at position 1
+    at module.exports (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-core\lib\util\createError.js:11:13)
+    at Reporter.createError (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-core\lib\reporter.js:332:12)
+    at Data.handleBeforeRender (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-data\lib\data.js:87:27)
+caused by: SyntaxError: Unexpected token o in JSON at position 1
+    at JSON.parse (<anonymous>)
+    at Data.handleBeforeRender (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-data\lib\data.js:85:27)
+2021-01-20T16:32:40.500Z - warn: Error during processing request at https://localhost:5489/templates/Qewrgm9Wza
+2021-01-20T16:32:42.359Z - info: Starting rendering request 10 (user: null)
+2021-01-20T16:32:42.360Z - info: Rendering template { name: centroReport, recipe: chrome-pdf, engine: handlebars, preview: false }
+2021-01-20T16:32:42.362Z - warn: Rendering request 10 finished with error in 3 ms
+2021-01-20T16:32:42.365Z - warn: Error when processing render request 10 Failed to parse data json. Unexpected token o in JSON at position 1 Error: Failed to parse data json. Unexpected token o in JSON at position 1
+    at module.exports (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-core\lib\util\createError.js:11:13)
+    at Reporter.createError (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-core\lib\reporter.js:332:12)
+    at Data.handleBeforeRender (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-data\lib\data.js:87:27)
+caused by: SyntaxError: Unexpected token o in JSON at position 1
+    at JSON.parse (<anonymous>)
+    at Data.handleBeforeRender (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-data\lib\data.js:85:27)
+2021-01-20T16:32:42.365Z - warn: Error during processing request at https://localhost:5489/templates/Qewrgm9Wza
+2021-01-20T16:32:42.797Z - info: Starting rendering request 11 (user: null)
+2021-01-20T16:32:42.798Z - info: Rendering template { name: centroReport, recipe: chrome-pdf, engine: handlebars, preview: false }
+2021-01-20T16:32:42.801Z - warn: Rendering request 11 finished with error in 4 ms
+2021-01-20T16:32:42.803Z - warn: Error when processing render request 11 Failed to parse data json. Unexpected token o in JSON at position 1 Error: Failed to parse data json. Unexpected token o in JSON at position 1
+    at module.exports (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-core\lib\util\createError.js:11:13)
+    at Reporter.createError (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-core\lib\reporter.js:332:12)
+    at Data.handleBeforeRender (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-data\lib\data.js:87:27)
+caused by: SyntaxError: Unexpected token o in JSON at position 1
+    at JSON.parse (<anonymous>)
+    at Data.handleBeforeRender (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-data\lib\data.js:85:27)
+2021-01-20T16:32:42.804Z - warn: Error during processing request at https://localhost:5489/templates/Qewrgm9Wza
+2021-01-20T16:33:11.920Z - info: Starting rendering request 12 (user: null)
+2021-01-20T16:33:11.924Z - info: Rendering template { name: centroReport, recipe: chrome-pdf, engine: handlebars, preview: true }
+2021-01-20T16:33:13.001Z - info: Rendering request 12 finished in 1084 ms
+2021-01-20T16:33:17.501Z - info: Starting rendering request 13 (user: null)
+2021-01-20T16:33:17.506Z - info: Rendering template { name: centroReport, recipe: chrome-pdf, engine: handlebars, preview: false }
+2021-01-20T16:33:17.508Z - warn: Rendering request 13 finished with error in 8 ms
+2021-01-20T16:33:17.511Z - warn: Error when processing render request 13 Failed to parse data json. Unexpected token o in JSON at position 1 Error: Failed to parse data json. Unexpected token o in JSON at position 1
+    at module.exports (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-core\lib\util\createError.js:11:13)
+    at Reporter.createError (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-core\lib\reporter.js:332:12)
+    at Data.handleBeforeRender (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-data\lib\data.js:87:27)
+caused by: SyntaxError: Unexpected token o in JSON at position 1
+    at JSON.parse (<anonymous>)
+    at Data.handleBeforeRender (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-data\lib\data.js:85:27)
+2021-01-20T16:33:17.512Z - warn: Error during processing request at https://localhost:5489/templates/Qewrgm9Wza
+2021-01-20T16:33:18.713Z - info: Starting rendering request 14 (user: null)
+2021-01-20T16:33:18.716Z - info: Rendering template { name: centroReport, recipe: chrome-pdf, engine: handlebars, preview: false }
+2021-01-20T16:33:18.720Z - warn: Rendering request 14 finished with error in 7 ms
+2021-01-20T16:33:18.722Z - warn: Error when processing render request 14 Failed to parse data json. Unexpected token o in JSON at position 1 Error: Failed to parse data json. Unexpected token o in JSON at position 1
+    at module.exports (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-core\lib\util\createError.js:11:13)
+    at Reporter.createError (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-core\lib\reporter.js:332:12)
+    at Data.handleBeforeRender (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-data\lib\data.js:87:27)
+caused by: SyntaxError: Unexpected token o in JSON at position 1
+    at JSON.parse (<anonymous>)
+    at Data.handleBeforeRender (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-data\lib\data.js:85:27)
+2021-01-20T16:33:18.723Z - warn: Error during processing request at https://localhost:5489/templates/Qewrgm9Wza
+2021-01-20T16:33:23.630Z - info: Starting rendering request 15 (user: null)
+2021-01-20T16:33:23.633Z - info: Rendering template { name: centroReport, recipe: chrome-pdf, engine: handlebars, preview: true }
+2021-01-20T16:33:24.594Z - info: Rendering request 15 finished in 964 ms
+2021-01-20T16:40:25.782Z - info: Starting rendering request 16 (user: null)
+2021-01-20T16:40:25.783Z - info: Rendering template { name: centroReport, recipe: chrome-pdf, engine: handlebars, preview: false }
+2021-01-20T16:40:25.787Z - warn: Rendering request 16 finished with error in 4 ms
+2021-01-20T16:40:25.789Z - warn: Error when processing render request 16 Failed to parse data json. Unexpected token o in JSON at position 1 Error: Failed to parse data json. Unexpected token o in JSON at position 1
+    at module.exports (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-core\lib\util\createError.js:11:13)
+    at Reporter.createError (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-core\lib\reporter.js:332:12)
+    at Data.handleBeforeRender (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-data\lib\data.js:87:27)
+caused by: SyntaxError: Unexpected token o in JSON at position 1
+    at JSON.parse (<anonymous>)
+    at Data.handleBeforeRender (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-data\lib\data.js:85:27)
+2021-01-20T16:40:25.792Z - warn: Error during processing request at https://localhost:5489/templates/Qewrgm9Wza
+2021-01-20T16:42:17.319Z - info: Starting rendering request 17 (user: null)
+2021-01-20T16:42:17.321Z - info: Rendering template { name: centroReport, recipe: chrome-pdf, engine: handlebars, preview: false }
+2021-01-20T16:42:17.325Z - warn: Rendering request 17 finished with error in 6 ms
+2021-01-20T16:42:17.327Z - warn: Error when processing render request 17 Failed to parse data json. Unexpected token o in JSON at position 1 Error: Failed to parse data json. Unexpected token o in JSON at position 1
+    at module.exports (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-core\lib\util\createError.js:11:13)
+    at Reporter.createError (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-core\lib\reporter.js:332:12)
+    at Data.handleBeforeRender (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-data\lib\data.js:87:27)
+caused by: SyntaxError: Unexpected token o in JSON at position 1
+    at JSON.parse (<anonymous>)
+    at Data.handleBeforeRender (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-data\lib\data.js:85:27)
+2021-01-20T16:42:17.329Z - warn: Error during processing request at https://localhost:5489/templates/Qewrgm9Wza
+2021-01-20T16:43:13.821Z - info: Starting rendering request 18 (user: null)
+2021-01-20T16:43:13.822Z - info: Rendering template { name: centroReport, recipe: chrome-pdf, engine: handlebars, preview: false }
+2021-01-20T16:43:13.824Z - warn: Rendering request 18 finished with error in 4 ms
+2021-01-20T16:43:13.828Z - warn: Error when processing render request 18 Failed to parse data json. Unexpected token o in JSON at position 1 Error: Failed to parse data json. Unexpected token o in JSON at position 1
+    at module.exports (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-core\lib\util\createError.js:11:13)
+    at Reporter.createError (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-core\lib\reporter.js:332:12)
+    at Data.handleBeforeRender (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-data\lib\data.js:87:27)
+caused by: SyntaxError: Unexpected token o in JSON at position 1
+    at JSON.parse (<anonymous>)
+    at Data.handleBeforeRender (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-data\lib\data.js:85:27)
+2021-01-20T16:43:13.828Z - warn: Error during processing request at https://localhost:5489/templates/Qewrgm9Wza
+2021-01-20T16:46:44.497Z - info: Starting rendering request 19 (user: null)
+2021-01-20T16:46:44.499Z - info: Rendering template { name: centroReport, recipe: chrome-pdf, engine: handlebars, preview: true }
+2021-01-20T16:46:48.687Z - info: Rendering request 19 finished in 4190 ms
+2021-01-20T16:46:53.128Z - info: Starting rendering request 20 (user: null)
+2021-01-20T16:46:53.130Z - info: Rendering template { name: centroReport, recipe: chrome-pdf, engine: handlebars, preview: false }
+2021-01-20T16:46:53.143Z - warn: Rendering request 20 finished with error in 13 ms
+2021-01-20T16:46:53.146Z - warn: Error when processing render request 20 Failed to parse data json. Unexpected token o in JSON at position 1 Error: Failed to parse data json. Unexpected token o in JSON at position 1
+    at module.exports (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-core\lib\util\createError.js:11:13)
+    at Reporter.createError (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-core\lib\reporter.js:332:12)
+    at Data.handleBeforeRender (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-data\lib\data.js:87:27)
+caused by: SyntaxError: Unexpected token o in JSON at position 1
+    at JSON.parse (<anonymous>)
+    at Data.handleBeforeRender (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-data\lib\data.js:85:27)
+2021-01-20T16:46:53.147Z - warn: Error during processing request at https://localhost:5489/templates/Qewrgm9Wza
+2021-01-20T16:47:01.115Z - info: Starting rendering request 21 (user: null)
+2021-01-20T16:47:01.116Z - info: Rendering template { name: centroReport, recipe: chrome-pdf, engine: handlebars, preview: true }
+2021-01-20T16:47:02.310Z - info: Rendering request 21 finished in 1195 ms
+2021-01-20T16:48:30.760Z - info: Starting rendering request 22 (user: null)
+2021-01-20T16:48:30.764Z - info: Rendering template { name: centroReport, recipe: chrome-pdf, engine: handlebars, preview: false }
+2021-01-20T16:48:30.780Z - warn: Rendering request 22 finished with error in 25 ms
+2021-01-20T16:48:30.782Z - warn: Error when processing render request 22 Failed to parse data json. Unexpected token o in JSON at position 1 Error: Failed to parse data json. Unexpected token o in JSON at position 1
+    at module.exports (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-core\lib\util\createError.js:11:13)
+    at Reporter.createError (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-core\lib\reporter.js:332:12)
+    at Data.handleBeforeRender (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-data\lib\data.js:87:27)
+caused by: SyntaxError: Unexpected token o in JSON at position 1
+    at JSON.parse (<anonymous>)
+    at Data.handleBeforeRender (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-data\lib\data.js:85:27)
+2021-01-20T16:48:30.785Z - warn: Error during processing request at https://localhost:5489/templates/Qewrgm9Wza
+2021-01-20T16:49:12.793Z - info: Initializing jsreport@2.11.0 in development mode using configuration file: jsreport.config.json
+2021-01-20T16:49:12.796Z - info: Searching for available extensions in C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\
+2021-01-20T16:49:12.808Z - info: Extensions location cache contains up to date information, skipping crawling in C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\
+2021-01-20T16:49:20.408Z - info: Found 70 extensions
+2021-01-20T16:49:21.145Z - warn: Filtering out duplicated extension "authentication" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-authentication, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-authentication
+2021-01-20T16:49:21.148Z - warn: Filtering out duplicated extension "cli" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-cli, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-cli
+2021-01-20T16:49:21.205Z - warn: Filtering out duplicated extension "debug" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-debug, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-debug
+2021-01-20T16:49:21.295Z - warn: Filtering out duplicated extension "express" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-express, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-express
+2021-01-20T16:49:21.299Z - warn: Filtering out duplicated extension "freeze" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-freeze, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-freeze
+2021-01-20T16:49:21.315Z - warn: Filtering out duplicated extension "handlebars" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-handlebars, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-handlebars
+2021-01-20T16:49:21.337Z - warn: Filtering out duplicated extension "import-export" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-import-export, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-import-export
+2021-01-20T16:49:21.346Z - warn: Filtering out duplicated extension "jsrender" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-jsrender, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-jsrender
+2021-01-20T16:49:21.347Z - warn: Filtering out duplicated extension "tags" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-tags, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-tags
+2021-01-20T16:49:21.354Z - warn: Filtering out duplicated extension "templates" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-templates, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-templates
+2021-01-20T16:49:21.361Z - warn: Filtering out duplicated extension "authorization" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-authorization, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-authorization
+2021-01-20T16:49:21.362Z - warn: Filtering out duplicated extension "base" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-base, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-base
+2021-01-20T16:49:21.369Z - warn: Filtering out duplicated extension "browser-client" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-browser-client, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-browser-client
+2021-01-20T16:49:21.397Z - warn: Filtering out duplicated extension "child-templates" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-child-templates, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-child-templates
+2021-01-20T16:49:21.398Z - warn: Filtering out duplicated extension "chrome-pdf" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-chrome-pdf, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-chrome-pdf
+2021-01-20T16:49:21.399Z - warn: Filtering out duplicated extension "data" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-data, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-data
+2021-01-20T16:49:21.422Z - warn: Filtering out duplicated extension "docx" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-docx, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-docx
+2021-01-20T16:49:21.422Z - warn: Filtering out duplicated extension "fs-store" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-fs-store, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-fs-store
+2021-01-20T16:49:21.426Z - warn: Filtering out duplicated extension "licensing" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-licensing, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-licensing
+2021-01-20T16:49:21.426Z - warn: Filtering out duplicated extension "pdf-utils" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-pdf-utils, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-pdf-utils
+2021-01-20T16:49:21.431Z - warn: Filtering out duplicated extension "pptx" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-pptx, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-pptx
+2021-01-20T16:49:21.431Z - warn: Filtering out duplicated extension "reports" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-reports, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-reports
+2021-01-20T16:49:21.451Z - warn: Filtering out duplicated extension "static-pdf" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-static-pdf, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-static-pdf
+2021-01-20T16:49:21.452Z - warn: Filtering out duplicated extension "studio" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-studio, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-studio
+2021-01-20T16:49:21.455Z - warn: Filtering out duplicated extension "text" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-text, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-text
+2021-01-20T16:49:21.455Z - warn: Filtering out duplicated extension "version-control" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-version-control, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-version-control
+2021-01-20T16:49:21.459Z - warn: Filtering out duplicated extension "assets" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-assets, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-assets
+2021-01-20T16:49:21.459Z - warn: Filtering out duplicated extension "html-to-xlsx" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-html-to-xlsx, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-html-to-xlsx
+2021-01-20T16:49:21.463Z - warn: Filtering out duplicated extension "scheduling" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-scheduling, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-scheduling
+2021-01-20T16:49:21.463Z - warn: Filtering out duplicated extension "scripts" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-scripts, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-scripts
+2021-01-20T16:49:21.481Z - warn: Filtering out duplicated extension "studio-theme-dark" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-studio-theme-dark, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-studio-theme-dark
+2021-01-20T16:49:21.507Z - warn: Filtering out duplicated extension "xlsx" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-xlsx, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-xlsx
+2021-01-20T16:49:21.509Z - warn: Filtering out duplicated extension "public-templates" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-public-templates, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-public-templates
+2021-01-20T16:49:21.510Z - warn: Filtering out duplicated extension "resources" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-resources, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-resources
+2021-01-20T16:49:21.513Z - warn: Filtering out duplicated extension "sample-template" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-sample-template, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-sample-template
+2021-01-20T16:49:21.582Z - info: Setting http-server strategy for rendering
+2021-01-20T16:49:21.871Z - info: Using extension cli@2.2.5
+2021-01-20T16:49:21.880Z - info: Using extension debug@2.1.3
+2021-01-20T16:49:21.894Z - info: Using extension express@2.8.1
+2021-01-20T16:49:22.210Z - info: Using extension freeze@2.0.0
+2021-01-20T16:49:22.213Z - info: Using extension handlebars@2.1.0
+2021-01-20T16:49:22.226Z - info: Using extension import-export@2.1.1
+2021-01-20T16:49:22.310Z - info: Using extension jsrender@2.1.1
+2021-01-20T16:49:22.313Z - info: Using extension tags@2.5.0
+2021-01-20T16:49:22.327Z - info: Using extension templates@2.4.0
+2021-01-20T16:49:22.331Z - info: Using extension authorization@2.4.0
+2021-01-20T16:49:22.343Z - info: Using extension base@2.0.2
+2021-01-20T16:49:22.346Z - info: Using extension browser-client@2.2.2
+2021-01-20T16:49:22.356Z - info: Using extension child-templates@1.4.0
+2021-01-20T16:49:22.373Z - info: Using extension chrome-pdf@1.10.0
+2021-01-20T16:49:22.490Z - info: Using extension data@2.4.0
+2021-01-20T16:49:22.492Z - info: Using extension docx@2.9.0
+2021-01-20T16:49:22.497Z - info: Using extension fs-store@2.9.1
+2021-01-20T16:49:22.711Z - info: Using extension licensing@2.2.3
+2021-01-20T16:49:22.725Z - info: Using extension pdf-utils@1.10.1
+2021-01-20T16:49:22.847Z - info: Using extension pptx@0.7.0
+2021-01-20T16:49:22.855Z - info: Using extension reports@2.5.1
+2021-01-20T16:49:22.862Z - info: Using extension static-pdf@0.4.0
+2021-01-20T16:49:22.867Z - info: Using extension studio@2.10.1
+2021-01-20T16:49:22.947Z - info: Using extension text@2.0.0
+2021-01-20T16:49:22.950Z - info: Using extension version-control@1.6.0
+2021-01-20T16:49:23.072Z - info: Using extension assets@1.7.0
+2021-01-20T16:49:23.087Z - info: Using extension html-to-xlsx@2.8.3
+2021-01-20T16:49:23.513Z - info: html-to-xlsx detected chrome as available html engine
+2021-01-20T16:49:23.513Z - info: Using extension scheduling@2.5.0
+2021-01-20T16:49:23.577Z - info: Using extension scripts@2.6.0
+2021-01-20T16:49:23.581Z - info: Using extension studio-theme-dark@0.3.0
+2021-01-20T16:49:23.588Z - info: Using extension xlsx@2.5.0
+2021-01-20T16:49:23.827Z - info: Using extension public-templates@2.2.0
+2021-01-20T16:49:23.835Z - info: Using extension resources@2.1.0
+2021-01-20T16:49:23.838Z - info: Using extension sample-template@2.6.1
+2021-01-20T16:49:23.841Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2021-01-20T16:49:23.842Z - info: Using fs provider for template store.
+2021-01-20T16:49:23.847Z - info: fs store is persisting using fs
+2021-01-20T16:49:23.848Z - info: fs store is synchronizing using fs
+2021-01-20T16:49:23.858Z - info: fs store is loading data
+2021-01-20T16:49:23.951Z - info: fs store is initialized successfully
+2021-01-20T16:49:23.972Z - info: Creating default express app.
+2021-01-20T16:49:24.022Z - info: jsreport server successfully started on https port: 5489
+2021-01-20T16:49:24.022Z - info: jsreport server successfully started on http port: 5488
+2021-01-20T16:49:24.024Z - info: fs store emits sockets to synchronize underlying changes with studio
+2021-01-20T16:49:24.053Z - info: Verifying license key free
+2021-01-20T16:49:24.060Z - info: Using free license
+2021-01-20T16:49:24.074Z - info: reporter initialized
+2021-01-20T16:49:36.014Z - info: Starting rendering request 1 (user: null)
+2021-01-20T16:49:36.018Z - info: Rendering template { name: centroReport, recipe: chrome-pdf, engine: handlebars, preview: true }
+2021-01-20T16:49:37.295Z - info: Rendering request 1 finished in 1280 ms
+2021-01-20T16:49:50.960Z - info: Starting rendering request 2 (user: null)
+2021-01-20T16:49:50.963Z - info: Rendering template { name: centroReport, recipe: chrome-pdf, engine: handlebars, preview: true }
+2021-01-20T16:49:51.656Z - info: Starting rendering request 3 (user: null)
+2021-01-20T16:49:51.658Z - info: Rendering template { name: centroReport, recipe: chrome-pdf, engine: handlebars, preview: true }
+2021-01-20T16:49:52.610Z - info: Rendering request 2 finished in 1651 ms
+2021-01-20T16:49:53.361Z - info: Rendering request 3 finished in 1705 ms
+2021-01-20T16:49:54.840Z - info: Starting rendering request 4 (user: null)
+2021-01-20T16:49:54.842Z - info: Rendering template { name: centroReport, recipe: chrome-pdf, engine: handlebars, preview: true }
+2021-01-20T16:49:59.016Z - info: Rendering request 4 finished in 4175 ms
+2021-01-20T16:50:43.377Z - info: Starting rendering request 5 (user: null)
+2021-01-20T16:50:43.379Z - info: Rendering template { name: centroReport, recipe: chrome-pdf, engine: handlebars, preview: true }
+2021-01-20T16:50:44.426Z - info: Rendering request 5 finished in 1048 ms
+2021-01-20T16:51:43.774Z - info: Starting rendering request 6 (user: null)
+2021-01-20T16:51:43.776Z - info: Rendering template { name: centroReport, recipe: chrome-pdf, engine: handlebars, preview: true }
+2021-01-20T16:51:44.715Z - info: Rendering request 6 finished in 940 ms
+2021-01-20T16:52:21.877Z - info: Starting rendering request 7 (user: null)
+2021-01-20T16:52:21.885Z - info: Rendering template { name: centroReport, recipe: chrome-pdf, engine: handlebars, preview: true }
+2021-01-20T16:52:22.788Z - info: Rendering request 7 finished in 912 ms
+2021-01-20T16:54:11.245Z - info: Starting rendering request 8 (user: null)
+2021-01-20T16:54:11.247Z - info: Rendering template { name: centroReport, recipe: chrome-pdf, engine: handlebars, preview: true }
+2021-01-20T16:54:12.588Z - info: Rendering request 8 finished in 1343 ms
+2021-01-20T16:54:18.945Z - info: Starting rendering request 9 (user: null)
+2021-01-20T16:54:18.947Z - info: Rendering template { name: centroReport, recipe: chrome-pdf, engine: handlebars, preview: true }
+2021-01-20T16:54:20.266Z - info: Rendering request 9 finished in 1323 ms
+2021-01-20T16:55:53.202Z - info: Starting rendering request 10 (user: null)
+2021-01-20T16:55:53.204Z - info: Rendering template { name: centroReport, recipe: chrome-pdf, engine: handlebars, preview: true }
+2021-01-20T16:55:54.258Z - info: Rendering request 10 finished in 1072 ms
+2021-01-20T16:58:34.223Z - info: Starting rendering request 11 (user: null)
+2021-01-20T16:58:34.225Z - info: Rendering template { name: centroReport, recipe: chrome-pdf, engine: handlebars, preview: true }
+2021-01-20T16:58:35.220Z - info: Rendering request 11 finished in 998 ms
+2021-01-20T21:38:00.939Z - info: Starting rendering request 12 (user: null)
+2021-01-20T21:38:00.943Z - info: Rendering template { name: centroReport, recipe: chrome-pdf, engine: handlebars, preview: true }
+2021-01-20T21:38:08.422Z - info: Rendering request 12 finished in 7498 ms
+2021-01-21T14:12:52.438Z - info: Starting rendering request 13 (user: null)
+2021-01-21T14:12:52.450Z - info: Rendering template { name: centroReport, recipe: chrome-pdf, engine: handlebars, preview: true }
+2021-01-21T14:12:57.960Z - error: Rendering request 13 finished with error in 5539 ms
+2021-01-21T14:12:57.978Z - error: Error when processing render request 13 Failed to launch chrome!
+[0121/151257.671:FATAL:feature_list.cc(282)] Check failed: !g_initialized_from_accessor. 
+Backtrace:
+	ovly_debug_event [0x00007FFB5DF21252+16183762]
+	ovly_debug_event [0x00007FFB5DF20832+16181170]
+	ovly_debug_event [0x00007FFB5DF33383+16257795]
+	ovly_debug_event [0x00007FFB5DF23386+16192262]
+	ovly_debug_event [0x00007FFB5DA74B2E+11283118]
+	ovly_debug_event [0x00007FFB5DE9DB58+15645400]
+	ovly_debug_event [0x00007FFB5DE9DACD+15645261]
+	ovly_debug_event [0x00007FFB5DEC8F28+15822504]
+	ovly_debug_event [0x00007FFB5DE9D35E+15643358]
+	ovly_debug_event [0x00007FFB5DEC83E3+15819619]
+	ovly_debug_event [0x00007FFB5DEC82BB+15819323]
+	ovly_debug_event [0x00007FFB5DEC80F2+15818866]
+	ChromeMain [0x00007FFB5CFB11B6+286]
+	Ordinal0 [0x00007FF67C3A275F+10079]
+	Ordinal0 [0x00007FF67C3A182D+6189]
+	GetHandleVerifier [0x00007FF67C4AB7C2+697538]
+	BaseThreadInitThunk [0x00007FFBDC6E7C24+20]
+	RtlUserThreadStart [0x00007FFBDE68D4D1+33]
+
+
+
+TROUBLESHOOTING: https://github.com/GoogleChrome/puppeteer/blob/master/docs/troubleshooting.md
+ Error: Failed to launch chrome!
+[0121/151257.671:FATAL:feature_list.cc(282)] Check failed: !g_initialized_from_accessor. 
+Backtrace:
+	ovly_debug_event [0x00007FFB5DF21252+16183762]
+	ovly_debug_event [0x00007FFB5DF20832+16181170]
+	ovly_debug_event [0x00007FFB5DF33383+16257795]
+	ovly_debug_event [0x00007FFB5DF23386+16192262]
+	ovly_debug_event [0x00007FFB5DA74B2E+11283118]
+	ovly_debug_event [0x00007FFB5DE9DB58+15645400]
+	ovly_debug_event [0x00007FFB5DE9DACD+15645261]
+	ovly_debug_event [0x00007FFB5DEC8F28+15822504]
+	ovly_debug_event [0x00007FFB5DE9D35E+15643358]
+	ovly_debug_event [0x00007FFB5DEC83E3+15819619]
+	ovly_debug_event [0x00007FFB5DEC82BB+15819323]
+	ovly_debug_event [0x00007FFB5DEC80F2+15818866]
+	ChromeMain [0x00007FFB5CFB11B6+286]
+	Ordinal0 [0x00007FF67C3A275F+10079]
+	Ordinal0 [0x00007FF67C3A182D+6189]
+	GetHandleVerifier [0x00007FF67C4AB7C2+697538]
+	BaseThreadInitThunk [0x00007FFBDC6E7C24+20]
+	RtlUserThreadStart [0x00007FFBDE68D4D1+33]
+
+
+
+TROUBLESHOOTING: https://github.com/GoogleChrome/puppeteer/blob/master/docs/troubleshooting.md
+
+    at onClose (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\puppeteer\lib\Launcher.js:348:14)
+    at ChildProcess.<anonymous> (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\puppeteer\lib\Launcher.js:338:60)
+    at ChildProcess.emit (events.js:327:22)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:277:12)
+2021-01-21T14:12:57.982Z - error: Error during processing request at https://localhost:5489/api/report
+2021-01-21T15:27:21.695Z - info: Starting rendering request 14 (user: null)
+2021-01-21T15:27:21.698Z - info: Rendering template { name: centroReport, recipe: chrome-pdf, engine: handlebars, preview: true }
+2021-01-21T15:27:27.467Z - info: Rendering request 14 finished in 5782 ms
+2021-01-21T15:28:07.379Z - info: Starting rendering request 15 (user: null)
+2021-01-21T15:28:07.380Z - info: Rendering template { name: centroReport, recipe: chrome-pdf, engine: handlebars, preview: true }
+2021-01-21T15:28:08.652Z - info: Rendering request 15 finished in 1273 ms
+2021-01-21T15:31:59.626Z - info: Starting rendering request 16 (user: null)
+2021-01-21T15:31:59.627Z - info: Rendering template { name: centroReport, recipe: chrome-pdf, engine: handlebars, preview: true }
+2021-01-21T15:32:01.227Z - info: Rendering request 16 finished in 1601 ms
+2021-01-21T15:33:01.200Z - info: Starting rendering request 17 (user: null)
+2021-01-21T15:33:01.269Z - info: Rendering template { name: centroReport, recipe: chrome-pdf, engine: handlebars, preview: true }
+2021-01-21T15:33:04.716Z - info: Rendering request 17 finished in 3521 ms
+2021-01-21T15:33:52.485Z - info: Starting rendering request 18 (user: null)
+2021-01-21T15:33:52.486Z - info: Rendering template { name: centroReport, recipe: chrome-pdf, engine: handlebars, preview: false }
+2021-01-21T15:33:52.496Z - warn: Rendering request 18 finished with error in 12 ms
+2021-01-21T15:33:52.499Z - warn: Error when processing render request 18 Failed to parse data json. Unexpected token o in JSON at position 1 Error: Failed to parse data json. Unexpected token o in JSON at position 1
+    at module.exports (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-core\lib\util\createError.js:11:13)
+    at Reporter.createError (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-core\lib\reporter.js:332:12)
+    at Data.handleBeforeRender (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-data\lib\data.js:87:27)
+caused by: SyntaxError: Unexpected token o in JSON at position 1
+    at JSON.parse (<anonymous>)
+    at Data.handleBeforeRender (C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\jsreportapp\node_modules\jsreport-data\lib\data.js:85:27)
+2021-01-21T15:33:52.506Z - warn: Error during processing request at https://localhost:5489/templates/Qewrgm9Wza
+2021-01-21T15:34:43.099Z - info: Starting rendering request 19 (user: null)
+2021-01-21T15:34:43.100Z - info: Rendering template { name: centroReport, recipe: chrome-pdf, engine: handlebars, preview: true }
+2021-01-21T15:34:44.248Z - info: Rendering request 19 finished in 1149 ms

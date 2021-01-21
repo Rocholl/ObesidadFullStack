@@ -19,6 +19,14 @@
     <ion-label>Centro:{{centro.nombre}}</ion-label>
     
   </ion-item>
+  <ion-item>
+  <ion-button *ngIf="isMobile" (click)="viewReport()" color="secondary" expand="block" fill="clear" shape="round">
+    Ver Informe
+</ion-button>
+<ion-button *ngIf="!isMobile" (click)="viewReport()" color="secondary" expand="block" fill="clear" shape="round">
+  Ver Informe
+</ion-button>
+</ion-item>
   <ion-row>
   <ion-col>
     <ion-button href="/form-health" expand="block">Añadir un Alumno</ion-button>

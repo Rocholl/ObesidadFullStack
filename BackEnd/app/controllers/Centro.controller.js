@@ -55,8 +55,7 @@ exports.findOne = (req, res) => {
     let id = req.params.id;
     Centro.findByPk(id)
         .then(data => {
-            console.log("estos son los datos")
-            console.log(data);
+           
             if (!data) {
                 res.status(400).send({
                     message: "No Centro found with that id"
@@ -67,14 +66,35 @@ exports.findOne = (req, res) => {
         })
         .catch(err => {
             console.log(err.message);
-            console.log("hola");
+           
             res.status(500).send({
                 message: err.message || "Some error occurred while retrieving Centro with id"
             });
             return;
         });
 };
-
+exports.findOne1 = (req, res) => {
+    let id = req.params.id;
+    Centro.findByPk(id)
+        .then(data => {
+           
+            if (!data) {
+                res.status(400).send({
+                    message: "No Centro found with that id"
+                })
+            }
+            
+            return data;
+        })
+        .catch(err => {
+            console.log(err.message);
+           
+            res.status(500).send({
+                message: err.message || "Some error occurred while retrieving Centro with id"
+            });
+            return;
+        });
+};
 // Update a Tutorial by the id in the request
 exports.update = (req, res) => {
     let id = req.body.id;
