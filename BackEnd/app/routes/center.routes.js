@@ -27,9 +27,9 @@ module.exports = app => {
 
 
    router.get('/report/:id', async function(req,res){
-console.log(req.params.id)
-       Health.findHealthbyCentro(req.params.id).then(datos => {
-         
+
+       let datos= await   Health.findHealthbyCentro(req.params.id);
+   
         let data = {
             template:{ "shortid": "Qewrgm9Wza",},
             data:  datos,
@@ -43,12 +43,9 @@ console.log(req.params.id)
             method:'POST',
             json:data,
         }
-        console.log(datos);
-        request(options).pipe(res);
+       
+     await   request(options).pipe(res);
 
-       });
-   
-      
 
     } )
 

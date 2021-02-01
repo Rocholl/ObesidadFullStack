@@ -27,6 +27,7 @@ export class FormHealthPage implements OnInit {
   curso: Cursos;
   isSubmitted = false;
   health:Healths;
+  sex;
   constructor(private router: Router,private menuCtrl: MenuController,private alertController:AlertController, private auth: AuthService, private healthService: HealthsService, private centroService: CentrosService, private storage: Storage, public formBuilder: FormBuilder) { }
   toggleMenu() {
     this.menuCtrl.toggle();
@@ -52,7 +53,7 @@ export class FormHealthPage implements OnInit {
     return this.ionicForm.controls;
   }
   async saveParams() {
-    this.storage.get("curso").then(data => {
+  await  this.storage.get("class").then(data => {
       this.cursos = data;
 
     });

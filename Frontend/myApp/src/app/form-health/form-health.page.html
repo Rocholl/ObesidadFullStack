@@ -12,14 +12,15 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-item *ngIf="cursos" >
+<ion-content>
+  
+<ion-item >
    
   <ion-select color="primary" placeholder="Clase: " [(ngModel)]="curso">
-    <ion-select-option *ngFor="let curso1 of cursos" [value]="curso1">{{curso1.Curso + ' ' + curso1.Letra}}
+    <ion-select-option *ngFor="let curso1 of cursos" [value]="curso1">{{curso1.Curso + ' ' + curso1.letra}}
     </ion-select-option>
   </ion-select>
 </ion-item>
-<ion-content>
   <ion-item>
     <ion-select class="customInterface" color="primary" placeholder="Sexo: " [(ngModel)]="sex">
       <ion-select-option value="m">

@@ -10,6 +10,7 @@ import { CursosService } from '../services/cursos.service';
 import { HealthsService } from '../services/healths.service';
 import { BrowserTab } from '@ionic-native/browser-tab/ngx';
 import { Router } from '@angular/router';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-user-page',
@@ -20,12 +21,18 @@ export class UserPagePage implements OnInit {
   user:any;
   centro:Centro;
   isMobile:Boolean;
+  isLogged:boolean;
   constructor(private obj:ObjectSenderService,private router:Router,private centroService: CentrosService,
-    private healthService: HealthsService,private cursoService:CursosService,private storage:Storage,private menuCtrl: MenuController,private browser:BrowserTab,private platform:Platform) { }
+    private auth:AuthService,private cursoService:CursosService,private storage:Storage,private menuCtrl: MenuController,private browser:BrowserTab,private platform:Platform) { }
     toggleMenu() {
       this.menuCtrl.toggle();
     }
   ngOnInit() {
+    if(this.auth.isLoggedIn){
+      this.isLogged= true;
+    }else{
+      this.isLogged= false;
+    }
     if(this.platform.is('android')){
       this.isMobile=true;
     
@@ -52,7 +59,7 @@ export class UserPagePage implements OnInit {
     }
     viewReport(){
      
-      if(this.platform.is('android')){
+      if(this.platform.is('android')||this.platform.is('ios')){
         this.browser.openUrl("http://localhost:8080/api/centro/report/"+this.centro.idCentro);
       }
       window.open("http://localhost:8080/api/centro/report/"+this.centro.idCentro, '_system');
@@ -68,6 +75,9 @@ export class UserPagePage implements OnInit {
       });
     
     }
+    logout(){
+      this.auth.logout();
+      }
   }
   
   

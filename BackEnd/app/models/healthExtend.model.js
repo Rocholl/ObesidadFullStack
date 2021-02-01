@@ -1,6 +1,6 @@
 module.exports = (sequelize, Sequelize) => {
-    const Health = sequelize.define("healths", {
-        id: {
+    const healthExtend = sequelize.define("healthExtend", {
+        idHealths: {
             type: Sequelize.INTEGER,
             primaryKey: true,
             autoIncrement: true
@@ -11,47 +11,28 @@ module.exports = (sequelize, Sequelize) => {
         masa_Viseral: {
             type: Sequelize.DOUBLE,
         },
-        peso_Muscular: {
-            type: Sequelize.DOUBLE,
-        },
         masa_Muscular: {
-            type: Sequelize.DOUBLE,
-        },
-        edad_Metabolica:{
             type: Sequelize.DOUBLE,
         },
         altura: {
             type: Sequelize.DOUBLE,
         },
-        perimetro_Abdominal: {
-            type: Sequelize.DOUBLE,
-        },
         peso: {
             type: Sequelize.DOUBLE,
         },
-        masa_Corporal:{
+        edad: {
             type: Sequelize.DOUBLE,
         },
-        peso_Oseo:{
-            type: Sequelize.DOUBLE,
-        },
-        actividad_Fisica:{
-            type: Sequelize.DOUBLE,
-        },
-     
 
       
 
       
     }, { timestamps: false });
-    Health.associate = function(models) {
-        Health.hasMany(models.healthExtend,{
-
-            foreignKey: 'idHealth'
-        })
+    healthExtend.associate = function(models) {
+        // associations can be defined here
        
      
     };
         //  
-    return Health;
+    return healthExtend;
 };

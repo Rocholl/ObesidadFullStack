@@ -69,7 +69,7 @@ const PORT = process.env.PORT || 8080;
 app.listen(PORT, function () {
     console.log(`La app ha arrancado en http://localhost:${PORT}`);
 
-    sequelize.sync({ force: false }).then(() => {
+    sequelize.sync({ force: true }).then(() => {
         console.log("Se ha establecido la conexión");
     })
 });

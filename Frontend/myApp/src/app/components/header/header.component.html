@@ -16,7 +16,9 @@
       <ion-button expand="full" >
         Terminos de uso
       </ion-button>
-
+      <ion-button *ngIf="isLogged" (click)="logout()"  href="/login" expand="full" color="secondary">
+        Cerrar sesion
+      </ion-button>
     </ion-list>
   </ion-content>
 </ion-menu>
@@ -41,7 +43,9 @@
       <ion-button expand="full" >
         Terminos de uso
       </ion-button>
-
+      <ion-button *ngIf="isLogged" (click)="logout()" href="/login" expand="full" color="secondary">
+        Cerrar sesion
+      </ion-button>
 
     </ion-list>
   </ion-content>

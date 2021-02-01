@@ -4,7 +4,7 @@ const Op = db.Sequelize.Op;
 const bcrypt = require('bcrypt');
 const jst = require('jsonwebtoken');
 const authConfig = require('../config/Auth.config.js');
-
+console.log(Usuario);
 
 // Create and Save a new usuario
 // req --> request (contains the body)

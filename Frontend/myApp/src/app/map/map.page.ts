@@ -29,7 +29,11 @@ export class MapPage implements OnInit {
   focusmapLong = -15.43;
   centros: Centro[];
   mapMarkers: any[] = [];
+  mapMarkers1: any[] = [];
   color:string;
+  municipio1;
+ markerbool:boolean= true;
+ markerbool1:boolean= true;
   constructor(
     private menuCtrl: MenuController,
     private centroService: CentrosService,
@@ -45,6 +49,29 @@ this.showMap();
   }
   ngOnInit() {
      
+  }
+  toggleMap1(){
+    if(this.markerbool){
+    this.mapMarkers1= this.mapMarkers;
+    this.mapMarkers= [];
+    this.addMarkersToMap();
+    this.showMap();
+  }else{
+    this.mapMarkers=this.mapMarkers1;
+    this.addMarkersToMap();
+    this.showMap();
+  }
+  }
+  toggleMap(){
+    if(this.markerbool){
+      this.municipio1=this.municipio;
+      this.municipio= [];
+      this.showMap();
+    }else{
+      this.municipio= this.municipio1;
+      this.showMap();
+    }
+    
   }
   getAllHealth() {
     this.healthService.getAll().subscribe(healths => {
