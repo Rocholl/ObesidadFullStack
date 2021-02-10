@@ -1,7 +1,8 @@
 const db = require("../models");
 const Municipio = db.municipio;
 const Op = db.Sequelize.Op;
-
+const { QueryTypes } = require('sequelize');
+const { Sequelize } = require("../models");
 // Create and Save a new usuario
 // req --> request (contains the body)
 exports.create = (req, res) => {
@@ -76,7 +77,18 @@ exports.findOne = (req, res) => {
             return;
         });
 };
-
+exports.findHealthbyMunicipio= (req,res)=>{
+    db.sequelize.query(`SELECT * from healthsExtend INNER JOIN centros   
+       ON healths.idCentros = centros.idCentro 
+    HAVING centros.idMunicipios =` +req.params.id).then((result) => {
+       res.json(result);
+    }).catch((err) => {
+       res.status(500).send({
+           message: err.message || "Some error occurred while retrieving Healths."
+       });
+    });
+   
+   }
 // Update a Tutorial by the id in the request
 exports.update = (req, res) => {
     let id = req.body.id;

@@ -1,5 +1,5 @@
 module.exports = app => {
-    const Municipio = require("../controllers/Municipio.controller.js");
+    const Municipio = require("../controllers/municipio.controller.js");
 
     var router = require("express").Router();
 
@@ -18,7 +18,7 @@ module.exports = app => {
     // Delete a Usuario with id
     router.delete("/:id", Municipio.delete);
 
-
+    router.get(":id",Municipio.findHealthbyMunicipio);
 
     app.use('/api/municipio', router);
 };

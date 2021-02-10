@@ -1,14 +1,14 @@
-import { Cursos } from './Cursos';
+
 
 export class Healths{
     idHealths: number;
-    masa_Grasa: number;
+    edad: number;
 
-    masa_Viseral: number;
-    idCursos: number;
-    idCentros:number;
-    masa_Muscular:number;
-    altura:number;
-    peso:number;
-    edad:number;
+    sexo: String;
+    idCurso: number;
+    idCentro:number;
+    num_lista:number;
+   
+
+   
 }

@@ -11,6 +11,7 @@ import { HealthsService } from '../services/healths.service';
 import { BrowserTab } from '@ionic-native/browser-tab/ngx';
 import { Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
+import { Cursos } from '../Models/Cursos';
 
 @Component({
   selector: 'app-user-page',
@@ -46,6 +47,7 @@ export class UserPagePage implements OnInit {
       console.log(data);
       this.cursoService.getCursosByUserId(this.user.idUsuarios).subscribe(curso=>{
         this.storage.set("class",curso);
+        console.log(curso)
         });
     }).catch().finally(()=>{
       this.saveParams();
@@ -66,7 +68,7 @@ export class UserPagePage implements OnInit {
 
     }
     saveParams(){
-      this.centroService.getCentroId(this.user.idCentros).subscribe(centro=>{
+      this.centroService.getCentroId(this.user.idCentro).subscribe(centro=>{
         console.log(this.user)
   
         this.centro= centro;
@@ -75,8 +77,14 @@ export class UserPagePage implements OnInit {
       });
     
     }
+    addRecords(){
+      this.router.navigateByUrl("user-class-students");
+    }
     logout(){
       this.auth.logout();
+      }
+      compareWith(o1: Cursos, o2: Cursos) {
+        return o1 && o2 ? o1.idCursos === o2.idCursos : o1 === o2;
       }
   }
   

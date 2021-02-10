@@ -9,9 +9,6 @@ module.exports = (sequelize, Sequelize) => {
             type: Sequelize.STRING
            
            
-        },
-        Letra: {
-            type: Sequelize.STRING     
         }
 
       
@@ -22,11 +19,11 @@ module.exports = (sequelize, Sequelize) => {
         Curso.belongsToMany(models.usuarios, {
             through: 'usuario_Cursos',
             as: 'fk_Id_Curso',
-            foreignKey: 'idCursos',
+            foreignKey: 'idCurso',
           })
-        Curso.hasMany(models.healths,{
+        Curso.hasMany(models.health,{
 
-            foreignKey: 'idCursos'
+            foreignKey: 'idCurso'
         })
     };
     return Curso;

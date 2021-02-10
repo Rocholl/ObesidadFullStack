@@ -18,10 +18,10 @@ module.exports = (sequelize, Sequelize) => {
         timestamps: false
     });
     Municipio.associate = function(models) {
-        Municipio.hasMany(models.centros, {
+        Municipio.hasMany(models.distrito, {
        
           as: 'fk_Id_Municipios',
-          foreignKey: 'idMunicipios'
+          foreignKey: 'idMunicipio'
          
         })
     };

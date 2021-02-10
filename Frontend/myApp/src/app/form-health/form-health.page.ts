@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
 import { CentrosService } from '../services/centros.service';
@@ -20,6 +20,8 @@ import { AlertController, MenuController } from '@ionic/angular';
   styleUrls: ['./form-health.page.scss'],
 })
 export class FormHealthPage implements OnInit {
+  
+	@ViewChild('recordSlider') recordSlider;
   cursos: Cursos[];
   cursoId: number;
   centroId: number;
@@ -28,9 +30,46 @@ export class FormHealthPage implements OnInit {
   isSubmitted = false;
   health:Healths;
   sex;
-  constructor(private router: Router,private menuCtrl: MenuController,private alertController:AlertController, private auth: AuthService, private healthService: HealthsService, private centroService: CentrosService, private storage: Storage, public formBuilder: FormBuilder) { }
+  Tanita: FormGroup;
+  Tanita2: FormGroup;
+  Manual: FormGroup;
+
+  constructor(private router: Router,private menuCtrl: MenuController,private alertController:AlertController, private auth: AuthService, private healthService: HealthsService, private centroService: CentrosService, private storage: Storage, public formBuilder: FormBuilder) {
+    this.Tanita = formBuilder.group({
+      peso: ["23",Validators.compose([Validators.maxLength(2),Validators.min(20),Validators.max(99)])],
+      percent_Grasa: ["", Validators.compose([Validators.maxLength(2),Validators.min(5),Validators.max(50)])],
+      percent_Hidratacion: ["",Validators.compose([Validators.maxLength(2),Validators.min(40),Validators.max(80)])],
+      peso_Muscular: ["",Validators.compose([Validators.maxLength(2),Validators.min(5),Validators.max(40)])],
+      masa_Muscular: ["",Validators.compose([Validators.maxLength(15),Validators.min(15),Validators.max(40)])],
+
+    });
+    this.Tanita2 = formBuilder.group({
+      peso_Oseo: ["",Validators.compose([Validators.maxLength(2),Validators.min(1),Validators.max(5)])],
+      kilocalorias: ["", Validators.compose([Validators.maxLength(4),Validators.min(1000),Validators.max(4000)])],
+      edad_Metabolica: ["",Validators.compose([Validators.maxLength(2),Validators.min(5),Validators.max(25)])],
+      masa_Viseral: ["",Validators.compose([Validators.maxLength(15),Validators.min(10),Validators.max(40)])],
+
+    })
+   
+   this.Manual = formBuilder.group({
+    altura: ["",Validators.compose([Validators.maxLength(3),Validators.min(120),Validators.max(220)])],
+    perimetro_Abdominal: ["", Validators.compose([Validators.maxLength(3),Validators.min(75),Validators.max(120)])],
+    actividad_Fisica: ["",Validators.compose([Validators.maxLength(2),Validators.min(0),Validators.max(7)])],
+   
+
+  });
+  }
   toggleMenu() {
     this.menuCtrl.toggle();
+  }
+
+  //forms
+  next(){
+    this.recordSlider.slideNext();
+  }
+  prev(){
+    this.recordSlider.slidePrev();
+
   }
   ngOnInit() {
     if (!this.auth.isLoggedIn()) {
@@ -40,18 +79,8 @@ export class FormHealthPage implements OnInit {
     this.saveParams();
 
   }
-  ionicForm = this.formBuilder.group({
-    mGrasa: ['', [Validators.required, Validators.minLength(2), Validators.min(5), Validators.max(80)]],
-    mVisceral: ['', [Validators.required, Validators.minLength(2), Validators.min(1), Validators.max(25)]],
-    altura: ['', [Validators.minLength(2), Validators.min(100), Validators.max(270)]],
-    peso: ['', [Validators.minLength(2), Validators.min(35), Validators.max(150)]],
-    edad: ['', [Validators.minLength(1), Validators.min(5), Validators.max(22)]],
-    mMuscular: ['', [Validators.minLength(1), Validators.min(15), Validators.max(60)]]
-
-  })
-  get errorControl() {
-    return this.ionicForm.controls;
-  }
+  
+ 
   async saveParams() {
   await  this.storage.get("class").then(data => {
       this.cursos = data;
@@ -61,30 +90,46 @@ export class FormHealthPage implements OnInit {
       this.centro = data;
     })
   }
-  submitForm(form) {
-    console.log(this.curso);
+  submitForm() {
+    this.isSubmitted = true;
+
+    if(!this.Tanita.valid){
+        this.recordSlider.slideTo(0);
+    } 
+    else if(!this.Tanita2.valid){
+        this.recordSlider.slideTo(1);
+    }  else if(!this.Manual.valid){
+      this.recordSlider.slideTo(2);
+  }
+    else {
+        console.log("success!")
+        console.log(this.Tanita.value);
+        console.log(this.Tanita2.value);
+        console.log(this.Manual.value);
+    }
+  /*  console.log(this.curso);
     this.isSubmitted = true;
     
     
     let health: Healths = {
       idHealths: null,
-      masa_Grasa: this.ionicForm.controls["mGrasa"].value,
+      masa_Grasa: this..controls["mGrasa"].value,
 
-      masa_Viseral: this.ionicForm.controls["mVisceral"].value,
+      masa_Viseral: this..controls["mVisceral"].value,
       idCursos: this.curso.idCursos,
       idCentros: this.centro.idCentro,
-      masa_Muscular: this.ionicForm.controls["mMuscular"].value,
-      altura: this.ionicForm.controls["altura"].value,
-      peso: this.ionicForm.controls["peso"].value,
-      edad: this.ionicForm.controls["edad"].value,
+      masa_Muscular: this..controls["mMuscular"].value,
+      altura: this..controls["altura"].value,
+      peso: this..controls["peso"].value,
+      edad: this..controls["edad"].value,
     }
    
     this.healthService.postHealth(health).subscribe((res) => {
 
       this.handleButtonClick(health);
-      this.ionicForm.reset();
+      this..reset();
     });
-
+*/
   }
   async handleButtonClick(health) {
     const alert = await this.alertController.create({
@@ -98,40 +143,6 @@ export class FormHealthPage implements OnInit {
   compareWith(o1: Cursos, o2: Cursos) {
     return o1 && o2 ? o1.idCursos === o2.idCursos : o1 === o2;
   }
-  public errorMessages = {
-    mGrasa: [
-      { type: 'required', message: 'mGrasa is required' },
-      { type: 'min', message: 'Name cant be longer than 5 characters' }
-    ],
-    mVisceral: [
-      { type: 'required', message: 'mVisceral is required' },
-      { type: 'min', message: 'Introduce un numero valido' }
-    ],
-    altura: [
-
-      { type: 'min', message: 'No puede medir menos de 100cm' }
-    ],
-    peso: [
-
-      {
-        type: 'min',
-        message: 'No puede pesar menos de 35 kilos'
-      }
-    ],
-    edad: [
-
-      {
-        type: 'maxlength',
-        message: 'City name cant be longer than 100 characters'
-      }
-    ],
-    mMuscular: [
-
-      {
-        type: 'min',
-        message: '15'
-      }
-    ]
-  };
+  
 }
 

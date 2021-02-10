@@ -7,6 +7,8 @@ module.exports = app => {
     router.get("/:id",Class.findOne);
 
     // Retrieve all Classs
+    router.post("/",Class.create);
+    router.get("/",Class.findAll);
    
 
 

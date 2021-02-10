@@ -34,7 +34,7 @@ export class LoginPage implements OnInit {
       nombre: null,
       apellidos: null,
       rol: null,
-      idCentros: null
+      idCentro: null
     };
     this.authService.login(user).subscribe((res)=>{
       if(!res.token) {

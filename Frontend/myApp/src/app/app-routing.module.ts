@@ -34,6 +34,10 @@ const routes: Routes = [
     path: 'help-page',
     loadChildren: () => import('./help-page/help-page.module').then( m => m.HelpPagePageModule)
   },
+  {
+    path: 'user-class-students',
+    loadChildren: () => import('./user-class-students/user-class-students.module').then( m => m.UserClassStudentsPageModule)
+  },
 
 ];
 

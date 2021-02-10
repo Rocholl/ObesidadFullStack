@@ -64,12 +64,14 @@ require("./app/routes/municipality.routes")(app);
 require("./app/routes/center.routes")(app);
 require("./app/routes/health.routes")(app);
 require("./app/routes/class.routes")(app);
+require("./app/routes/healthExtend.routes")(app);
+
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, function () {
     console.log(`La app ha arrancado en http://localhost:${PORT}`);
 
-    sequelize.sync({ force: true }).then(() => {
+    sequelize.sync({ force: false }).then(() => {
         console.log("Se ha establecido la conexión");
     })
 });

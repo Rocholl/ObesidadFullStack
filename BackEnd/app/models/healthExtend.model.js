@@ -1,30 +1,54 @@
 module.exports = (sequelize, Sequelize) => {
     const healthExtend = sequelize.define("healthExtend", {
-        idHealths: {
+       
+
+        id: {
             type: Sequelize.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },
-        masa_Grasa: {
-            type: Sequelize.DOUBLE
+        fecha: {
+            type: Sequelize.DATEONLY
         },
-        masa_Viseral: {
+        peso: {
+            type: Sequelize.DOUBLE,
+        },
+        percent_Grasa:{
+            type: Sequelize.DOUBLE,
+        },
+        percent_Hidratacion:{
+            type: Sequelize.DOUBLE,
+        },
+        peso_Muscular: {
             type: Sequelize.DOUBLE,
         },
         masa_Muscular: {
             type: Sequelize.DOUBLE,
         },
+        peso_Oseo:{
+            type: Sequelize.DOUBLE,
+        },
+        kilocalorias:{
+            type: Sequelize.DOUBLE,
+        },
+        edad_Metabolica:{
+            type: Sequelize.DOUBLE,
+        },
         altura: {
             type: Sequelize.DOUBLE,
         },
-        peso: {
+        masa_Viseral: {
+            type: Sequelize.DOUBLE,
+        },    
+        perimetro_Abdominal: {
+            type: Sequelize.DOUBLE,
+        },   
+     
+        
+        actividad_Fisica:{
             type: Sequelize.DOUBLE,
         },
-        edad: {
-            type: Sequelize.DOUBLE,
-        },
-
-      
+     
 
       
     }, { timestamps: false });

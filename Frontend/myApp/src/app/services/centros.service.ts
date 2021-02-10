@@ -16,9 +16,9 @@ export class CentrosService {
 
   constructor(private http: HttpClient) { }
 
-  getCentros(): Observable<Centro[]> {
+  getCentros(): Observable<any[]> {
  
-    return this.http.get<Centro[]>(apiUrl);
+    return this.http.get<any[]>(apiUrl);
     
       // .pipe(
       //   tap(bicycle => console.log('fetched bicycles'))

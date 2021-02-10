@@ -1,6 +1,6 @@
 module.exports = app => {
-    const Usuario = require("../controllers/Usuarios.controller.js");
-    const Auth = require("../controllers/Auth.controller");
+    const Usuario = require("../controllers/usuarios.controller.js");
+    const Auth = require("../controllers/auth.controller");
     var router = require("express").Router();
 
     // Create a new Usuario

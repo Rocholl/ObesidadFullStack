@@ -13,7 +13,7 @@ module.exports = app => {
     // Retrieve a single Centro with id
 
      
-        router.get("/reportes/:id", Health.findHealthbyCentr2o);
+
 
 
     router.get("/:id", Centro.findOne);
@@ -28,7 +28,7 @@ module.exports = app => {
 
    router.get('/report/:id', async function(req,res){
 
-       let datos= await   Health.findHealthbyCentro(req.params.id);
+    //   let datos= await   Health.findHealthbyCentro(req.params.id);
    
         let data = {
             template:{ "shortid": "Qewrgm9Wza",},

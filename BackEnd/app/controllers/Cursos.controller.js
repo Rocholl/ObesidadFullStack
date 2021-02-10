@@ -3,8 +3,9 @@ const Cursos = db.cursos;
 const Op = db.Sequelize.Op;
 const usuario_Curso= db.usuario_Cursos;
 const Usuario = db.usuarios;
-// Create and Save a new usuario
-// req --> request (contains the body)
+const { QueryTypes } = require('sequelize');
+const { Sequelize } = require("../models");
+
 exports.create = (req, res) => {
     // Validate request
     /*if (!req.body.ID_whis || !req.body.Nombre) {
@@ -16,9 +17,9 @@ exports.create = (req, res) => {
 
     // Create a usuario
     const cursos = {
-        idcursos: req.body.idcursos,
-        nombre: req.body.nombre,
-        isla: req.body.isla
+        idCursos: req.body.idCursos,
+        Curso: req.body.Curso,
+        
         
     };
 
@@ -100,6 +101,7 @@ exports.update = (req, res) => {
             });
         });
 };
+
 
 // Delete a Tutorial with the specified id in the request
 exports.delete = (req, res) => {

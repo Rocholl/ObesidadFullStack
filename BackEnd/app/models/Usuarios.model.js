@@ -17,9 +17,7 @@ module.exports = (sequelize, Sequelize) => {
         apellidos:{
             type: Sequelize.STRING      
         },
-        rol:{
-            type: Sequelize.ENUM('Admin','Profesor','Alumno')  
-        },
+  
      
     
     }, { timestamps: false });
@@ -29,7 +27,7 @@ module.exports = (sequelize, Sequelize) => {
         Usuario.belongsToMany(models.cursos, {
             through: 'usuario_Cursos',
            
-            foreignKey: 'idUsuarios',
+            foreignKey: 'idUsuario',
           })
     };
  

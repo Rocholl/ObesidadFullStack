@@ -27,14 +27,14 @@ module.exports = (sequelize, Sequelize) => {
             Centro.hasMany(models.usuarios, {
            as:"fk_usu_Id_Centro",
            foreignKey:{
-            name: "idCentros"
+            name: "idCentro"
           }}) ,
            
             
-              Centro.hasMany(models.healths, {
+              Centro.hasMany(models.health, {
                 
                 as: 'Centro',
-                foreignKey: "idCentros"
+                foreignKey: "idCentro"
               })
         };
     return Centro;

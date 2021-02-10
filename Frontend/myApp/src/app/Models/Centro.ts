@@ -7,6 +7,6 @@ export class Centro {
     
     lat: number;
     long: number;
-    idMunicipios: number;
+    idDistrito: number;
 
 }

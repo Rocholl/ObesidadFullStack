@@ -16,27 +16,9 @@ export class HealthsService {
   constructor(private http: HttpClient) { }
   postHealth(heath:Healths):Observable<any> {
 
-    let bodyEncoded = new URLSearchParams();
-    bodyEncoded.append("idHealths", "");
-    bodyEncoded.append("masa_Grasa", heath.masa_Grasa.toString());
-    bodyEncoded.append("masa_Viseral", heath.masa_Viseral.toString());
+    
 
-    bodyEncoded.append("masa_Muscular", heath.masa_Muscular.toString());
-
-    bodyEncoded.append("altura", heath.altura.toString());
-
-    bodyEncoded.append("peso", heath.peso.toString());
-
-    bodyEncoded.append("edad", heath.edad.toString());
-    bodyEncoded.append("idCentros", heath.idCentros.toString());
-
-    bodyEncoded.append("idCursos", heath.idCursos.toString());
-
-
-
-    let body = bodyEncoded.toString();
-
-    return this.http.post(apiUrl, body, httpOptions);
+    return this.http.post(apiUrl,  httpOptions);
 
   }
   getByMunicipio(id): Observable<Healths[]> {
@@ -50,10 +32,19 @@ export class HealthsService {
     // );
   };
 
-  getAll(): Observable<Healths[]> {
-
+  getByCurso(idCurso,idCentro): Observable<Healths[]> {
+    let bodyEncoded = new URLSearchParams();
    
-    return this.http.get<Healths[]>(apiUrl);
+   
+    bodyEncoded.append("idCurso", idCurso.toString());
+    bodyEncoded.append("idCentro", idCentro.toString());
+
+
+
+
+    let body = bodyEncoded.toString();
+   
+    return this.http.post<Healths[]>(apiUrl+"healthbyclass/",body,httpOptions);
 
     // .pipe(
     //   tap(bicycle => console.log('fetched bicycles'))

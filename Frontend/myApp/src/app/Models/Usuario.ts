@@ -8,7 +8,7 @@ export class Usuario {
     apellidos: string;
   
     rol: number;
-    idCentros: number;
+    idCentro: number;
 
 
 }

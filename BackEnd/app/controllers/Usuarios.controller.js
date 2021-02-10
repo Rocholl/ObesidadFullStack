@@ -4,8 +4,9 @@ const Op = db.Sequelize.Op;
 const bcrypt = require('bcrypt');
 const jst = require('jsonwebtoken');
 const authConfig = require('../config/Auth.config.js');
-console.log(Usuario);
 
+const { QueryTypes } = require('sequelize');
+const { Sequelize } = require("../models");
 // Create and Save a new usuario
 // req --> request (contains the body)
 exports.create = (req, res) => {
@@ -20,8 +21,8 @@ exports.create = (req, res) => {
         password	:password,
         nombre: req.body.apellidos,
         apellidos: req.body.apellidos,
-        rol:Number.parseInt(req.body.Rol),
-        idCentros: Number.parseInt(req.body.idCentros)
+    
+        idCentro: Number.parseInt(req.body.idCentro)
     })
         .then(usuario => {
 
@@ -170,28 +171,4 @@ exports.getClass=(req,res)=>{
 
 }
 
-exports.addCentro= (req,res)=>{
-let idUsuarios = req.params.idUsuario;
-let idCentro = req.params.IdCentro;
-Usuario.findByPk(idUsuarios)
-.then(data => {
 
-    if (!data) {
-        res.status(400).send({
-            message: "No usuario found with that id"
-        })
-    }
-    data.setCentro(idCentro);
-  
-})
-.catch(err => {
-    console.log(err.message);
- 
-    res.status(500).send({
-        message: err.message || "Some error occurred while retrieving usuario with id"
-    });
-    return;
-});
-
-
-}

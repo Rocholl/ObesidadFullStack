@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Elige Tu clase</ion-title>
+    
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+      <ion-button (click)="toggleMenu()" color="secondary" expand="block" fill="clear" shape="round">
+        <ion-icon slot="start" name="menu"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-select color="primary" (ionChange)="addHealth()" placeholder="Clase: " [(ngModel)]="cursos">
+      <ion-select-option *ngFor="let curso1 of curso" [value]="curso1">{{curso1.Curso}}
+      </ion-select-option>
+    </ion-select>
+  </ion-toolbar>
+
+  
+  
+
+</ion-header>
+<ion-content>
+  <ion-title>
+    Alumnos:
+  </ion-title>
+  <ion-list *ngFor="let health of students">
+    <ion-item>
+
+      <ion-label>
+        <h2>Lista: {{health.num_lista}}</h2>
+        <h3>Sexo: {{health.sexo}}</h3>
+        <p>Edad: {{health.edad}}</p>
+      </ion-label>
+      <ion-button (click)="addRecord(health.idHealths)" expand="block" fill="clear" shape="round">
+        Añadir Registro
+      </ion-button>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
