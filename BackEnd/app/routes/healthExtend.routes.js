@@ -12,6 +12,9 @@ module.exports = app => {
     router.get("/avg",Health.Averages);
     router.get("/centeraverage/:id",Health.CenterAverage);
 
+    router.get("/centeraveragetiburaw/:start_date/:end_date",Health.CenterAverageTibuRaw);
+    router.get("/centeraveragetibu/:start_date/:end_date",Health.CenterAverageTibu);
+
   // Delete a health with id
 
 

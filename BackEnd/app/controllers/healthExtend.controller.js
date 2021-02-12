@@ -6,6 +6,8 @@ const Centro = db.centros;
 const { QueryTypes } = require('sequelize');
 const { Sequelize } = require("../models");
 
+const Health = db.health;
+
 // Create and Save a new usuario
 // req --> request (contains the body)
 exports.create = (req, res) => {
@@ -140,6 +142,84 @@ exports.CenterAverage = async (req, res) => {
         return;
     })
 }
+
+exports.CenterAverageTibuRaw = async (req, res) => {
+    let startDate = req.params.start_date;
+    let endDate = req.params.end_date;
+
+    db.sequelize.query(`SELECT c.nombre as "Centro", avg(he.peso) AS "Average Weight" 
+    FROM healthextends as he, health as h, centros as c
+    WHERE he.idHealth=h.idHealths and c.idCentro=h.idCentro and he.fecha between ? AND ?
+    GROUP BY c.nombre`, {
+        replacements: [startDate, endDate],
+        type: QueryTypes.Select
+    }).then(data => {
+        res.json(data);
+    }).catch(err => {
+        console.log(err.message);
+
+        res.status(500).send({
+            message: err.message || "Some error occurred while retrieving Centro with id"
+        });
+        return;
+    })
+}
+
+exports.CenterAverageTibu = async (req, res) => {
+    let startDate = req.params.start_date;
+    let endDate = req.params.end_date;
+
+    HealthsExtend.findAll({
+        raw: true,
+        attributes: {
+            exclude: [
+                "id",
+                "fecha",
+                "peso",
+                "percent_Grasa",
+                "percent_Hidratacion",
+                "peso_Muscular",
+                "masa_Muscular",
+                "peso_Oseo",
+                "kilocalorias",
+                "edad_Metabolica",
+                "altura",
+                "masa_Viseral",
+                "perimetro_Abdominal",
+                "actividad_Fisica",
+                "idHealth"
+            ],
+            include: [
+                [Sequelize.col('health->centros.nombre'), 'nombre'],
+                [Sequelize.fn('AVG', Sequelize.col('peso')), 'AverageWeight']
+            ]
+        },
+        where: {
+            fecha: {
+                [Op.between]: [startDate, endDate]
+            }
+        },
+        group: "nombre",
+        include: [{
+            model: Health,
+            attributes: [],
+            include: [{
+                model: Centro,
+                attributes: [],
+                as: "centros"
+            }]
+        }]
+    }).then(data => {
+        res.send(data);
+    })
+        .catch(err => {
+            res.status(500).send({
+                message: err.message || "Some error occurred while retrieving usuarios."
+            });
+        });
+}
+
+
 exports.Averages = async (req, res) => {
 
 

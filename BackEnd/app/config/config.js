@@ -3,7 +3,7 @@ require('dotenv').config();
 module.exports = {
     development: {
         username: "root",
-        password: null,
+        password: "sasa",
         database: "obesidadSql",
         host: "localhost",
         dialect: 'mysql',

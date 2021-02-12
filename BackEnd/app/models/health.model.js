@@ -28,9 +28,11 @@ module.exports = (sequelize, Sequelize) => {
         Health.hasMany(models.healthExtend,{
 
             foreignKey: 'idHealth'
+        }),
+        Health.belongsTo(models.centros,{
+            as: "centros",
+            foreignKey: "idCentro"
         })
-       
-     
     };
         //  
     return Health;
