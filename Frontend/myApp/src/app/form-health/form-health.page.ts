@@ -13,6 +13,7 @@ import { Storage } from '@ionic/storage';
 import { Centro } from '../Models/Centro';
 import { Healths } from '../Models/Healths';
 import { AlertController, MenuController } from '@ionic/angular';
+import { HealthsExtendService } from '../services/health-extend.service';
 
 @Component({
   selector: 'app-form-health',
@@ -23,20 +24,22 @@ export class FormHealthPage implements OnInit {
   
 	@ViewChild('recordSlider') recordSlider;
   cursos: Cursos[];
-  cursoId: number;
-  centroId: number;
   centro: Centro;
   curso: Cursos;
+  cursoId: number;
+  centroId: number;
+  idStudent;
+
   isSubmitted = false;
-  health:Healths;
-  sex;
+
+
   Tanita: FormGroup;
   Tanita2: FormGroup;
   Manual: FormGroup;
-
-  constructor(private router: Router,private menuCtrl: MenuController,private alertController:AlertController, private auth: AuthService, private healthService: HealthsService, private centroService: CentrosService, private storage: Storage, public formBuilder: FormBuilder) {
+  isLogged:boolean;
+  constructor(private router: Router,private menuCtrl: MenuController,private alertController:AlertController, private auth: AuthService, private healthService: HealthsService,private healthExtendService:HealthsExtendService, private centroService: CentrosService, private storage: Storage, public formBuilder: FormBuilder) {
     this.Tanita = formBuilder.group({
-      peso: ["23",Validators.compose([Validators.maxLength(2),Validators.min(20),Validators.max(99)])],
+      peso: ["",Validators.compose([Validators.maxLength(2),Validators.min(20),Validators.max(99)])],
       percent_Grasa: ["", Validators.compose([Validators.maxLength(2),Validators.min(5),Validators.max(50)])],
       percent_Hidratacion: ["",Validators.compose([Validators.maxLength(2),Validators.min(40),Validators.max(80)])],
       peso_Muscular: ["",Validators.compose([Validators.maxLength(2),Validators.min(5),Validators.max(40)])],
@@ -72,6 +75,13 @@ export class FormHealthPage implements OnInit {
 
   }
   ngOnInit() {
+    if (this.auth.isLoggedIn()) {
+      this.isLogged= true;
+  
+      }else{
+        this.isLogged= false;
+  
+      }
     if (!this.auth.isLoggedIn()) {
       this.router.navigateByUrl("/login");
 
@@ -88,9 +98,14 @@ export class FormHealthPage implements OnInit {
     });
     this.storage.get("centro").then(data => {
       this.centro = data;
+    });
+    this.storage.get("idHealth").then(data => {
+      this.idStudent = data;
+      console.log(data);
     })
   }
   submitForm() {
+    
     this.isSubmitted = true;
 
     if(!this.Tanita.valid){
@@ -106,36 +121,48 @@ export class FormHealthPage implements OnInit {
         console.log(this.Tanita.value);
         console.log(this.Tanita2.value);
         console.log(this.Manual.value);
-    }
-  /*  console.log(this.curso);
-    this.isSubmitted = true;
-    
-    
-    let health: Healths = {
-      idHealths: null,
-      masa_Grasa: this..controls["mGrasa"].value,
+        let record = {
+          id:null,
+          fecha: null,
 
-      masa_Viseral: this..controls["mVisceral"].value,
-      idCursos: this.curso.idCursos,
-      idCentros: this.centro.idCentro,
-      masa_Muscular: this..controls["mMuscular"].value,
-      altura: this..controls["altura"].value,
-      peso: this..controls["peso"].value,
-      edad: this..controls["edad"].value,
-    }
-   
-    this.healthService.postHealth(health).subscribe((res) => {
+         
+          peso: this.Tanita.controls["peso"].value,
+          percent_Grasa:this.Tanita.controls["percent_Grasa"].value,
+          percent_Hidratacion:this.Tanita.controls["percent_Hidratacion"].value,
+          peso_Muscular:this.Tanita.controls["peso_Muscular"].value,
+          masa_Muscular:this.Tanita.controls["masa_Muscular"].value,
+          peso_Oseo:this.Tanita2.controls["peso_Oseo"].value,
+          kilocalorias:this.Tanita2.controls["kilocalorias"].value,
+          edad_Metabolica:this.Tanita2.controls["edad_Metabolica"].value,
+          altura:this.Manual.controls["altura"].value,
 
-      this.handleButtonClick(health);
-      this..reset();
-    });
-*/
+          masa_Viseral:this.Tanita2.controls["masa_Viseral"].value,
+        
+          perimetro_Abdominal:this.Manual.controls["perimetro_Abdominal"].value,
+          actividad_Fisica:this.Manual.controls["actividad_Fisica"].value,
+          idHealth:this.idStudent,
+        }
+        this.healthExtendService.postHealth(record).subscribe((res) => {
+
+          this.handleButtonClick();
+          this.Tanita.reset();
+          this.Tanita2.reset();
+
+          this.Manual.reset();
+
+          
+        });
+    }
+ 
   }
-  async handleButtonClick(health) {
+  async handleButtonClick() {
     const alert = await this.alertController.create({
-      header: 'Usuario creado',
-      message: "Id: "+health.idHealths,
-      buttons: ['Agree']
+      header: 'Registro creado',
+      message: "Registro creado",
+      buttons: [{text: 'Aceptar',handler:()=> {
+        
+        this.router.navigateByUrl("user-class-students");
+      }}]
     });
 
     await alert.present();

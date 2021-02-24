@@ -1,0 +1,172 @@
+2021-02-18T19:18:13.640Z - info: Initializing jsreport@2.11.0 in development mode using configuration file: jsreport.config.json
+2021-02-18T19:18:13.662Z - info: Searching for available extensions in C:\Users\34691\Documents\GitHub\ObesidadFullStack\
+2021-02-18T19:18:13.683Z - info: Extensions location cache not found, crawling directories
+2021-02-18T19:18:36.393Z - info: Found 35 extensions
+2021-02-18T19:18:36.680Z - debug: Writing extension locations cache to C:\Users\34691\AppData\Local\Temp\jsreport\core\locations.json
+2021-02-18T19:18:36.683Z - debug: Discovered 35 extensions
+2021-02-18T19:18:36.750Z - info: Setting dedicated-process (process based) strategy for rendering. Please visit http://jsreport.net/learn/configuration for information how to get more performance.
+2021-02-18T19:18:36.804Z - debug: Extension authentication@2.6.1 is disabled, skipping
+2021-02-18T19:18:36.805Z - info: Using extension cli@2.2.5
+2021-02-18T19:18:36.819Z - info: Using extension debug@2.1.3
+2021-02-18T19:18:36.826Z - info: Using extension express@2.8.1
+2021-02-18T19:18:37.095Z - info: Using extension freeze@2.0.0
+2021-02-18T19:18:37.108Z - info: Using extension handlebars@2.1.0
+2021-02-18T19:18:37.113Z - info: Using extension import-export@2.1.1
+2021-02-18T19:18:37.432Z - info: Using extension jsrender@2.1.1
+2021-02-18T19:18:37.434Z - info: Using extension tags@2.5.0
+2021-02-18T19:18:37.450Z - info: Using extension templates@2.4.0
+2021-02-18T19:18:37.455Z - info: Using extension authorization@2.4.0
+2021-02-18T19:18:37.468Z - debug: Extension authorization@2.4.0 was disabled
+2021-02-18T19:18:37.470Z - info: Using extension base@2.0.2
+2021-02-18T19:18:37.483Z - info: Using extension browser-client@2.2.2
+2021-02-18T19:18:37.500Z - info: Using extension child-templates@1.4.0
+2021-02-18T19:18:37.516Z - info: Using extension chrome-pdf@1.10.0
+2021-02-18T19:18:37.732Z - debug: Chrome strategy is dedicated-process
+2021-02-18T19:18:37.733Z - info: Using extension data@2.4.0
+2021-02-18T19:18:37.735Z - info: Using extension docx@2.9.0
+2021-02-18T19:18:37.749Z - info: Using extension fs-store@2.9.1
+2021-02-18T19:18:37.967Z - info: Using extension licensing@2.2.3
+2021-02-18T19:18:37.984Z - info: Using extension pdf-utils@1.10.1
+2021-02-18T19:18:38.162Z - info: Using extension pptx@0.7.0
+2021-02-18T19:18:38.178Z - info: Using extension reports@2.5.1
+2021-02-18T19:18:38.184Z - info: Using extension static-pdf@0.4.0
+2021-02-18T19:18:38.199Z - info: Using extension studio@2.10.1
+2021-02-18T19:18:38.274Z - debug: studio request logs are enabled (flush interval: 2000)
+2021-02-18T19:18:38.276Z - info: Using extension text@2.0.0
+2021-02-18T19:18:38.278Z - info: Using extension version-control@1.6.0
+2021-02-18T19:18:38.586Z - info: Using extension assets@1.7.0
+2021-02-18T19:18:38.617Z - info: Using extension html-to-xlsx@2.8.3
+2021-02-18T19:18:39.174Z - info: html-to-xlsx detected chrome as available html engine
+2021-02-18T19:18:39.175Z - info: Using extension scheduling@2.5.0
+2021-02-18T19:18:39.243Z - info: Using extension scripts@2.6.0
+2021-02-18T19:18:39.247Z - info: Using extension studio-theme-dark@0.3.0
+2021-02-18T19:18:39.249Z - info: Using extension xlsx@2.5.0
+2021-02-18T19:18:39.493Z - info: Using extension public-templates@2.2.0
+2021-02-18T19:18:39.506Z - debug: Extension public-templates@2.2.0 was disabled
+2021-02-18T19:18:39.507Z - info: Using extension resources@2.1.0
+2021-02-18T19:18:39.509Z - info: Using extension sample-template@2.6.1
+2021-02-18T19:18:39.513Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2021-02-18T19:18:39.514Z - info: Using fs provider for template store.
+2021-02-18T19:18:39.519Z - info: fs store is persisting using fs
+2021-02-18T19:18:39.533Z - info: fs store sync is disabled
+2021-02-18T19:18:39.535Z - info: fs store underlying changes synchronization with studio is disabled
+2021-02-18T19:18:39.549Z - info: fs store is loading data
+2021-02-18T19:18:39.568Z - info: fs store is initialized successfully
+2021-02-18T19:18:39.583Z - debug: studio default theme is: light
+2021-02-18T19:18:39.617Z - info: Creating default express app.
+2021-02-18T19:18:39.666Z - info: jsreport server successfully started on http port: 5488
+2021-02-18T19:18:39.668Z - info: Verifying license key free
+2021-02-18T19:18:39.669Z - info: Using free license
+2021-02-18T19:18:39.682Z - debug: Inserting samples
+2021-02-18T19:18:39.700Z - debug: Creating folder "samples" for sample entities
+2021-02-18T19:18:39.719Z - debug: Inserting sample entity Invoice (entitySet: folders)
+2021-02-18T19:18:39.735Z - debug: Inserting sample entity Sales (entitySet: folders)
+2021-02-18T19:18:39.752Z - debug: Inserting sample entity Orders (entitySet: folders)
+2021-02-18T19:18:39.763Z - debug: Inserting sample entity shared (entitySet: folders)
+2021-02-18T19:18:39.784Z - debug: Inserting sample entity invoice-data (entitySet: data)
+2021-02-18T19:18:39.807Z - debug: Inserting sample entity sales-data (entitySet: data)
+2021-02-18T19:18:39.819Z - debug: Inserting sample entity sales-main (entitySet: templates)
+2021-02-18T19:18:39.859Z - debug: Inserting sample entity invoice-main (entitySet: templates)
+2021-02-18T19:18:39.964Z - debug: Inserting sample entity orders-main (entitySet: templates)
+2021-02-18T19:18:40.023Z - debug: Inserting sample entity orders-header (entitySet: templates)
+2021-02-18T19:18:40.116Z - debug: Inserting sample entity invoice-styles.css (entitySet: assets)
+2021-02-18T19:18:40.281Z - debug: Inserting sample entity invoice-logo.png (entitySet: assets)
+2021-02-18T19:18:40.351Z - debug: Inserting sample entity sales-styles.css (entitySet: assets)
+2021-02-18T19:18:40.491Z - debug: Inserting sample entity global helpers.js (entitySet: assets)
+2021-02-18T19:18:40.511Z - debug: Inserting sample entity orders-styles.css (entitySet: assets)
+2021-02-18T19:18:40.546Z - debug: Inserting sample entity orders-script (entitySet: scripts)
+2021-02-18T19:18:40.570Z - info: reporter initialized
+2021-02-19T17:02:40.189Z - info: Initializing jsreport@2.11.0 in development mode using configuration file: jsreport.config.json
+2021-02-19T17:02:40.191Z - info: Searching for available extensions in C:\Users\34691\Documents\GitHub\ObesidadFullStack\
+2021-02-19T17:02:40.207Z - info: Extensions location cache contains up to date information, skipping crawling in C:\Users\34691\Documents\GitHub\ObesidadFullStack\
+2021-02-19T17:02:55.974Z - info: Found 70 extensions
+2021-02-19T17:02:56.571Z - warn: Filtering out duplicated extension "authentication" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\node_modules\jsreport-authentication, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-authentication
+2021-02-19T17:02:56.593Z - warn: Filtering out duplicated extension "cli" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\node_modules\jsreport-cli, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-cli
+2021-02-19T17:02:56.594Z - warn: Filtering out duplicated extension "debug" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\node_modules\jsreport-debug, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-debug
+2021-02-19T17:02:56.595Z - warn: Filtering out duplicated extension "express" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\node_modules\jsreport-express, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-express
+2021-02-19T17:02:56.596Z - warn: Filtering out duplicated extension "freeze" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\node_modules\jsreport-freeze, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-freeze
+2021-02-19T17:02:56.596Z - warn: Filtering out duplicated extension "handlebars" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\node_modules\jsreport-handlebars, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-handlebars
+2021-02-19T17:02:56.597Z - warn: Filtering out duplicated extension "import-export" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\node_modules\jsreport-import-export, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-import-export
+2021-02-19T17:02:56.598Z - warn: Filtering out duplicated extension "jsrender" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\node_modules\jsreport-jsrender, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-jsrender
+2021-02-19T17:02:56.598Z - warn: Filtering out duplicated extension "tags" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\node_modules\jsreport-tags, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-tags
+2021-02-19T17:02:56.599Z - warn: Filtering out duplicated extension "templates" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\node_modules\jsreport-templates, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-templates
+2021-02-19T17:02:56.600Z - warn: Filtering out duplicated extension "authorization" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\node_modules\jsreport-authorization, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-authorization
+2021-02-19T17:02:56.601Z - warn: Filtering out duplicated extension "base" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\node_modules\jsreport-base, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-base
+2021-02-19T17:02:56.601Z - warn: Filtering out duplicated extension "browser-client" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\node_modules\jsreport-browser-client, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-browser-client
+2021-02-19T17:02:56.602Z - warn: Filtering out duplicated extension "child-templates" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\node_modules\jsreport-child-templates, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-child-templates
+2021-02-19T17:02:56.602Z - warn: Filtering out duplicated extension "chrome-pdf" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\node_modules\jsreport-chrome-pdf, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-chrome-pdf
+2021-02-19T17:02:56.603Z - warn: Filtering out duplicated extension "data" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\node_modules\jsreport-data, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-data
+2021-02-19T17:02:56.604Z - warn: Filtering out duplicated extension "docx" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\node_modules\jsreport-docx, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-docx
+2021-02-19T17:02:56.604Z - warn: Filtering out duplicated extension "fs-store" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\node_modules\jsreport-fs-store, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-fs-store
+2021-02-19T17:02:56.626Z - warn: Filtering out duplicated extension "licensing" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\node_modules\jsreport-licensing, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-licensing
+2021-02-19T17:02:56.627Z - warn: Filtering out duplicated extension "pdf-utils" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\node_modules\jsreport-pdf-utils, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-pdf-utils
+2021-02-19T17:02:56.628Z - warn: Filtering out duplicated extension "pptx" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\node_modules\jsreport-pptx, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-pptx
+2021-02-19T17:02:56.630Z - warn: Filtering out duplicated extension "reports" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\node_modules\jsreport-reports, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-reports
+2021-02-19T17:02:56.630Z - warn: Filtering out duplicated extension "static-pdf" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\node_modules\jsreport-static-pdf, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-static-pdf
+2021-02-19T17:02:56.632Z - warn: Filtering out duplicated extension "studio" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\node_modules\jsreport-studio, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-studio
+2021-02-19T17:02:56.633Z - warn: Filtering out duplicated extension "text" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\node_modules\jsreport-text, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-text
+2021-02-19T17:02:56.634Z - warn: Filtering out duplicated extension "version-control" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\node_modules\jsreport-version-control, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-version-control
+2021-02-19T17:02:56.635Z - warn: Filtering out duplicated extension "assets" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\node_modules\jsreport-assets, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-assets
+2021-02-19T17:02:56.635Z - warn: Filtering out duplicated extension "html-to-xlsx" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\node_modules\jsreport-html-to-xlsx, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-html-to-xlsx
+2021-02-19T17:02:56.636Z - warn: Filtering out duplicated extension "scheduling" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\node_modules\jsreport-scheduling, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-scheduling
+2021-02-19T17:02:56.637Z - warn: Filtering out duplicated extension "scripts" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\node_modules\jsreport-scripts, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-scripts
+2021-02-19T17:02:56.658Z - warn: Filtering out duplicated extension "studio-theme-dark" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\node_modules\jsreport-studio-theme-dark, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-studio-theme-dark
+2021-02-19T17:02:56.659Z - warn: Filtering out duplicated extension "xlsx" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\node_modules\jsreport-xlsx, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-xlsx
+2021-02-19T17:02:56.660Z - warn: Filtering out duplicated extension "public-templates" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\node_modules\jsreport-public-templates, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-public-templates
+2021-02-19T17:02:56.661Z - warn: Filtering out duplicated extension "resources" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\node_modules\jsreport-resources, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-resources
+2021-02-19T17:02:56.662Z - warn: Filtering out duplicated extension "sample-template" from C:\Users\34691\Documents\GitHub\ObesidadFullStack\node_modules\jsreport-sample-template, using C:\Users\34691\Documents\GitHub\ObesidadFullStack\BackEnd\node_modules\jsreport-sample-template
+2021-02-19T17:02:56.720Z - info: Setting http-server strategy for rendering
+2021-02-19T17:02:57.056Z - info: Using extension cli@2.2.5
+2021-02-19T17:02:57.076Z - info: Using extension debug@2.1.3
+2021-02-19T17:02:57.083Z - info: Using extension express@2.8.1
+2021-02-19T17:02:57.326Z - info: Using extension freeze@2.0.0
+2021-02-19T17:02:57.329Z - info: Using extension handlebars@2.1.0
+2021-02-19T17:02:57.346Z - info: Using extension import-export@2.1.1
+2021-02-19T17:02:57.431Z - info: Using extension jsrender@2.1.1
+2021-02-19T17:02:57.434Z - info: Using extension tags@2.5.0
+2021-02-19T17:02:57.438Z - info: Using extension templates@2.4.0
+2021-02-19T17:02:57.455Z - info: Using extension authorization@2.4.0
+2021-02-19T17:02:57.475Z - info: Using extension base@2.0.2
+2021-02-19T17:02:57.477Z - info: Using extension browser-client@2.2.2
+2021-02-19T17:02:57.480Z - info: Using extension child-templates@1.4.0
+2021-02-19T17:02:57.502Z - info: Using extension chrome-pdf@1.10.0
+2021-02-19T17:02:57.626Z - info: Using extension data@2.4.0
+2021-02-19T17:02:57.644Z - info: Using extension docx@2.9.0
+2021-02-19T17:02:57.650Z - info: Using extension fs-store@2.9.1
+2021-02-19T17:02:57.883Z - info: Using extension licensing@2.2.3
+2021-02-19T17:02:57.904Z - info: Using extension pdf-utils@1.10.1
+2021-02-19T17:02:58.174Z - info: Using extension pptx@0.7.0
+2021-02-19T17:02:58.197Z - info: Using extension reports@2.5.1
+2021-02-19T17:02:58.204Z - info: Using extension static-pdf@0.4.0
+2021-02-19T17:02:58.221Z - info: Using extension studio@2.10.1
+2021-02-19T17:02:58.343Z - info: Using extension text@2.0.0
+2021-02-19T17:02:58.345Z - info: Using extension version-control@1.6.0
+2021-02-19T17:02:58.490Z - info: Using extension assets@1.7.0
+2021-02-19T17:02:58.518Z - info: Using extension html-to-xlsx@2.8.3
+2021-02-19T17:02:59.335Z - info: html-to-xlsx detected chrome as available html engine
+2021-02-19T17:02:59.336Z - info: Using extension scheduling@2.5.0
+2021-02-19T17:02:59.434Z - info: Using extension scripts@2.6.0
+2021-02-19T17:02:59.460Z - info: Using extension studio-theme-dark@0.3.0
+2021-02-19T17:02:59.463Z - info: Using extension xlsx@2.5.0
+2021-02-19T17:02:59.945Z - info: Using extension public-templates@2.2.0
+2021-02-19T17:02:59.970Z - info: Using extension resources@2.1.0
+2021-02-19T17:02:59.995Z - info: Using extension sample-template@2.6.1
+2021-02-19T17:02:59.999Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2021-02-19T17:03:00.000Z - info: Using fs provider for template store.
+2021-02-19T17:03:00.033Z - info: fs store is persisting using fs
+2021-02-19T17:03:00.048Z - info: fs store is synchronizing using fs
+2021-02-19T17:03:00.056Z - info: fs store is loading data
+2021-02-19T17:03:00.153Z - info: fs store is initialized successfully
+2021-02-19T17:03:00.183Z - info: Creating default express app.
+2021-02-19T17:03:00.280Z - info: jsreport server successfully started on https port: 5489
+2021-02-19T17:03:00.287Z - info: jsreport server successfully started on http port: 5488
+2021-02-19T17:03:00.310Z - info: fs store emits sockets to synchronize underlying changes with studio
+2021-02-19T17:03:00.348Z - info: Verifying license key free
+2021-02-19T17:03:00.350Z - info: Using free license
+2021-02-19T17:03:00.436Z - info: reporter initialized
+2021-02-19T17:04:37.168Z - info: Starting rendering request 1 (user: null)
+2021-02-19T17:04:37.188Z - info: Rendering template { name: CentroReport, recipe: chrome-pdf, engine: handlebars, preview: true }
+2021-02-19T17:04:43.779Z - info: Rendering request 1 finished in 6610 ms
+2021-02-19T17:04:43.989Z - info: Starting rendering request 2 (user: null)
+2021-02-19T17:04:44.003Z - info: Rendering template { name: CentroReport, recipe: chrome-pdf, engine: handlebars, preview: true }
+2021-02-19T17:04:45.985Z - info: Rendering request 2 finished in 1997 ms

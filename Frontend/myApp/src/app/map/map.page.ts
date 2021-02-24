@@ -34,7 +34,7 @@ export class MapPage implements OnInit {
 
   mapMarkers: any[] = [];
   mapMarkers1: any[] = [];
-  color: string;
+
   municipio1;
   markerbool: boolean = true;
   markerbool1: boolean = true;
@@ -56,6 +56,7 @@ export class MapPage implements OnInit {
 
   }
   toggleMap1() {
+    console.log(this.centros);
     if (this.markerbool) {
       this.mapMarkers1 = this.mapMarkers;
       this.mapMarkers = [];
@@ -68,67 +69,63 @@ export class MapPage implements OnInit {
     }
   }
   toggleMap() {
-    if (this.markerbool) {
-      this.municipio1 = this.municipio;
-      this.municipio = [];
-      this.showMap();
-    } else {
-      this.municipio = this.municipio1;
-      this.showMap();
-    }
+  if(this.markerbool1){
+this.markerbool1=false;
+  }else{
+    this.markerbool1= true;
+  }
+  
+  this.showMap();
 
   }
   getAllHealth() {
-    for (let center of this.centros) {
-      let center1;
+   
+    console.log(this.centros)
+    for (let centro of this.centros) {
+      let marker= new MapArray;
+      console.log(centro.lat)
+      marker.nombre = centro.nombre;
+   
+      marker.lat = centro.lat;
+      marker.long = centro.long;
+      marker.peso =centro.peso;
+      marker.percent_Grasa = centro.percent_Grasa;
+      marker.percent_Hidratacion = centro.percent_Hidratacion;
 
-      this.healthExtendService.centerAverage(center.idCentro).subscribe(avg => {
-        center1 = [center, avg];
+      marker.peso_Muscular = centro.peso_Muscular;
 
-      })
-    }
-    for (let avg of this.centrosavg) {
-      let marker;
-      marker.nombre = avg.center.nombre;
-      marker.codigo_Postal = avg.center.codigo_Postal;
-      marker.lat = avg.center.lat;
-      marker.long = avg.center.long;
-      marker.peso = avg.avg.peso;
-      marker.percent_Grasa = avg.avg.percent_Grasa;
-      marker.percent_Hidratacion = avg.avg.percent_Hidratacion;
+      marker.masa_Muscular = centro.masa_Muscular;
 
-      marker.peso_Muscular = avg.avg.peso_Muscular;
+      marker.peso_Oseo = centro.peso_Oseo;
 
-      marker.masa_Muscular = avg.avg.masa_Muscular;
+      marker.kilocalorias = centro.kilocalorias;
+      marker.edad_Metabolica = centro.edad_Metabolica;
+      marker.altura = centro.altura;
+      marker.masa_Viseral = centro.masa_Viseral;
+      marker.actividad_Fisica = centro.actividad_Fisica;
 
-      marker.peso_Oseo = avg.avg.peso_Oseo;
-
-      marker.kilocalorias = avg.avg.kilocalorias;
-      marker.edad_Metabolica = avg.avg.edad_Metabolica;
-      marker.altura = avg.avg.altura;
-      marker.masa_Viseral = avg.avg.masa_Viseral;
-      marker.perimetro_Abdominal = avg.avg.perimetro_Abdominal;
-
-      marker.perimetro_Abdominal = avg.avg.perimetro_Abdominal;
-      if(avg.avg.percent_Grasa> 27 && avg.avg.percent_Grasa < 50){
+      marker.perimetro_Abdominal = centro.perimetro_Abdominal;
+      if(centro.percent_Grasa> 27 && centro.percent_Grasa < 50){
         marker.type = "alto";
       }
-      if(avg.avg.percent_Grasa> 21  && avg.avg.percent_Grasa < 27 ){
-        marker.type = "alto";
+      if(centro.percent_Grasa> 21  && centro.percent_Grasa < 27 ){
+        marker.type = "medio";
       }
-      if(avg.avg.percent_Grasa> 5 && avg.avg.percent_Grasa < 21){
-        marker.type = "alto";
+      if(centro.percent_Grasa> 5 && centro.percent_Grasa < 21){
+        marker.type = "bajo";
       }
-     if(avg.avg.percent_Grasa=null){
-      marker.type = "default";
+     if(centro.percent_Grasa=null){
+      marker.type = "Default";
      }
+     console.log(marker)
      this.mapMarkers.push(marker)
+
     }
 
   }
 
  async getAllCentros() {
-    await this.centroService.getCentros().subscribe(centros => {
+    await this.healthExtendService.centersAverage().subscribe(centros => {
       this.centros = centros;
     
 
@@ -173,6 +170,7 @@ export class MapPage implements OnInit {
         longitude: marker.long,
         icon: icons[marker.type].icon
       });
+
       mapMarker.setMap(this.map);
       this.addInfoWindowToMarker(mapMarker);
 
@@ -181,10 +179,10 @@ export class MapPage implements OnInit {
   }
   addInfoWindowToMarker(marker) {
     let infoWindowContent = '<div id="content">' +
-      '<h2 id="firstHeading" style="color:black;" class"firstHeading">' + marker.title + '</h2>' +
-      '<p style="color:black;">Latitude: ' + marker.latitude + '</p>' +
-      '<p style="color:black;">Longitude: ' + marker.longitude + '</p>' +
-      '<p style="color:black;">Masa Grasa: ' + marker.masa_grasa + '%</p>' +
+      '<h2 id="firstHeading" style=":black;" class"firstHeading">' + marker.title + '</h2>' +
+      '<p style=":black;">Latitude: ' + marker.latitude + '</p>' +
+      '<p style=":black;">Longitude: ' + marker.longitude + '</p>' +
+      '<p style=":black;">% Grasa: ' + marker.percent_Grasa + '%.</p>' +
       '</div>';
 
     let infoWindow = new google.maps.InfoWindow({
@@ -210,23 +208,25 @@ export class MapPage implements OnInit {
     const location = new google.maps.LatLng(this.focusmapLat, this.focusmapLong);
     const options = {
       center: location,
-      zoom: 15,
+      zoom: 11,
       disableDefaultUI: true
     }
     this.map = new google.maps.Map(this.mapRef.nativeElement, options);
 
     const lasPalmasPolygon = new google.maps.Polygon({
       paths: this.municipio,
-      strokeColor: this.color,
+      stroke: "#90EE90",
       strokeOpacity: 0.8,
       strokeWeight: 3,
-      fillColor: this.color,
+      fill: "#90EE90",
       fillOpacity: 0.35,
     });
     this.addMarkersToMap();
 
-
+    if(this.markerbool1){
     lasPalmasPolygon.setMap(this.map);
+  }
+
   }
   Menu() {
     this.menuCtrl.toggle();

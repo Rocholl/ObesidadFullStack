@@ -1,0 +1,116 @@
+<ion-header>
+  <ion-toolbar color="primary">
+      <ion-title>Datos</ion-title>
+
+      <ion-buttons slot="start">
+          <ion-button (click)="toggleMenu()" color="secondary" expand="block" fill="clear" shape="round">
+              <ion-icon slot="start" name="menu"></ion-icon>
+          </ion-button>
+      </ion-buttons>
+      <ion-select interface="action-sheet" color="primary" (ionChange)="select()" placeholder="Filtro: "  [(ngModel)]="selectParam" >
+        
+        <ion-select-option>General</ion-select-option>
+        <ion-select-option>Sexo</ion-select-option>
+        <ion-select-option>Edad</ion-select-option>
+
+        <ion-select-option>Centro</ion-select-option>
+
+        <ion-select-option>Actividad Fisica</ion-select-option>
+
+
+
+        
+      </ion-select>
+      <ion-select interface="popover" color="primary" *ngIf="selectBool" (ionChange)="selectService()" placeholder="{{selectParam}}: "[(ngModel)]="centrosSelected">
+        <ion-select-option *ngFor="let curso1 of centrosSelect" [value]="curso1">{{curso1.nombre}}
+        </ion-select-option>
+      </ion-select>
+      <ion-select interface="popover" color="primary" *ngIf="selectBool2" (ionChange)="selectService2()" placeholder="{{selectParam}}: "[(ngModel)]="sex">
+        <ion-select-option value="M">Masculino</ion-select-option>
+
+        <ion-select-option value="F">Femenino</ion-select-option>
+
+      </ion-select>
+      <ion-select interface="popover" color="primary" *ngIf="selectBool4" (ionChange)="selectService4()" placeholder="{{selectParam}}: "[(ngModel)]="phisicalActivity">
+        <ion-select-option value="1">1</ion-select-option>
+        <ion-select-option value="2">2</ion-select-option>
+        <ion-select-option value="3">3</ion-select-option>
+        <ion-select-option value="4">4</ion-select-option>
+        <ion-select-option value="5">5</ion-select-option>
+        <ion-select-option value="6">6</ion-select-option>
+        <ion-select-option value="7">7</ion-select-option>
+
+      </ion-select>
+      <ion-select interface="popover" color="primary" *ngIf="selectBool3" (ionChange)="selectService3()" placeholder="{{selectParam}}: "[(ngModel)]="age">
+        <ion-select-option value="8">8</ion-select-option>
+        <ion-select-option value="9">9</ion-select-option>
+        <ion-select-option value="10">10</ion-select-option>
+        <ion-select-option value="11">11</ion-select-option>
+        <ion-select-option value="12">12</ion-select-option>
+        <ion-select-option value="13">13</ion-select-option>
+        <ion-select-option value="14">14</ion-select-option>
+        <ion-select-option value="15">15</ion-select-option>
+        <ion-select-option value="16">16</ion-select-option>
+        <ion-select-option value="17">17</ion-select-option>
+        <ion-select-option value="18">18</ion-select-option>
+        <ion-select-option value="19">19</ion-select-option>
+        <ion-select-option value="20">20</ion-select-option>
+        <ion-select-option value="21">21</ion-select-option>
+      </ion-select>
+      
+  </ion-toolbar>
+</ion-header>
+<ion-content >
+    <ion-list>
+     
+        <ion-item>
+          <ion-label>Peso</ion-label>
+          <ion-badge slot="end">{{average.peso.toFixed(2)}} kg</ion-badge>
+        </ion-item>
+        <ion-item>
+          <ion-label>Porcentaje Grasa</ion-label>
+          <ion-badge [color]="this.average.percent_Grasa>27 ? 'danger':'primary'" slot="end">{{average.percent_Grasa.toFixed(2)}}%</ion-badge>
+        </ion-item>
+        <ion-item>
+          <ion-label>Porcentaje hidratacion</ion-label>
+          <ion-badge [color]="this.average.percent_Hidratacion<40 ? 'danger':'primary'"slot="end">{{average.percent_Hidratacion.toFixed(2)}}%</ion-badge>
+        </ion-item>
+        <ion-item>
+          <ion-label>Peso muscular</ion-label>
+          <ion-badge color="success" slot="end">{{average.peso_Muscular.toFixed(2)}} kg</ion-badge>
+        </ion-item>
+        <ion-item>
+          <ion-label>Masa muscular</ion-label>
+          <ion-badge color="warning" slot="end">{{average.masa_Muscular.toFixed(2)}}</ion-badge>
+        </ion-item>
+        <ion-item>
+          <ion-label>Peso oseo</ion-label>
+          <ion-badge color="danger" slot="end">{{average.peso_Oseo.toFixed(2)}} kg</ion-badge>
+        </ion-item>
+        <ion-item>
+          <ion-label>Kilocaliorias</ion-label>
+          <ion-badge color="light" slot="end">{{average.kilocalorias.toFixed(0)}} kcal</ion-badge>
+        </ion-item>
+        <ion-item>
+          <ion-label>Edad metabolica</ion-label>
+          <ion-badge color="medium" slot="end">{{average.edad_Metabolica.toFixed(0)}} años</ion-badge>
+        </ion-item>
+        <ion-item>
+            <ion-label>Altura</ion-label>
+            <ion-badge color="dark" slot="end">{{average.altura.toFixed(2)}} cm</ion-badge>
+          </ion-item>
+          <ion-item>
+            <ion-label>Masa Visceral</ion-label>
+            <ion-badge color="dark" slot="end">{{average.masa_Muscular.toFixed(2)}}</ion-badge>
+          </ion-item>
+          <ion-item>
+            <ion-label>Perimetro abdominal</ion-label>
+            <ion-badge color="dark" slot="end">{{average.perimetro_Abdominal.toFixed(2)}} cm</ion-badge>
+          </ion-item>
+          <ion-item>
+            <ion-label>Actividad Fisica</ion-label>
+            <ion-badge color="dark" slot="end">{{average.actividad_Fisica.toFixed(2)}} h/d</ion-badge>
+          </ion-item>
+      </ion-list>
+      <br>
+</ion-content>

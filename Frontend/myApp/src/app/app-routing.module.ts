@@ -38,6 +38,10 @@ const routes: Routes = [
     path: 'user-class-students',
     loadChildren: () => import('./user-class-students/user-class-students.module').then( m => m.UserClassStudentsPageModule)
   },
+  {
+    path: 'average-table',
+    loadChildren: () => import('./average-table/average-table.module').then( m => m.AverageTablePageModule)
+  },
 
 ];
 

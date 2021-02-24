@@ -1,0 +1,23 @@
+{
+    "shortid": "B1Q2SFTNr",
+    "name": "sales-main",
+    "recipe": "html-to-xlsx",
+    "engine": "handlebars",
+    "chrome": {
+        "printBackground": true
+    },
+    "htmlToXlsx": {
+        "htmlEngine": "chrome"
+    },
+    "data": {
+        "shortid": "B1lSTrt6NB"
+    },
+    "creationDate": {
+        "$$date": 1613675919835
+    },
+    "modificationDate": {
+        "$$date": 1613675919836
+    },
+    "_id": "PK6UuivZmnpOl50c",
+    "$entitySet": "templates"
+}

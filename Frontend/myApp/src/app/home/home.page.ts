@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { MenuController } from '@ionic/angular';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-home',
@@ -7,11 +8,22 @@ import { MenuController } from '@ionic/angular';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-
-  constructor(private menuCtrl: MenuController) {}
+  isLogged:boolean;
+  constructor(private menuCtrl: MenuController,private auth:AuthService) {}
   toggleMenu() {
     this.menuCtrl.toggle();
   }
+  ngOnInit() {
+    if (this.auth.isLoggedIn()) {
+    this.isLogged= true;
 
+    }else{
+      this.isLogged= false;
+
+    }
+
+
+  }
+  
   }
 

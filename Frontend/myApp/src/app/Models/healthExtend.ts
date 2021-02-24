@@ -3,7 +3,6 @@ export class HealthsExtend{
     id: number;
     fecha: Date;
 
-    sexo: String;
     peso: number;
     percent_Grasa:number;
     percent_Hidratacion:number;
@@ -17,6 +16,6 @@ export class HealthsExtend{
   
     perimetro_Abdominal:number;
     actividad_Fisica:number;
-    idUsuario:number;
+    idHealth:number;
    
 }

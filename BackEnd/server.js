@@ -20,8 +20,7 @@ app.use(express.static('public'));
 
 const { sequelize } = require('./app/models/index'); 
 
-// explotation time.
-sequelize.sync();
+
 
 // development time only. Drop and re-sync db.
 // db.sequelize.sync({ force: true }).then(() => {

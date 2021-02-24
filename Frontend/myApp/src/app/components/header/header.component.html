@@ -6,7 +6,6 @@
   </ion-header>
   <ion-content>
     <ion-list>
-
       <ion-button expand="full" href="/login">
         Login
       </ion-button>
@@ -16,7 +15,10 @@
       <ion-button expand="full" >
         Terminos de uso
       </ion-button>
-      <ion-button *ngIf="isLogged" (click)="logout()"  href="/login" expand="full" color="secondary">
+      <ion-button *ngIf="!isLogged"  href="/user-page" expand="full" color="secondary">
+        Profesor
+      </ion-button>
+      <ion-button *ngIf="!isLogged" (click)="logout()" href="/login" expand="full" color="secondary">
         Cerrar sesion
       </ion-button>
     </ion-list>
@@ -43,7 +45,10 @@
       <ion-button expand="full" >
         Terminos de uso
       </ion-button>
-      <ion-button *ngIf="isLogged" (click)="logout()" href="/login" expand="full" color="secondary">
+      <ion-button *ngIf="!isLogged"  href="/user-page" expand="full" color="secondary">
+        Profesor
+      </ion-button>
+      <ion-button *ngIf="!isLogged" (click)="logout()" href="/login" expand="full" color="secondary">
         Cerrar sesion
       </ion-button>
 

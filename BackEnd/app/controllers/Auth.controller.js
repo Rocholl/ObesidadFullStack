@@ -26,7 +26,7 @@ module.exports =
                     let token = jst.sign({ usuario: usuario }, authConfig.secret, {
                         expiresIn: authConfig.expires
                     })
-                    console.log("q");
+
                     res.json({
                         usuario: usuario,
                         token: token

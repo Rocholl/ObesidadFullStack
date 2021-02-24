@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { average } from '../Models/average';
 import { HealthsExtend } from '../Models/healthExtend';
 const apiUrl = 'http://localhost:8080/api/healthextend/';
 const httpOptions = {
@@ -15,10 +16,10 @@ export class HealthsExtendService {
 
   constructor(private http: HttpClient) { }
   postHealth(heath: HealthsExtend): Observable<any> {
-
+    console.log(heath);
     let bodyEncoded = new URLSearchParams();
     bodyEncoded.append("idHealths", "");
-    bodyEncoded.append("fecha", heath.fecha.toString());
+    bodyEncoded.append("fecha", "");
     bodyEncoded.append("peso", heath.peso.toString());
 
     bodyEncoded.append("percent_Grasa", heath.percent_Grasa.toString());
@@ -43,7 +44,7 @@ export class HealthsExtendService {
 
     bodyEncoded.append("actividad_Fisica", heath.actividad_Fisica.toString());
 
-    bodyEncoded.append("idUsuario", heath.idUsuario.toString());
+    bodyEncoded.append("idHealth", heath.idHealth.toString());
 
 
 
@@ -54,11 +55,23 @@ export class HealthsExtendService {
     return this.http.post(apiUrl, body, httpOptions);
 
   }
-  averages(any): Observable<any> {
+  averages(): Observable<average> {
 
-    return    this.http.get(apiUrl+"avg");
+    return this.http.get<average>(apiUrl + "avg");
   }
   centerAverage(idCentro): Observable<HealthsExtend> {
-    return this.http.get<HealthsExtend>(apiUrl+"centeraverage/"+idCentro);
-    }
+    return this.http.get<HealthsExtend>(apiUrl + "centeraverage/" + idCentro);
+  }
+  centersAverage(): Observable<any> {
+    return this.http.get<any>(apiUrl + "maparray/");
+  }
+  pipebysex(sex): Observable<any> {
+    return this.http.get<any>(apiUrl + "pipebysex/"+sex);
+  }
+  pipebyage(age): Observable<any> {
+    return this.http.get<any>(apiUrl + "pipebyage/"+age);
+  }
+  pipebyphisicalActivity(ph):Observable<any>{
+    return this.http.get<any>(apiUrl + "pipebyphisicalactivity/"+ph);
+  }
 }

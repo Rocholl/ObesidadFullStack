@@ -12,7 +12,9 @@ import { AuthService } from '../services/auth.service';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
+  isLogged:boolean;
   constructor(
+    
     private router: Router, 
     private authService: AuthService, 
     private alertController: AlertController,
@@ -22,6 +24,13 @@ export class LoginPage implements OnInit {
     ) { }
 
   ngOnInit() {
+    if (this.authService.isLoggedIn()) {
+      this.isLogged= true;
+  
+      }else{
+        this.isLogged= false;
+  
+      }
   }
   toggleMenu() {
     this.menuCtrl.toggle();

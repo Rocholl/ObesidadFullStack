@@ -15,50 +15,74 @@ import { HealthsService } from '../services/healths.service';
   styleUrls: ['./user-class-students.page.scss'],
 })
 export class UserClassStudentsPage implements OnInit {
-curso: Cursos[];
-cursos: Cursos;
-idCentro: number;
-students: Healths[];
-  constructor(  private auth:AuthService,private healthService: HealthsService,private router:Router,private storage:Storage,private menuCtrl: MenuController) { }
+  curso: Cursos[];
+  cursos: Cursos;
+  idCentro: number;
+  students: Healths[];
+  currentClass;
+  constructor(private auth: AuthService, private healthService: HealthsService, private router: Router, private storage: Storage, private menuCtrl: MenuController) { }
   toggleMenu() {
     this.menuCtrl.toggle();
-  
+
   }
   ngOnInit() {
-    this.storage.get("user").then(data=>{
+    this.storage.get("user").then(data => {
       this.idCentro = data.idCentro;
-      
+
     })
-    this.storage.get("class").then(data=>{
-     this.curso= data;
+    this.storage.get("class").then(data => {
+      this.curso = data;
+      console.log(data);
+    });
+    this.storage.get("currentClass").then(data => {
+      this.currentClass = data;
       console.log(data);
     })
   }
-addHealth(){
-  console.log(this.cursos)
-  console.log(this.idCentro)
-this.healthService.getByCurso(this.cursos.idCursos,this.idCentro).subscribe(data=>{
+  addHealth() {
+    if (this.currentClass = null) {
 
-this.students= data;
- 
-});
+      this.healthService.getByCurso(this.currentClass, this.idCentro).subscribe(data => {
 
+        this.students = data;
 
+      });
 
-}
-doRefresh(event){
-setTimeout(()=>{
-  console.log(this.students);
-this.addHealth();
-event.target.complete();
-},1000)
+    } else {
+      console.log(this.cursos)
+      console.log(this.idCentro)
+      this.healthService.getByCurso(this.cursos.idCursos, this.idCentro).subscribe(data => {
 
-}
-show(){
+        this.students = data;
 
-}
-addRecord(id){
-  this.storage.set("idHealth",id);
-  this.router.navigateByUrl("form-health");
-}
+      });
+
+    }
+
+  }
+  doRefresh(event) {
+    setTimeout(() => {
+      console.log(this.students);
+      this.addHealth();
+      event.target.complete();
+    }, 1000)
+
+  }
+  ionViewDidEnter() {
+    if (this.currentClass != null) {
+      this.addHealth();
+    }
+  }
+  show() {
+
+  }
+  addRecord(id) {
+    this.storage.set("idHealth", id);
+    
+    this.storage.set("currentClass", this.cursos.idCursos);
+    this.router.navigateByUrl("form-health");
+
+  }  compareWith(o1: Cursos, o2: Cursos) {
+    return o1 && o2 ? o1.idCursos === o2.idCursos : o1 === o2;
+  }
 }
