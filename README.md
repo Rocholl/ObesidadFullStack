@@ -34,17 +34,19 @@ A list of technologies used within the project:
 Here we will see about the data model
 ### Introducion
  In the database we have 6 tables:
- * usuario: idUsuario as primary key, user, password, name, lastname, idCentro refers to the id of the Centro table.
- * centro:idCentro as primary key, name, postal_code, lat, long, idMunicipio refers to the id of the Municipiotable.
- * health:idHealth as primary key,  fat_dought, viceral_mass, height, weight, age, idCentro refers to the id of the Centro table and idCurso refers to the id of the Curso table.
+ * usuario: idUsuarios as primary key, user, password, name, lastname, idCentro refers to the id of the Centro table.
+ * centro:idCentro as primary key, name, postal_code, lat, long, idDistrito refers to the id of the Distrito table.
+ * health:idHealths as primary key, age, sex,num_lista, idCentro refers to the id of the Centro table and idCurso refers to the id of the Curso table.
+ * healt_extend: id as primary key ,date,peso,percent_Grasa,percent_Hidratacion,peso_Muscular,peso_Muscular,masa_Muscular,peso_Oseo,kilocalorias,edad_Metabolica,altura,masa_Viseral,perimetro_Abdominal,actividad_Fisica,idHealt refers to Health.
  * municipio: idMunicipio as primary key, name, island.
- * class: idCurso as primary key, name, letter.
+ * distrito: idDistrito as primary key , name
+ * class: idCurso as primary key, name.
  * user_class:idUsuario and idCurso.
 
 ### Relations
 #### one to many
  - a usuario has a centro and a centro has many usuario.
- -  a centro has a municipìo and a municipio has many centro
+ -  a centro has a district and a district has many centro
  - a health has a centro and a centro has many health
  - a health has a curso and a curso has many health
 
@@ -52,7 +54,7 @@ Here we will see about the data model
  - a usuario has many cursos and a curso has many usuario
 
 ### E/R Diagram
- <p align="center"> <img src="https://github.com/Rocholl/ObesidadFullStack/blob/Tests/Documentacion/entidad-relacion.png?raw=true" width="500"/>  </p> 
+ <p align="center"> <img src="https://github.com/Rocholl/ObesidadFullStack/blob/Master/Documentacion/v2/formInvalid.png?raw=true" width="500"/>  </p> 
 
 ### Relational Model
 Usuario(**IdUsuario**,Username,Password,Email,Nombre,Apellidos,Rol,IdCentro*)
@@ -64,18 +66,20 @@ Usuario_Cursos(**IdUsu,IdCurso**)*
  - idUsu foreign key Usuario
  - idCurso foreign key Curso
 
-Datos(**IdDatos**,masa_Grasa,masa_Viseral,masa_Muscular,altura,peso,edad,aula,grupo,idCentro*,idCurso*)
+Healt(**idHealts**,idHealths as primary key, age, sex,num_lista, idCentro*,idCurso*)
 
  - idCentro foreign key Centro
  - idCurso foreign key Curso
 
 Curso(**idCurso**,nombre,letra)
 
-Centro(**Id_Centro**,nombre,lat,long,codigo_Postal,IdMunicipio*)
+Centro(**Id_Centro**,nombre,lat,long,codigo_Postal,IdDistrito*)
 
- - idMunicipio foreign key Municipio
+ - IdDistrito foreign key IdDistrito
 
 Municipio(**Id_Municipio**,Nombre,Isla)
+Distrito(**Id_distrito**,Nombre,idMunicipio*)
+ - idMunicipio foreign key idMunicipio
 ### Class diagram
  <p align="center"> <img src="https://github.com/Rocholl/ObesidadFullStack/blob/Tests/Documentacion/class-diagram.png?raw=true" width="500"/>  </p> 
 
@@ -94,6 +98,8 @@ Municipio(**Id_Municipio**,Nombre,Isla)
 
 ## Use case
  <p align="center"> <img src="https://github.com/Rocholl/ObesidadFullStack/blob/Tests/Documentacion/use_case.png?raw=true" width="500"/> </p> 
+## User Class Diagram
+ <p align="center"> <img src="https://github.com/Rocholl/ObesidadFullStack/blob/Master/Documentacion/v2/Screenshot_1.png?raw=true" width="500"/> </p> 
 
 
 ## Technical specifications
@@ -129,6 +135,8 @@ When a teacher adds a student, the interface lets him create several, keeping th
    <p align="center"> <img src="https://github.com/Rocholl/ObesidadFullStack/blob/Tests/Documentacion/healthcreated.png?raw=true"/>  </p> 
    Regarding security, it is checked every time a page is entered if the user is logged in or not
 
+When applying a filter a loading window will appear so as not to confuse.
+ <p align="center"> <img src="https://github.com/Rocholl/ObesidadFullStack/blob/Master/Documentacion/v2/Screenshot_2.png?raw=true"/>  </p> 
 ##  Installation instructions
 ### Prerequisites
 You need a working environment with:
