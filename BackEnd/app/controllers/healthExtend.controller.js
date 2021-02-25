@@ -193,7 +193,7 @@ exports.CenterAverage = async (req, res) => {
     ,AVG(healthextends.kilocalorias) as kilocalorias, AVG(healthextends.edad_Metabolica) as edad_Metabolica 
     ,AVG(healthextends.altura) as altura ,AVG(healthextends.masa_Viseral) as masa_Viseral 
     ,AVG(healthextends.perimetro_Abdominal) as perimetro_Abdominal ,AVG(healthextends.actividad_Fisica) as actividad_Fisica 
-    FROM healthextends INNER JOIN health ON health.idHealths= healthextends.idHealth WHERE health.idCentro= `+id,{type: Sequelize.QueryTypes.SELECT}).then(data => {
+    FROM healthextends INNER JOIN health ON health.idHealths= healthextends.idHealth WHERE health.idCentro= `+id+" LIMIT 1",{type: Sequelize.QueryTypes.SELECT}).then(data => {
         res.json(data);
     }).catch(err => {
         console.log(err.message);

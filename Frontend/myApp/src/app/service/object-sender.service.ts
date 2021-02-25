@@ -6,16 +6,15 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class ObjectSenderService {
 
-  private objectSource = new BehaviorSubject<{}>({});
+  private objectSource = new Object;
   private listSource = new BehaviorSubject<any[]>([]);
 
-  $getObjectSource = this.objectSource.asObservable();
   $getListSource = this.listSource.asObservable();
 
   constructor() { }
 
-  sendObjectSource(data:any){
-    this.objectSource.next(data);
+  getObjectSource(){
+  return this.objectSource;
   }
 
   sendListSource(list:any[]){

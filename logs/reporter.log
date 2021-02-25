@@ -170,3 +170,9 @@
 2021-02-19T17:04:43.989Z - info: Starting rendering request 2 (user: null)
 2021-02-19T17:04:44.003Z - info: Rendering template { name: CentroReport, recipe: chrome-pdf, engine: handlebars, preview: true }
 2021-02-19T17:04:45.985Z - info: Rendering request 2 finished in 1997 ms
+2021-02-25T18:12:52.765Z - info: Initializing jsreport@2.11.0 in development mode using configuration file: jsreport.config.json
+2021-02-25T18:12:52.776Z - info: Searching for available extensions in C:\Users\34691\Documents\GitHub\ObesidadFullStack\
+2021-02-25T18:12:52.798Z - info: Extensions location cache C:\Users\34691\AppData\Local\Temp\jsreport\core\locations.json contains older information, crawling
+2021-02-25T18:13:03.700Z - info: Initializing jsreport@2.11.0 in development mode using configuration file: jsreport.config.json
+2021-02-25T18:13:03.712Z - info: Searching for available extensions in C:\Users\34691\Documents\GitHub\ObesidadFullStack\
+2021-02-25T18:13:03.735Z - info: Extensions location cache C:\Users\34691\AppData\Local\Temp\jsreport\core\locations.json contains older information, crawling

@@ -21,4 +21,7 @@ export class HeaderComponent implements OnInit {
   logout(){
     this.auth.logout();
     }
+    help(){
+      window.open("http://localhost:8080/Ayuda%20ObesidadFullStack.html", '_system');
+    }
 }

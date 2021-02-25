@@ -37,7 +37,7 @@ export class MapPage implements OnInit {
 
   municipio1;
   markerbool: boolean = true;
-  markerbool1: boolean = true;
+  markerbool1: boolean = false;
   constructor(
     private menuCtrl: MenuController,
     private centroService: CentrosService,
