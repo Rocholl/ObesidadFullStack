@@ -149,6 +149,7 @@ Tab Menu:
   <p align="center"> <img src=" https://github.com/Rocholl/ObesidadFullStack/blob/Master/Documentacion/v2/Screenshot_5.png?raw=true"/>  </p> 
 Slide menu:
   <p align="center"> <img src=" https://github.com/Rocholl/ObesidadFullStack/blob/Master/Documentacion/v2/Screenshot_6.png?raw=true"/>  </p> 
+  
 ##  User Manual
 When starting the application we will not find a welcome page where we will have various buttons to navigate the pages.
  <p align="center"> <img src=" https://github.com/Rocholl/ObesidadFullStack/blob/Master/Documentacion/v2/usu1.png?raw=true"/>  </p> 
