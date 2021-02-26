@@ -149,6 +149,40 @@ Tab Menu:
   <p align="center"> <img src=" https://github.com/Rocholl/ObesidadFullStack/blob/Master/Documentacion/v2/Screenshot_5.png?raw=true"/>  </p> 
 Slide menu:
   <p align="center"> <img src=" https://github.com/Rocholl/ObesidadFullStack/blob/Master/Documentacion/v2/Screenshot_6.png?raw=true"/>  </p> 
+##  User Manual
+When starting the application we will not find a welcome page where we will have various buttons to navigate the pages.
+ <p align="center"> <img src=" https://github.com/Rocholl/ObesidadFullStack/blob/Master/Documentacion/v2/usu1.png?raw=true"/>  </p> 
+To view the data and the map we will have available the tab bar in which we can move to these tabs
+
+To view the data in a table you have to go to the Data tab
+<p align="center"> <img src=" https://github.com/Rocholl/ObesidadFullStack/blob/Master/Documentacion/v2/usu2.png?raw=true"/>  </p> 
+By default you will get some preloaded data.
+To use the filters you must click the Filter button and select the one you want.
+Then the data will be displayed.
+
+<p align="center"> <img src=" https://github.com/Rocholl/ObesidadFullStack/blob/Master/Documentacion/v2/usu3.png?raw=true"/>  </p> 
+To view the map you must go to the map tab. There you can choose whether or not to see the centers and municipalities
+<p align="center"> <img src=" https://github.com/Rocholl/ObesidadFullStack/blob/Master/Documentacion/v2/usu2.png?raw=true"/>  </p> 
+
+To add records as Professor you must go to the login tab using the slide menu
+<p align="center"> <img src=" https://github.com/Rocholl/ObesidadFullStack/blob/Master/Documentacion/v2/usu5.png?raw=true"/>  </p> 
+Then you must register with your teacher credentials.
+You will access the Teacher window where you will have the possibility to view a report and add records.
+<p align="center"> <img src=" https://github.com/Rocholl/ObesidadFullStack/blob/Master/Documentacion/v2/usu6.png?raw=true"/>  </p>
+To add a record you must click on Add record.
+
+And the class window will open where you must choose the class to which you will take the data.
+<p align="center"> <img src=" https://github.com/Rocholl/ObesidadFullStack/blob/Master/Documentacion/v2/usu5.png?raw=true"/>  </p>
+
+You must choose a student and press the button add record.
+Then the data collection window will open
+
+You must fill in the data. Don't worry because you will get a signal when you have something wrong.
+Then press the create button.
+<p align="center"> <img src=" https://github.com/Rocholl/ObesidadFullStack/blob/Master/Documentacion/v2/usu8.png?raw=true"/>  </p>
+A window will appear that will say that the record was created successfully and will redirect you to the class window with the class you had previously chosen.
+<p align="center"> <img src=" https://github.com/Rocholl/ObesidadFullStack/blob/Master/Documentacion/v2/usu9.png?raw=true"/>  </p>
+
 ##  Installation instructions
 ### Prerequisites
 You need a working environment with:
@@ -281,4 +315,3 @@ El desarrollo basado en frameworks en de javascript me parecio increible tanto n
  - [Code Swag Channel](https://www.youtube.com/channel/UCNqICCv46r3o4sRlmzStfVQ)
  - [StackOverFlow](https://stackoverflow.com/)
  - [Simon Grimm Channel](https://www.youtube.com/user/saimon1924)
-
