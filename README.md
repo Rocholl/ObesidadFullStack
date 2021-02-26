@@ -137,6 +137,18 @@ When a teacher adds a student, the interface lets him create several, keeping th
 
 When applying a filter a loading window will appear so as not to confuse.
  <p align="center"> <img src="https://github.com/Rocholl/ObesidadFullStack/blob/Master/Documentacion/v2/Screenshot_2.png?raw=true"/>  </p> 
+ The map interface has two buttons available that allow to remove the markers and the polygon from the map to make the data visualization more comfortable.
+
+  <p align="center"> <img src=" https://github.com/Rocholl/ObesidadFullStack/blob/Master/Documentacion/v2/Screenshot_3.png?raw=true"/>  </p> 
+The data display changes the select lists in order to do more like the display of options to choose from.
+
+  <p align="center"> <img src=" https://github.com/Rocholl/ObesidadFullStack/blob/Master/Documentacion/v2/Screenshot_3.png?raw=true"/>  </p> 
+The user is able at all times to access the entire application through two implemented navigation methods.
+
+Tab Menu:
+  <p align="center"> <img src=" https://github.com/Rocholl/ObesidadFullStack/blob/Master/Documentacion/v2/Screenshot_5.png?raw=true"/>  </p> 
+Slide menu:
+  <p align="center"> <img src=" https://github.com/Rocholl/ObesidadFullStack/blob/Master/Documentacion/v2/Screenshot_6.png?raw=true"/>  </p> 
 ##  Installation instructions
 ### Prerequisites
 You need a working environment with:
@@ -269,3 +281,4 @@ El desarrollo basado en frameworks en de javascript me parecio increible tanto n
  - [Code Swag Channel](https://www.youtube.com/channel/UCNqICCv46r3o4sRlmzStfVQ)
  - [StackOverFlow](https://stackoverflow.com/)
  - [Simon Grimm Channel](https://www.youtube.com/user/saimon1924)
+
