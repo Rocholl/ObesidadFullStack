@@ -21,4 +21,8 @@ describe('LoginPage', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  it('saltara el mensaje?', () => {
+    expect(component.presentAlert("mensaje")).toBeUndefined();
+  });
+ 
 });

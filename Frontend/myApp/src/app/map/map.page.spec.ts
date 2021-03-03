@@ -21,4 +21,7 @@ describe('MapPage', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  it('should create', () => {
+    expect(component.centrosavg.length).toBeUndefined();
+  });
 });

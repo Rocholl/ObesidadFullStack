@@ -15,7 +15,7 @@ module.exports = app => {
      
     router.get('/report/:id', async function(req,res){
 
-        let datos= await   Health.CenterAverage(req.params.id);
+        let datos= await   Health.CenterAverageReport(req.params.id);
     
          let data = {
              template:{ "shortid": "Qewrgm9Wza",},

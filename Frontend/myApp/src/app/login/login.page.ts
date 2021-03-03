@@ -18,7 +18,7 @@ export class LoginPage implements OnInit {
     private router: Router, 
     private authService: AuthService, 
     private alertController: AlertController,
-    private objSender:ObjectSenderService,
+ 
     private storage:Storage,
     private menuCtrl: MenuController
     ) { }

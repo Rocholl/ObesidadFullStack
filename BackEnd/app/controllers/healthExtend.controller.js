@@ -204,6 +204,26 @@ exports.CenterAverage = async (req, res) => {
         return;
     })
 }
+exports.CenterAverageReport= (id1) => {
+
+    let id = id1;
+    db.sequelize.query(`SELECT AVG(healthextends.peso) as peso,AVG(healthextends.percent_Grasa) as percent_Grasa 
+    ,AVG(healthextends.percent_Hidratacion) as percent_Hidratacion ,AVG(healthextends.peso_Muscular) as peso_Muscular 
+    ,AVG(healthextends.masa_Muscular) as masa_Muscular ,AVG(healthextends.peso_Oseo) as peso_Oseo 
+    ,AVG(healthextends.kilocalorias) as kilocalorias, AVG(healthextends.edad_Metabolica) as edad_Metabolica 
+    ,AVG(healthextends.altura) as altura ,AVG(healthextends.masa_Viseral) as masa_Viseral 
+    ,AVG(healthextends.perimetro_Abdominal) as perimetro_Abdominal ,AVG(healthextends.actividad_Fisica) as actividad_Fisica 
+    FROM healthextends INNER JOIN health ON health.idHealths= healthextends.idHealth WHERE health.idCentro= `+id+" LIMIT 1",{type: Sequelize.QueryTypes.SELECT}).then(data => {
+        return data;
+    }).catch(err => {
+        console.log(err.message);
+
+        res.status(500).send({
+            message: err.message || "Some error occurred while retrieving Centro with id"
+        });
+        return;
+    });
+}
 exports.Averages = async (req, res) => {
 
 

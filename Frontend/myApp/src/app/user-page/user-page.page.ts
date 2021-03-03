@@ -60,7 +60,7 @@ export class UserPagePage implements OnInit {
    
     }
     viewReport(){
-     
+     console.log(this.centro.idCentro);
       if(this.platform.is('android')||this.platform.is('ios')){
         this.browser.openUrl("http://localhost:8080/api/centro/report/"+this.centro.idCentro);
       }
