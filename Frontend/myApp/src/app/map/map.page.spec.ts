@@ -21,7 +21,7 @@ describe('MapPage', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-  it('should create', () => {
+  it('Sera indefenido', () => {
     expect(component.centrosavg.length).toBeUndefined();
   });
 });
